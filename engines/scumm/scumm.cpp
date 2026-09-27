@@ -3212,6 +3212,47 @@ void ScummEngine::scummLoop(int delta) {
 		}
 	}
 
+	// ScummLearn: now and then, report the names of the touchable objects in this room
+	// (same rules as findObject, without the position), for the "find the ..." game.
+	{
+		static int learnObjTick = 0;
+		static Common::String learnLastObjects;
+		if (++learnObjTick >= 20) {
+			learnObjTick = 0;
+			Common::String all;
+			const int mask = (_game.version <= 2) ? kObjectStateIntrinsic : 0xF;
+			for (int i = 1; _currentRoom != 0 && i < _numLocalObjects; i++) {
+				if (_objs[i].obj_nr < 1 || getClass(_objs[i].obj_nr, kObjectClassUntouchable))
+					continue;
+				if (_objs[i].width == 0 || _objs[i].height == 0)
+					continue;
+				bool shown = false;
+				int b = i;
+				byte a;
+				do {
+					a = _objs[b].parentstate;
+					b = _objs[b].parent;
+					if (b == 0) {
+						shown = true;
+						break;
+					}
+				} while ((_objs[b].state & mask) == a);
+				if (!shown)
+					continue;
+				const byte *name = getObjOrActorName(_objs[i].obj_nr);
+				if (!name || !*name)
+					continue;
+				if (!all.empty())
+					all += '\n';
+				all += (const char *)name;
+			}
+			if (all != learnLastObjects) {
+				learnLastObjects = all;
+				Common::learnEmit("objects", Common::String(), all.empty() ? Common::String("-") : all);
+			}
+		}
+	}
+
 #ifdef USE_TTS
 	if (_game.id == GID_PASS && _roomResource == 2) {
 		int obj = findObject(_mouse.x, _mouse.y);
