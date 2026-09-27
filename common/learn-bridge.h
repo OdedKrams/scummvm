@@ -51,6 +51,9 @@ void setLearnSink(LearnSink sink);
  */
 void learnEmit(const char *kind, const String &speaker, const String &text);
 
+/** Report that the current spoken line has ended (subtitle should disappear). */
+void learnClear();
+
 } // End of namespace Common
 
 #endif

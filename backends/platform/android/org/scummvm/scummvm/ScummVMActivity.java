@@ -1160,6 +1160,20 @@ public class ScummVMActivity extends Activity {
 		_learnPanel = new LearnPanel(this, _videoLayout, paused -> {
 			if (_scummvm != null)
 				_scummvm.setPause(paused);
+		}, new LearnPanel.InputSender() {
+			@Override
+			public void rightClick() {
+				if (_events != null)
+					_events.getKidTouch().rightClick();
+			}
+
+			@Override
+			public void pressKey(int keyCode, int unicode) {
+				if (_scummvm == null)
+					return;
+				_scummvm.pushEvent(ScummVMEvents.JE_KEY, KeyEvent.ACTION_DOWN, keyCode, unicode, 0, 0, 0);
+				_scummvm.pushEvent(ScummVMEvents.JE_KEY, KeyEvent.ACTION_UP, keyCode, unicode, 0, 0, 0);
+			}
 		});
 
 		// Hide by default all buttons, they will be shown when native code will start

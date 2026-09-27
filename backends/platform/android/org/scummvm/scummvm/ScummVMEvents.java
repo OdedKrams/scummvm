@@ -108,6 +108,11 @@ public class ScummVMEvents implements
 
 	final protected ScummVMActivity _activity;
 	final protected ScummVM _scummvm;
+	final protected KidTouch _kidTouch;
+
+	public KidTouch getKidTouch() {
+		return _kidTouch;
+	}
 	final protected GestureDetector _gd;
 	final protected int _longPressTimeout;
 	final protected MouseHelper _mouseHelper;
@@ -209,6 +214,9 @@ public class ScummVMEvents implements
 		_mouseHelper = mouseHelper;
 
 		_multitouchHelper = new MultitouchHelper(_scummvm);
+
+		// ScummLearn: kid-friendly direct touch controls
+		_kidTouch = new KidTouch(_scummvm, activity.getResources().getDisplayMetrics().density);
 
 		_gd = new GestureDetector(activity, this);
 		_gd.setOnDoubleTapListener(this);
@@ -715,6 +723,13 @@ public class ScummVMEvents implements
 				// mouse button is pressed
 				return _mouseHelper.onMouseEvent(event, false);
 			}
+		}
+
+		// ScummLearn: kid controls replace the stock touch gestures (except gamepad mode)
+		if (_touchMode != TOUCH_MODE_GAMEPAD && _kidTouch != null) {
+			if (event.getActionMasked() == MotionEvent.ACTION_UP)
+				v.performClick();
+			return _kidTouch.onTouch(v, event);
 		}
 
 		if (_touchMode == TOUCH_MODE_GAMEPAD) {

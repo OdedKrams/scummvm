@@ -126,4 +126,14 @@ void learnEmit(const char *kind, const String &speaker, const String &text) {
 		g_learnSink(json);
 }
 
+void learnClear() {
+	if (!learnEnabled())
+		return;
+	// Let the same line be reported again next time it is spoken.
+	g_lastKey.clear();
+	debug(1, "LEARN {\"kind\":\"clear\"}");
+	if (g_learnSink)
+		g_learnSink("{\"kind\":\"clear\"}");
+}
+
 } // End of namespace Common

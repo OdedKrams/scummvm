@@ -20,6 +20,7 @@
  */
 
 #include "common/system.h"	// for setFocusRectangle/clearFocusRectangle
+#include "common/learn-bridge.h"
 #include "common/scummsys.h"
 #include "scumm/scumm.h"
 #include "scumm/actor.h"
@@ -3563,6 +3564,9 @@ void Actor::runActorTalkScript(int f) {
 
 void ScummEngine::stopTalk() {
 	int act;
+
+	// ScummLearn: the current line is over, hide its translation.
+	Common::learnClear();
 
 	_sound->stopTalkSound();
 
