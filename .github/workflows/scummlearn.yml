@@ -19,7 +19,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - uses: actions/setup-java@v4
+      - uses: actions/setup-java@v5
         with:
           distribution: temurin
           java-version: "17"
@@ -37,8 +37,13 @@ jobs:
 
       - name: Build
         run: |
-          make -j"$(nproc)"
-          make androidtest
+          report() {  # surface errors as annotations (readable without log access)
+            grep -E "error|Error|FAILED|What went wrong|\*\*\*" "$1" | tail -40 | while IFS= read -r l; do echo "::error::${l:0:400}"; done
+            exit 1
+          }
+          set -o pipefail
+          make -j"$(nproc)" 2>&1 | tee build.log > /dev/null || report build.log
+          make androidtest 2>&1 | tee apk.log | tail -20 || report apk.log
 
       - uses: actions/upload-artifact@v4
         with:
