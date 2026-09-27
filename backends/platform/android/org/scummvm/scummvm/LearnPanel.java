@@ -117,7 +117,11 @@ public class LearnPanel {
 	}
 
 	private String readPanelHtml() {
-		try (InputStream in = _activity.getResources().openRawResource(R.raw.learn_panel)) {
+		return readRaw(R.raw.learn_panel);
+	}
+
+	private String readRaw(int id) {
+		try (InputStream in = _activity.getResources().openRawResource(id)) {
 			ByteArrayOutputStream out = new ByteArrayOutputStream();
 			byte[] buf = new byte[8192];
 			int n;
@@ -125,7 +129,7 @@ public class LearnPanel {
 				out.write(buf, 0, n);
 			return out.toString("UTF-8");
 		} catch (Exception e) {
-			return "<html><body style='color:white'>Panel missing: " + e + "</body></html>";
+			return id == R.raw.learn_panel ? "<html><body style='color:white'>Panel missing: " + e + "</body></html>" : "{}";
 		}
 	}
 
@@ -192,6 +196,12 @@ public class LearnPanel {
 					arr.put(l);
 			}
 			return arr.toString();
+		}
+
+		/** Offline translations bundled in the APK (res/raw/learn_dict.json). */
+		@JavascriptInterface
+		public String getDict() {
+			return readRaw(R.raw.learn_dict);
 		}
 
 		@JavascriptInterface

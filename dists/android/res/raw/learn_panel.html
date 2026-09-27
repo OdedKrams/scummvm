@@ -82,9 +82,26 @@
     return localStorage.getItem('sl_' + key) || '';
   }
 
-  // Translation service (on the VPS). Returns {he, words:{word:{he,note}}}
+  // Offline dictionary bundled with the app: {lines:{en:he}, words:{w:{he,note}}}
+  let dict = {lines: {}, words: {}};
+  try {
+    if (bridge && bridge.getDict) dict = JSON.parse(bridge.getDict());
+    else { const x = new XMLHttpRequest(); x.open('GET', 'learn_dict.json', false); x.send(); if (x.status < 300 || x.status === 0) dict = JSON.parse(x.responseText); }
+  } catch (e) {}
+  dict.lines = dict.lines || {}; dict.words = dict.words || {};
+  const norm = t => t.replace(/\s+/g, ' ').trim();
+
+  function offline(text) {
+    const he = dict.lines[norm(text)];
+    if (!he) return null;
+    return {he: he, words: dict.words};
+  }
+
+  // Offline first; the translation server (optional) covers lines not in the dictionary.
   async function translate(text) {
     if (cache[text]) return cache[text];
+    const off = offline(text);
+    if (off) return (cache[text] = off);
     const url = setting('translate_url');
     if (!url) return null;
     const res = await fetch(url.replace(/\/$/, '') + '/translate', {
@@ -144,7 +161,7 @@
       he.textContent = '...';
       try {
         const d = await translate(l.text);
-        he.textContent = d ? d.he : 'התרגום עוד לא מחובר (צריך להגדיר שרת תרגום).';
+        he.textContent = d ? d.he : '(אין עדיין תרגום לשורה הזו)';
       } catch (e) { he.textContent = 'אין חיבור לתרגום כרגע.'; }
     };
     tools.appendChild(say); tools.appendChild(tr);
@@ -170,10 +187,15 @@
     card.style.display = 'block';
     try {
       const d = await translate(sentence);
-      const info = d && d.words && (d.words[word.toLowerCase()] || d.words[word]);
+      const lw = word.toLowerCase();
+      const info = (d && d.words && (d.words[lw] || d.words[word])) || dict.words[lw];
       if (info) { he.textContent = info.he; note.textContent = info.note || ''; }
-      else he.textContent = d ? '(אין פירוש למילה הזו)' : 'התרגום עוד לא מחובר.';
-    } catch (e) { he.textContent = 'אין חיבור לתרגום כרגע.'; }
+      else he.textContent = '(אין פירוש למילה הזו)';
+    } catch (e) {
+      const info = dict.words[word.toLowerCase()];
+      if (info) { he.textContent = info.he; note.textContent = info.note || ''; }
+      else he.textContent = '(אין פירוש למילה הזו)';
+    }
   }
 
   box.addEventListener('scroll', () => { card.style.display = 'none'; });
