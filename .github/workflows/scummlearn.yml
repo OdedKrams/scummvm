@@ -1,0 +1,112 @@
+name: ScummLearn builds
+
+# Builds a trimmed ScummVM (SCUMM engine only) with the ScummLearn bridge:
+#  - Android APK (arm64) to install on the tablet
+#  - Windows x64 build for quick testing on the PC
+# Download the results from the run's "Artifacts" section.
+
+on:
+  push:
+    branches: [scummlearn]
+  workflow_dispatch:
+
+jobs:
+  android:
+    name: Android arm64
+    runs-on: ubuntu-latest
+    env:
+      NDK_VERSION: "23.2.8568313"
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+
+      - name: Install Android NDK
+        run: |
+          yes | "$ANDROID_SDK_ROOT/cmdline-tools/latest/bin/sdkmanager" "ndk;${NDK_VERSION}" > /dev/null
+          echo "ANDROID_NDK_ROOT=$ANDROID_SDK_ROOT/ndk/${NDK_VERSION}" >> "$GITHUB_ENV"
+
+      - name: Configure
+        run: |
+          ./configure --host=android-arm64-v8a \
+            --disable-all-engines --enable-engine=scumm,scumm_7_8,he \
+            --enable-release --disable-debug
+
+      - name: Build
+        run: |
+          make -j"$(nproc)"
+          make androidtest
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: scummlearn-android-arm64
+          path: ScummVM-debug.apk
+
+  windows:
+    name: Windows x64
+    runs-on: windows-latest
+    permissions:
+      contents: write
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      GIT_VCPKG_COMMIT: ef7dbf94b9198bc58f45951adcf1f041fcbc5ea0
+      VCPKG_FEATURE_FLAGS: dependencygraph
+      VCPKG_DEFAULT_TRIPLET: x64-windows
+      VCPKG_INSTALLED_DIR: ${{ github.workspace }}/vcpkg_installed
+      VCPKG_BINARY_SOURCES: clear;files,${{ github.workspace }}/vcpkg_cache,readwrite
+      VCPKG_OVERLAY_PORTS: ${{ github.workspace }}/.github/vcpkg-ports
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup nasm
+        uses: ilammy/setup-nasm@v1
+
+      - name: Install vcpkg
+        uses: lukka/run-vcpkg@v11
+        id: runvcpkg
+        with:
+          vcpkgGitCommitId: ${{ env.GIT_VCPKG_COMMIT }}
+
+      - name: Integrate vcpkg
+        run: ${{ steps.runvcpkg.outputs.RUNVCPKG_VCPKG_ROOT_OUT }}/vcpkg integrate install
+
+      - name: Restore vcpkg cache
+        uses: actions/cache@v4
+        with:
+          path: ${{ github.workspace }}/vcpkg_cache
+          key: vcpkg-${{ env.GIT_VCPKG_COMMIT }}-x64-windows-${{ hashFiles('vcpkg.json') }}
+          restore-keys: vcpkg-${{ env.GIT_VCPKG_COMMIT }}-x64-windows-
+
+      - name: Build create_project
+        run: |
+          cd devtools/create_project/cmake
+          cmake .
+          cmake --build . -j 2
+
+      - name: Call create_project
+        run: |
+          mkdir build-scummvm
+          cd build-scummvm
+          ../devtools/create_project/cmake/Debug/create_project.exe .. --msvc --vcpkg --disable-all-engines --enable-engine=scumm,scumm_7_8,he
+
+      - name: Add msbuild to PATH
+        uses: microsoft/setup-msbuild@v2
+
+      - name: Install vcpkg packages
+        run: vcpkg install
+
+      - name: Build scummvm
+        run: |
+          cd build-scummvm
+          ls
+          msbuild scummvm.sln /m /p:VcpkgEnableManifest=true /p:BuildInParallel=true /p:Configuration=Release /p:PreferredToolArchitecture=x64 /p:Platform=x64 /v:minimal
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: scummlearn-windows-x64
+          path: |
+            build-scummvm/Releasex64/*.exe
+            build-scummvm/Releasex64/*.dll

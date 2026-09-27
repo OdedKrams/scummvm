@@ -23,6 +23,7 @@
 #ifdef ENABLE_SCUMM_7_8
 
 #include "common/config-manager.h"
+#include "common/learn-bridge.h"
 #include "scumm/actor.h"
 #include "scumm/charset.h"
 #include "scumm/scumm_v8.h"
@@ -643,6 +644,15 @@ void ScummEngine_v7::addSubtitleToQueue(const byte *text, const Common::Point &p
 		st->center = center;
 		st->wrap = wrap;
 		++_subtitleQueuePos;
+
+		// ScummLearn: report every subtitle line, including voiced ones.
+		Common::String speaker;
+		if (getTalkingActor() != 0xFF) {
+			Actor *a = derefActorSafe(getTalkingActor(), "addSubtitleToQueue");
+			if (a && a->getActorName())
+				speaker = (const char *)a->getActorName();
+		}
+		Common::learnEmit("dialog", speaker, (const char *)st->text);
 	}
 }
 

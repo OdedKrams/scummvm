@@ -17,6 +17,7 @@ MODULE_OBJS := \
 	gui_options.o \
 	hashmap.o \
 	language.o \
+	learn-bridge.o \
 	localization.o \
 	macresman.o \
 	memory.o \
