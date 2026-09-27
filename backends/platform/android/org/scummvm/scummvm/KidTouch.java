@@ -22,6 +22,10 @@ public class KidTouch {
 	private static final long CLICK_GAP_MS = 40;    // move -> down: SCUMM games want a small gap
 	private static final long CLICK_LEN_MS = 90;    // down -> up
 
+	/** Finger state, read by the learning overlay (object names show only while touching). */
+	public static volatile boolean sFingerDown = false;
+	public static Runnable sOnFingerUp = null;
+
 	private final ScummVM _scummvm;
 	private final Handler _h = new Handler(Looper.getMainLooper());
 
@@ -59,10 +63,18 @@ public class KidTouch {
 		click(ScummVMEvents.JE_RMB_DOWN, ScummVMEvents.JE_RMB_UP, _x, _y);
 	}
 
+	private static void fingerUp() {
+		sFingerDown = false;
+		Runnable r = sOnFingerUp;
+		if (r != null)
+			r.run();
+	}
+
 	public boolean onTouch(View v, MotionEvent e) {
 		_view = v;
 		switch (e.getActionMasked()) {
 			case MotionEvent.ACTION_DOWN:
+				sFingerDown = true;
 				_x = _anchorX = e.getX();
 				_y = _anchorY = e.getY();
 				_holding = false;
@@ -106,6 +118,7 @@ public class KidTouch {
 				}
 				_holding = false;
 				_twoFinger = false;
+				fingerUp();
 				return true;
 
 			case MotionEvent.ACTION_CANCEL:
@@ -114,6 +127,7 @@ public class KidTouch {
 					send(ScummVMEvents.JE_LMB_UP, _x, _y);
 				_holding = false;
 				_twoFinger = false;
+				fingerUp();
 				return true;
 		}
 		return true;

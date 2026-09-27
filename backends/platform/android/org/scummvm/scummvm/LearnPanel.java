@@ -6,6 +6,7 @@ import android.graphics.Color;
 import android.graphics.drawable.GradientDrawable;
 import android.os.Handler;
 import android.os.Looper;
+import android.speech.tts.TextToSpeech;
 import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.MotionEvent;
@@ -70,7 +71,16 @@ public class LearnPanel {
 	private boolean _enabled;
 	private boolean _holding = false;
 	private boolean _clearPending = false;
-	private boolean _showingChoice = false;
+	// what the subtitle bar shows now: nothing, a spoken line, or a hover label
+	private static final int SHOW_NONE = 0, SHOW_LINE = 1, SHOW_HOVER = 2;
+	private int _showKind = SHOW_NONE;
+	private String _hoverEn = null;
+	private TextToSpeech _tts;
+	private boolean _ttsReady = false;
+	private final Runnable _speakHover = () -> {
+		if (_hoverEn != null && KidTouch.sFingerDown && _ttsReady)
+			_tts.speak(_hoverEn, TextToSpeech.QUEUE_FLUSH, null, "scummlearn-object");
+	};
 	private final Runnable _autoHide = this::hideIfNotHeld;
 
 	public LearnPanel(Activity activity, FrameLayout root, PauseCallback pause, InputSender input) {
@@ -85,6 +95,19 @@ public class LearnPanel {
 		createHintCard();
 		createButtons();
 		tickHint();
+
+		_tts = new TextToSpeech(activity.getApplicationContext(), status -> {
+			if (status == TextToSpeech.SUCCESS) {
+				_tts.setLanguage(Locale.US);
+				_tts.setSpeechRate(0.85f);
+				_ttsReady = true;
+			}
+		});
+		// Object names show only while the finger is on the screen.
+		KidTouch.sOnFingerUp = () -> _ui.post(() -> {
+			if (_showKind == SHOW_HOVER && _hoverEn != null)
+				hide();
+		});
 	}
 
 	private SharedPreferences getPrefs() {
@@ -282,8 +305,10 @@ public class LearnPanel {
 
 	private void hide() {
 		_clearPending = false;
-		_showingChoice = false;
+		_showKind = SHOW_NONE;
+		_hoverEn = null;
 		_ui.removeCallbacks(_autoHide);
+		_ui.removeCallbacks(_speakHover);
 		_subtitle.setVisibility(View.GONE);
 	}
 
@@ -379,12 +404,12 @@ public class LearnPanel {
 				JSONObject o = new JSONObject(json);
 				String kind = o.optString("kind");
 				if ("clear".equals(kind)) {
-					if (!_showingChoice)
+					if (_showKind == SHOW_LINE)
 						hideIfNotHeld();
 					return;
 				}
-				if ("choice_end".equals(kind)) {
-					if (_showingChoice)
+				if ("choice_end".equals(kind) || "object_end".equals(kind)) {
+					if (_showKind == SHOW_HOVER)
 						hideIfNotHeld();
 					return;
 				}
@@ -392,21 +417,48 @@ public class LearnPanel {
 					_room = o.optString("text");
 					return;
 				}
-				if (("dialog".equals(kind) || "video".equals(kind)) && _seen.add(norm(o.optString("text"))))
+				String text = norm(o.optString("text"));
+				boolean line = "dialog".equals(kind) || "video".equals(kind);
+				if (line && _seen.add(text))
 					getPrefs().edit().putStringSet("seen_lines", new HashSet<>(_seen)).apply();
 				if (!_enabled || _holding)
 					return; // while held, keep the current subtitle
-				boolean choice = "choice".equals(kind);
-				if (!choice && !"dialog".equals(kind) && !"video".equals(kind))
+				String he = _lines.get(text);
+
+				if (line) {
+					if (he == null) {
+						hide();
+						return;
+					}
+					show(he, "video".equals(kind) ? VIDEO_SHOW_MS : MAX_SHOW_MS);
+					_showKind = SHOW_LINE;
 					return;
-				String he = _lines.get(norm(o.optString("text")));
+				}
+
+				boolean choice = "choice".equals(kind);
+				boolean object = "object".equals(kind);
+				if (!choice && !object)
+					return;
+				if (_showKind == SHOW_LINE)
+					return; // never cover a line that is being spoken
+				if (object && !KidTouch.sFingerDown)
+					return;
 				if (he == null) {
-					if (choice == _showingChoice)
+					if (_showKind == SHOW_HOVER)
 						hide();
 					return;
 				}
-				show(he, "video".equals(kind) ? VIDEO_SHOW_MS : MAX_SHOW_MS);
-				_showingChoice = choice;
+				if (object) {
+					// Object name: English + Hebrew, and say it in English.
+					show(text + "\n" + he, MAX_SHOW_MS);
+					_hoverEn = text;
+					_ui.removeCallbacks(_speakHover);
+					_ui.postDelayed(_speakHover, 350);
+				} else {
+					show(he, MAX_SHOW_MS);
+					_hoverEn = null;
+				}
+				_showKind = SHOW_HOVER;
 			} catch (Exception ignored) {
 			}
 		});
@@ -414,5 +466,10 @@ public class LearnPanel {
 
 	public void destroy() {
 		_ui.removeCallbacksAndMessages(null);
+		KidTouch.sOnFingerUp = null;
+		if (_tts != null) {
+			_tts.shutdown();
+			_tts = null;
+		}
 	}
 }

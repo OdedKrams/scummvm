@@ -114,8 +114,8 @@ void learnEmit(const char *kind, const String &speaker, const String &text) {
 
 	debug(1, "LEARN %s", json.c_str());
 
-	// Hover events (choice / choice_end) go to the app only, not to the log.
-	bool logIt = strncmp(kind, "choice", 6) != 0;
+	// Hover events (choice*, object*) go to the app only, not to the log.
+	bool logIt = strncmp(kind, "choice", 6) != 0 && strncmp(kind, "object", 6) != 0;
 	if (logIt && !g_learnLogTried)
 		openLog();
 	if (logIt && g_learnLog) {

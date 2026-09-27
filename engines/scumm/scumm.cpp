@@ -20,6 +20,7 @@
  */
 
 #include "common/config-manager.h"
+#include "common/learn-bridge.h"
 #include "common/compression/clickteam.h"
 #include "common/debug-channels.h"
 #include "common/macresman.h"
@@ -3158,6 +3159,25 @@ void ScummEngine::scummLoop(int delta) {
 	_talkDelay -= delta;
 	if (_talkDelay < 0)
 		_talkDelay = 0;
+
+	// ScummLearn: report the object or character under the finger/cursor.
+	{
+		static int learnLastHover = -1;
+		int obj = 0;
+		if (_currentRoom != 0 && _cursor.state > 0) {
+			obj = findObject(_virtualMouse.x, _virtualMouse.y);
+			if (obj == 0)
+				obj = getActorFromPos(_virtualMouse.x, _virtualMouse.y);
+		}
+		if (obj != learnLastHover) {
+			learnLastHover = obj;
+			const byte *name = obj ? getObjOrActorName(obj) : nullptr;
+			if (name && *name)
+				Common::learnEmit("object", Common::String(), (const char *)name);
+			else
+				Common::learnEmit("object_end", Common::String(), "-");
+		}
+	}
 
 #ifdef USE_TTS
 	if (_game.id == GID_PASS && _roomResource == 2) {
