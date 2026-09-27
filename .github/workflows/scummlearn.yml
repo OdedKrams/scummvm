@@ -63,7 +63,7 @@ jobs:
           }
           set -o pipefail
           make -j"$(nproc)" 2>&1 | tee build.log > /dev/null || report build.log
-          make androidtest 2>&1 | tee apk.log | tail -20 || report apk.log
+          make ScummVM-debug.apk 2>&1 | tee apk.log | tail -20 || report apk.log
 
       - uses: actions/upload-artifact@v4
         with:
