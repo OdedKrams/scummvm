@@ -77,6 +77,10 @@ public class LearnPanel {
 	private String _room = "";
 	private final Set<String> _seen = new HashSet<>();
 	private final Set<String> _hintShown = new HashSet<>();
+	/** Everything the hero has ever carried in this game (lower case): hints use it as progress. */
+	private final Set<String> _had = new HashSet<>();
+	/** The last hint shown: showing it again is free. */
+	private String _lastHint = null;
 	private final Runnable _tick = this::tickHint;
 	private boolean _enabled;
 	private boolean _holding = false;
@@ -289,6 +293,11 @@ public class LearnPanel {
 		if (fd != null)
 			_found.addAll(fd);
 		_coins = getPrefs().getInt(key("coins"), 0);
+		_had.clear();
+		Set<String> had = getPrefs().getStringSet(key("had"), null);
+		if (had != null)
+			_had.addAll(had);
+		_lastHint = getPrefs().getString(key("last_hint"), null);
 		updateCoins();
 	}
 
@@ -572,10 +581,32 @@ public class LearnPanel {
 		JSONArray done = step.optJSONArray("done_if");
 		if (done == null)
 			return false;
-		for (int i = 0; i < done.length(); i++)
-			if (_seen.contains(norm(done.optString(i))))
+		for (int i = 0; i < done.length(); i++) {
+			String d = done.optString(i);
+			if (d.startsWith("has:")) {
+				// "has:plastic hook+ramrod" = the hero has had all of these at some point
+				boolean all = true;
+				for (String item : d.substring(4).split("\\+"))
+					all &= _had.contains(item.trim().toLowerCase(Locale.ROOT));
+				if (all)
+					return true;
+			} else if (_seen.contains(norm(d))) {
 				return true;
+			}
+		}
 		return false;
+	}
+
+	/** What pickHint() would return now, without marking anything as shown. */
+	private String peekHint() {
+		Set<String> saved = new HashSet<>(_hintShown);
+		String h = pickHint();
+		if (!saved.equals(_hintShown)) {
+			_hintShown.clear();
+			_hintShown.addAll(saved);
+			getPrefs().edit().putStringSet(key("hints_shown"), new HashSet<>(_hintShown)).apply();
+		}
+		return h;
 	}
 
 	/** First step of the current room that the child hasn't finished yet. */
@@ -607,6 +638,16 @@ public class LearnPanel {
 
 	private void onHintPressed() {
 		boolean free = System.currentTimeMillis() >= hintReadyAt();
+		// The same hint again (nothing changed since) costs nothing and doesn't restart the timer.
+		String again = peekHint();
+		if (again != null && again.equals(_lastHint)) {
+			Log.d("ScummLearn", "hint room=" + _room + " again (free)");
+			_hintCard.setText(again + "\n\n(זה אותו רמז – בחינם 🙂)\n(נגיעה כדי לסגור)");
+			_hintCard.setVisibility(View.VISIBLE);
+			_hintCard.bringToFront();
+			_pause.setPaused(true);
+			return;
+		}
 		if (!free && _coins < HINT_COST) {
 			long sec = (hintReadyAt() - System.currentTimeMillis() + 999) / 1000;
 			flash("עוד " + (HINT_COST - _coins) + " 🪙 לרמז, או לחכות "
@@ -615,6 +656,8 @@ public class LearnPanel {
 		}
 		String hint = pickHint();
 		Log.d("ScummLearn", "hint room=" + _room + " -> " + hint);
+		_lastHint = hint;
+		getPrefs().edit().putString(key("last_hint"), hint).apply();
 		if (hint == null)
 			hint = "אין עדיין רמז למקום הזה. נסה להסתכל (Look at) ולדבר (Talk to) עם כל מה שאפשר.";
 		_hintCard.setText(hint + "\n\n(נגיעה כדי לסגור)");
@@ -897,6 +940,19 @@ public class LearnPanel {
 					_room = o.optString("text");
 					_roomObjects.clear();
 					endHunt(false);
+					return;
+				}
+				if ("inventory".equals(kind)) {
+					boolean added = false;
+					for (String raw : o.optString("text").split("\n")) {
+						String item = norm(raw).toLowerCase(Locale.ROOT);
+						if (!item.isEmpty() && !item.equals("-") && _had.add(item))
+							added = true;
+					}
+					if (added) {
+						getPrefs().edit().putStringSet(key("had"), new HashSet<>(_had)).apply();
+						Log.d("ScummLearn", "had " + _had);
+					}
 					return;
 				}
 				if ("objects".equals(kind)) {

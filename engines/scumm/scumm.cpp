@@ -3269,6 +3269,27 @@ void ScummEngine::scummLoop(int delta) {
 				learnLastObjects = all;
 				Common::learnEmit("objects", Common::String(), all.empty() ? Common::String("-") : all);
 			}
+
+			// ...and what the hero carries, so hints know what the child already picked up.
+			static Common::String learnLastInventory;
+			Common::String inv;
+			if (VAR_EGO != 0xFF) {
+				int ego = VAR(VAR_EGO);
+				int count = getInventoryCount(ego);
+				for (int i = 1; i <= count; i++) {
+					int obj = findInventory(ego, i);
+					const byte *name = obj ? getObjOrActorName(obj) : nullptr;
+					if (!name || !*name)
+						continue;
+					if (!inv.empty())
+						inv += '\n';
+					inv += (const char *)name;
+				}
+			}
+			if (inv != learnLastInventory) {
+				learnLastInventory = inv;
+				Common::learnEmit("inventory", Common::String(), inv.empty() ? Common::String("-") : inv);
+			}
 		}
 	}
 

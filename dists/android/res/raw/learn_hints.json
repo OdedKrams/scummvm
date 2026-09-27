@@ -43,7 +43,11 @@
      "You may call me Murray!",
      "I am Murray!",
      "It's a skeleton arm.",
-     "It's a sharp cutlass."
+     "It's a sharp cutlass.",
+     "has:plastic hook+ramrod",
+     "has:gaff",
+     "has:skeleton arm",
+     "has:cutlass"
     ]
    },
    {
@@ -52,7 +56,10 @@
      "It's a ramrod with a plastic hook stuck on the end.",
      "Hello, ramrod with plastic hook.",
      "It's a skeleton arm.",
-     "It's a sharp cutlass."
+     "It's a sharp cutlass.",
+     "has:gaff",
+     "has:skeleton arm",
+     "has:cutlass"
     ]
    },
    {
@@ -72,7 +79,8 @@
      "It's a skeleton arm.",
      "It's a skeleton arm with paste all over it.",
      "It's a sharp cutlass.",
-     "The rope has been cut."
+     "The rope has been cut.",
+     "has:cutlass"
     ]
    },
    {
@@ -92,7 +100,10 @@
     "he": "במים צפים גולגולת מדברת (Murray) וכל מיני שברים. צריך משהו ארוך כדי להגיע אליהם.",
     "done_if": [
      "It's a ramrod with a plastic hook stuck on the end.",
-     "Hello, ramrod with plastic hook."
+     "Hello, ramrod with plastic hook.",
+     "has:gaff",
+     "has:skeleton arm",
+     "has:cutlass"
     ]
    },
    {
@@ -100,7 +111,10 @@
     "done_if": [
      "It's a ramrod with a plastic hook stuck on the end.",
      "Hello, ramrod with plastic hook.",
-     "It's a skeleton arm."
+     "It's a skeleton arm.",
+     "has:gaff",
+     "has:skeleton arm",
+     "has:cutlass"
     ]
    },
    {
@@ -108,7 +122,9 @@
     "done_if": [
      "It's a skeleton arm.",
      "It's a skeleton arm with paste all over it.",
-     "It's a sharp cutlass."
+     "It's a sharp cutlass.",
+     "has:skeleton arm",
+     "has:cutlass"
     ]
    },
    {
