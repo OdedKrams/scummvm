@@ -114,6 +114,14 @@ public class LearnPanel {
 	private final Runnable _huntHelp = this::huntHelp;
 	private final Runnable _huntGiveUp = () -> endHunt(false);
 	private final java.util.Random _rnd = new java.util.Random();
+	/** In a conversation (dialogue options shown, and a little while after): no search cards. */
+	private boolean _inConversation = false;
+	private static final long CONVERSATION_TAIL_MS = 25000;
+	private final Runnable _conversationOver = () -> {
+		_inConversation = false;
+		_ui.removeCallbacks(_huntNext);
+		_ui.postDelayed(_huntNext, HUNT_FIRST_MS);
+	};
 
 	public LearnPanel(Activity activity, FrameLayout root, PauseCallback pause, InputSender input) {
 		_activity = activity;
@@ -743,11 +751,30 @@ public class LearnPanel {
 		}
 	}
 
+	/** The finger is on (or just tapped) the object we're looking for, or one it overlaps. */
+	private boolean isHuntHit(String name, String alsoUnder) {
+		boolean touching = KidTouch.sFingerDown
+			|| android.os.SystemClock.uptimeMillis() - KidTouch.sLastUpMs < 1500;
+		if (!touching)
+			return false;
+		if (name.equalsIgnoreCase(_huntTarget))
+			return true;
+		for (String other : alsoUnder.split("\n"))
+			if (norm(other).equalsIgnoreCase(_huntTarget))
+				return true;
+		return false;
+	}
+
 	/** Start a new search. asked = the child pressed 🔎 (then don't wait for a quiet moment). */
 	private boolean startHunt(boolean asked) {
 		_ui.removeCallbacks(_huntNext);
 		if (_huntTarget != null)
 			return true;
+		if (_inConversation) {
+			if (asked)
+				flash("נחפש אחרי השיחה 🙂");
+			return true; // resumes by itself when the conversation is over
+		}
 		if (!asked && (_choicesPanel.getVisibility() == View.VISIBLE || _hintCard.getVisibility() == View.VISIBLE
 				|| _showKind == SHOW_LINE)) {
 			_ui.postDelayed(_huntNext, 10000); // busy now, try again soon
@@ -827,7 +854,7 @@ public class LearnPanel {
 		_huntTarget = null;
 		if (_huntCard != null)
 			_huntCard.setVisibility(View.GONE);
-		if (!_roomObjects.isEmpty())
+		if (!_roomObjects.isEmpty() && !_inConversation)
 			_ui.postDelayed(_huntNext, HUNT_EVERY_MS);
 	}
 
@@ -865,10 +892,17 @@ public class LearnPanel {
 					return;
 				}
 				if ("choices".equals(kind)) {
+					_inConversation = true;
+					_ui.removeCallbacks(_conversationOver);
+					if (_huntTarget != null)
+						endHunt(false);
+					_ui.removeCallbacks(_huntNext);
 					showChoices(o.optString("text"));
 					return;
 				}
 				if ("choices_end".equals(kind)) {
+					_ui.removeCallbacks(_conversationOver);
+					_ui.postDelayed(_conversationOver, CONVERSATION_TAIL_MS);
 					hideChoices();
 					return;
 				}
@@ -876,8 +910,7 @@ public class LearnPanel {
 				boolean line = "dialog".equals(kind) || "video".equals(kind);
 				if (line && _seen.add(text))
 					getPrefs().edit().putStringSet(key("seen_lines"), new HashSet<>(_seen)).apply();
-				if ("object".equals(kind) && _huntTarget != null && KidTouch.sFingerDown
-						&& text.equalsIgnoreCase(_huntTarget)) {
+				if ("object".equals(kind) && _huntTarget != null && isHuntHit(text, o.optString("speaker"))) {
 					huntFound();
 					return;
 				}

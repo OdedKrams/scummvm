@@ -3205,10 +3205,29 @@ void ScummEngine::scummLoop(int delta) {
 		if (obj != learnLastHover) {
 			learnLastHover = obj;
 			const byte *name = obj ? getObjOrActorName(obj) : nullptr;
-			if (name && *name)
-				Common::learnEmit("object", Common::String(), (const char *)name);
-			else
+			if (name && *name) {
+				// Objects can overlap (a keyhole on a door): findObject only returns the first.
+				// The other names under the finger go in the "speaker" field, '\n'-separated,
+				// so the "find the ..." game accepts any of them.
+				Common::String others;
+				for (int i = 1; i < _numLocalObjects; i++) {
+					const ObjectData &od = _objs[i];
+					if (od.obj_nr < 1 || od.obj_nr == obj || getClass(od.obj_nr, kObjectClassUntouchable))
+						continue;
+					if (od.x_pos > _virtualMouse.x || od.x_pos + od.width < _virtualMouse.x ||
+						od.y_pos > _virtualMouse.y || od.y_pos + od.height < _virtualMouse.y)
+						continue;
+					const byte *n = getObjOrActorName(od.obj_nr);
+					if (!n || !*n)
+						continue;
+					if (!others.empty())
+						others += '\n';
+					others += (const char *)n;
+				}
+				Common::learnEmit("object", others, (const char *)name);
+			} else {
 				Common::learnEmit("object_end", Common::String(), "-");
+			}
 		}
 	}
 

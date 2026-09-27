@@ -26,6 +26,8 @@ public class KidTouch {
 	/** Finger state, read by the learning overlay (object names show only while touching). */
 	public static volatile boolean sFingerDown = false;
 	public static Runnable sOnFingerUp = null;
+	/** When the finger last left the screen (a quick tap can end before the game reports the object). */
+	public static volatile long sLastUpMs = 0;
 	/** Off while a dialogue menu is shown: a resting finger must not pick an option. */
 	public static volatile boolean sHoldEnabled = true;
 
@@ -71,6 +73,7 @@ public class KidTouch {
 
 	private static void fingerUp() {
 		sFingerDown = false;
+		sLastUpMs = android.os.SystemClock.uptimeMillis();
 		Runnable r = sOnFingerUp;
 		if (r != null)
 			r.run();
