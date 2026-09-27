@@ -114,9 +114,11 @@ void learnEmit(const char *kind, const String &speaker, const String &text) {
 
 	debug(1, "LEARN %s", json.c_str());
 
-	if (!g_learnLogTried)
+	// Hover events (choice / choice_end) go to the app only, not to the log.
+	bool logIt = strncmp(kind, "choice", 6) != 0;
+	if (logIt && !g_learnLogTried)
 		openLog();
-	if (g_learnLog) {
+	if (logIt && g_learnLog) {
 		g_learnLog->writeString(json);
 		g_learnLog->writeByte('\n');
 		g_learnLog->flush();

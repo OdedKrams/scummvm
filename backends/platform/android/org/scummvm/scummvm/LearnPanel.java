@@ -14,13 +14,17 @@ import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import org.json.JSONArray;
 import org.json.JSONObject;
 
 import java.io.ByteArrayOutputStream;
 import java.io.InputStream;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Iterator;
+import java.util.Locale;
 import java.util.Map;
+import java.util.Set;
 
 /**
  * ScummLearn overlay for kids.
@@ -56,9 +60,17 @@ public class LearnPanel {
 
 	private TextView _subtitle;
 	private TextView _toggle;
+	private TextView _hintBtn;
+	private TextView _hintCard;
+	private JSONObject _hints;
+	private String _room = "";
+	private final Set<String> _seen = new HashSet<>();
+	private final Set<String> _hintShown = new HashSet<>();
+	private final Runnable _tick = this::tickHint;
 	private boolean _enabled;
 	private boolean _holding = false;
 	private boolean _clearPending = false;
+	private boolean _showingChoice = false;
 	private final Runnable _autoHide = this::hideIfNotHeld;
 
 	public LearnPanel(Activity activity, FrameLayout root, PauseCallback pause, InputSender input) {
@@ -68,8 +80,11 @@ public class LearnPanel {
 		_input = input;
 		_enabled = getPrefs().getBoolean("subtitles_he", true);
 		loadDict();
+		loadHints();
 		createSubtitle();
+		createHintCard();
 		createButtons();
+		tickHint();
 	}
 
 	private SharedPreferences getPrefs() {
@@ -100,6 +115,31 @@ public class LearnPanel {
 		} catch (Exception e) {
 			// No dictionary: subtitles simply stay hidden.
 		}
+	}
+
+	private String readRaw(int id) throws Exception {
+		try (InputStream in = _activity.getResources().openRawResource(id)) {
+			ByteArrayOutputStream out = new ByteArrayOutputStream();
+			byte[] buf = new byte[8192];
+			int n;
+			while ((n = in.read(buf)) > 0)
+				out.write(buf, 0, n);
+			return out.toString("UTF-8");
+		}
+	}
+
+	private void loadHints() {
+		try {
+			_hints = new JSONObject(readRaw(R.raw.learn_hints));
+		} catch (Exception e) {
+			_hints = null;
+		}
+		Set<String> seen = getPrefs().getStringSet("seen_lines", null);
+		if (seen != null)
+			_seen.addAll(seen);
+		Set<String> shown = getPrefs().getStringSet("hints_shown", null);
+		if (shown != null)
+			_hintShown.addAll(shown);
 	}
 
 	// ---- UI -----------------------------------------------------------------
@@ -146,6 +186,30 @@ public class LearnPanel {
 		_root.addView(_subtitle, lp);
 	}
 
+	private void createHintCard() {
+		_hintCard = new TextView(_activity);
+		_hintCard.setTextColor(0xFF1A1A1A);
+		_hintCard.setTextSize(TypedValue.COMPLEX_UNIT_SP, 24);
+		_hintCard.setGravity(Gravity.CENTER);
+		_hintCard.setTextDirection(View.TEXT_DIRECTION_RTL);
+		_hintCard.setLineSpacing(0, 1.15f);
+		_hintCard.setPadding(dp(24), dp(20), dp(24), dp(20));
+		GradientDrawable bg = new GradientDrawable();
+		bg.setColor(0xFFFFF4C2);
+		bg.setCornerRadius(dp(18));
+		bg.setStroke(dp(3), 0xFFE0A800);
+		_hintCard.setBackground(bg);
+		_hintCard.setVisibility(View.GONE);
+		_hintCard.setOnClickListener(v -> {
+			_hintCard.setVisibility(View.GONE);
+			_pause.setPaused(false);
+		});
+		FrameLayout.LayoutParams lp = new FrameLayout.LayoutParams(
+			FrameLayout.LayoutParams.WRAP_CONTENT, FrameLayout.LayoutParams.WRAP_CONTENT, Gravity.CENTER);
+		lp.setMargins(dp(110), dp(40), dp(110), dp(40));
+		_root.addView(_hintCard, lp);
+	}
+
 	private TextView makeButton(String label, int color) {
 		TextView b = new TextView(_activity);
 		b.setText(label);
@@ -165,6 +229,9 @@ public class LearnPanel {
 		col.setOrientation(LinearLayout.VERTICAL);
 		col.setGravity(Gravity.CENTER_HORIZONTAL);
 
+		_hintBtn = makeButton("💡", 0xCCE0A800);
+		_hintBtn.setOnClickListener(v -> onHintPressed());
+
 		_toggle = makeButton("עב", 0xCC2E6BE6);
 		_toggle.setOnClickListener(v -> setEnabled(!_enabled));
 		updateToggle();
@@ -177,7 +244,7 @@ public class LearnPanel {
 		skip.setOnClickListener(v -> _input.pressKey(56 /* KEYCODE_PERIOD */, '.'));
 
 		int size = dp(60);
-		for (TextView b : new TextView[]{_toggle, inv, skip}) {
+		for (TextView b : new TextView[]{_hintBtn, _toggle, inv, skip}) {
 			LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(size, size);
 			lp.setMargins(0, dp(8), 0, dp(8));
 			col.addView(b, lp);
@@ -215,6 +282,7 @@ public class LearnPanel {
 
 	private void hide() {
 		_clearPending = false;
+		_showingChoice = false;
 		_ui.removeCallbacks(_autoHide);
 		_subtitle.setVisibility(View.GONE);
 	}
@@ -226,6 +294,82 @@ public class LearnPanel {
 			hide();
 	}
 
+	// ---- hints ----------------------------------------------------------------
+
+	private long hintReadyAt() {
+		return getPrefs().getLong("hint_ready_at", 0);
+	}
+
+	private void tickHint() {
+		_ui.removeCallbacks(_tick);
+		if (_hintBtn == null)
+			return;
+		long left = hintReadyAt() - System.currentTimeMillis();
+		if (left <= 0) {
+			_hintBtn.setText("💡");
+			_hintBtn.setTextSize(TypedValue.COMPLEX_UNIT_SP, 22);
+			_hintBtn.setAlpha(1f);
+		} else {
+			long sec = (left + 999) / 1000;
+			_hintBtn.setText(String.format(Locale.ROOT, "%d:%02d", sec / 60, sec % 60));
+			_hintBtn.setTextSize(TypedValue.COMPLEX_UNIT_SP, 15);
+			_hintBtn.setAlpha(0.5f);
+			_ui.postDelayed(_tick, 1000);
+		}
+	}
+
+	private boolean isDone(JSONObject step) {
+		JSONArray done = step.optJSONArray("done_if");
+		if (done == null)
+			return false;
+		for (int i = 0; i < done.length(); i++)
+			if (_seen.contains(norm(done.optString(i))))
+				return true;
+		return false;
+	}
+
+	/** First step of the current room that the child hasn't finished yet. */
+	private String pickHint() {
+		if (_hints == null)
+			return null;
+		JSONObject rooms = _hints.optJSONObject("rooms");
+		JSONArray steps = rooms != null ? rooms.optJSONArray(_room) : null;
+		if (steps == null)
+			steps = _hints.optJSONArray("general");
+		if (steps == null || steps.length() == 0)
+			return null;
+		for (int i = 0; i < steps.length(); i++) {
+			JSONObject step = steps.optJSONObject(i);
+			if (step == null || isDone(step))
+				continue;
+			String key = _room + ":" + i;
+			boolean last = i == steps.length() - 1;
+			// A step with no completion marker only shows once, then we move on.
+			if (!step.has("done_if") && _hintShown.contains(key) && !last)
+				continue;
+			_hintShown.add(key);
+			getPrefs().edit().putStringSet("hints_shown", new HashSet<>(_hintShown)).apply();
+			return step.optString("he");
+		}
+		JSONObject lastStep = steps.optJSONObject(steps.length() - 1);
+		return lastStep != null ? lastStep.optString("he") : null;
+	}
+
+	private void onHintPressed() {
+		if (System.currentTimeMillis() < hintReadyAt())
+			return; // still charging
+		String hint = pickHint();
+		if (hint == null)
+			hint = "אין עדיין רמז למקום הזה. נסה להסתכל (Look at) ולדבר (Talk to) עם כל מה שאפשר.";
+		_hintCard.setText(hint + "\n\n(נגיעה כדי לסגור)");
+		_hintCard.setVisibility(View.VISIBLE);
+		_hintCard.bringToFront();
+		_pause.setPaused(true);
+		long cooldown = (_hints != null ? _hints.optLong("cooldown_sec", 180) : 180) * 1000;
+		getPrefs().edit().putLong("hint_ready_at", System.currentTimeMillis() + cooldown).apply();
+		tickHint();
+	}
+
 	// ---- events from the game -------------------------------------------------
 
 	/** Called on the native thread whenever the game shows or ends a line of text. */
@@ -235,19 +379,34 @@ public class LearnPanel {
 				JSONObject o = new JSONObject(json);
 				String kind = o.optString("kind");
 				if ("clear".equals(kind)) {
-					hideIfNotHeld();
+					if (!_showingChoice)
+						hideIfNotHeld();
 					return;
 				}
+				if ("choice_end".equals(kind)) {
+					if (_showingChoice)
+						hideIfNotHeld();
+					return;
+				}
+				if ("room".equals(kind)) {
+					_room = o.optString("text");
+					return;
+				}
+				if (("dialog".equals(kind) || "video".equals(kind)) && _seen.add(norm(o.optString("text"))))
+					getPrefs().edit().putStringSet("seen_lines", new HashSet<>(_seen)).apply();
 				if (!_enabled || _holding)
 					return; // while held, keep the current subtitle
-				if (!"dialog".equals(kind) && !"video".equals(kind))
+				boolean choice = "choice".equals(kind);
+				if (!choice && !"dialog".equals(kind) && !"video".equals(kind))
 					return;
 				String he = _lines.get(norm(o.optString("text")));
 				if (he == null) {
-					hide();
+					if (choice == _showingChoice)
+						hide();
 					return;
 				}
 				show(he, "video".equals(kind) ? VIDEO_SHOW_MS : MAX_SHOW_MS);
+				_showingChoice = choice;
 			} catch (Exception ignored) {
 			}
 		});

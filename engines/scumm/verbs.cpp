@@ -19,6 +19,7 @@
  *
  */
 
+#include "common/learn-bridge.h"
 #include "scumm/actor.h"
 #include "scumm/charset.h"
 #include "scumm/he/intern_he.h"
@@ -535,6 +536,8 @@ void ScummEngine::redrawVerbs() {
 			drawVerb(i, 0);
 	}
 	_verbMouseOver = verb;
+	if (!verb || !_verbs[verb].hicolor)
+		Common::learnEmit("choice_end", Common::String(), "-");
 }
 
 void ScummEngine::handleMouseOver(bool updateInventory) {
@@ -994,6 +997,8 @@ void ScummEngine::verbMouseOver(int verb) {
 		return;
 
 	if (_verbMouseOver != verb) {
+		if (!verb || !_verbs[verb].hicolor)
+			Common::learnEmit("choice_end", Common::String(), "-");
 		if (_verbs[_verbMouseOver].type != kImageVerbType) {
 			drawVerb(_verbMouseOver, 0);
 			_verbMouseOver = verb;
@@ -1076,6 +1081,10 @@ void ScummEngine_v7::drawVerb(int verb, int mode, Common::TextToSpeechManager::A
 		msg = buf;
 		while (*msg == 0xFF)
 			msg += 4;
+
+		// ScummLearn: the option under the finger (dialogue choice or object name)
+		if (mode && vs->hicolor)
+			Common::learnEmit("choice", Common::String(), (const char *)msg);
 
 		// Set the specified charset id
 		int oldID = _charset->getCurID();

@@ -1,0 +1,41 @@
+{
+  "game": "comi",
+  "cooldown_sec": 180,
+  "rooms": {
+    "1": [{"he": "זה הפתיח של המשחק. אפשר פשוט לצפות, או ללחוץ ⏩ כדי לדלג על משפט."}],
+    "2": [{"he": "זה הפתיח של המשחק. אפשר פשוט לצפות, או ללחוץ ⏩ כדי לדלג על משפט."}],
+    "3": [
+      {"he": "אתה כלוא בבטן הספינה של הפיראט לה-צ'אק. נסה לדבר (Talk to) עם הפיראט הקטן שעומד ליד הדלת – אולי הוא מכיר אותך!",
+       "done_if": ["Wally!", "It's Guybrush Threepwood!", "Hello, Mr. Wood.", "Don't you recognize me?"]},
+      {"he": "הפיראט הקטן הוא וולי, חבר ישן. הוא רק מעמיד פנים שהוא פיראט. תמשיך לדבר איתו ולהגיד לו את האמת – שהוא לא באמת פיראט – עד שהוא יבכה.",
+       "done_if": ["I'm just not a pirate!", "<sob>", "Waaaaaaaaah!", "You're right, Mr. Wood!"]},
+      {"he": "כשוולי בוכה הוא מפיל את הוו המזויף שלו (hook). הרם אותו (Pick up), והרם גם את המוט הדוחס (ramrod) שליד התותח.",
+       "done_if": ["It's a ramrod with a plastic hook stuck on the end.", "Hello, ramrod with plastic hook.", "You may call me Murray!", "I am Murray!", "It's a skeleton arm.", "It's a sharp cutlass."]},
+      {"he": "פתח את התיק (🎒) וגרור את הוו (hook) על המוט (ramrod). תקבל מוט ארוך עם וו בקצה (gaff).",
+       "done_if": ["It's a ramrod with a plastic hook stuck on the end.", "Hello, ramrod with plastic hook.", "It's a skeleton arm.", "It's a sharp cutlass."]},
+      {"he": "הסתכל החוצה דרך פתח התותח (gunport) – יש משהו מעניין במים.",
+       "done_if": ["You may call me Murray!", "I am Murray!", "I'm a powerful demonic force!", "Lose something?", "It's a skeleton arm.", "It's a sharp cutlass."]},
+      {"he": "צריך להשיג את החרב (cutlass) שנמצאת במים, ליד הגולגולת. הסתכל שוב דרך פתח התותח עם ה-gaff.",
+       "done_if": ["It's a skeleton arm.", "It's a skeleton arm with paste all over it.", "It's a sharp cutlass.", "The rope has been cut."]},
+      {"he": "יש לך חרב (cutlass)! השתמש בה על החבל שקושר את התותח (cannon restraint rope).",
+       "done_if": ["The rope has been cut.", "There's nothing restraining the cannon now.", "It's already cut."]},
+      {"he": "עכשיו שום דבר לא מחזיק את התותח. תירה בו (Use cannon) ותראה מה קורה!"}
+    ],
+    "5": [
+      {"he": "במים צפים גולגולת מדברת (Murray) וכל מיני שברים. צריך משהו ארוך כדי להגיע אליהם.",
+       "done_if": ["It's a ramrod with a plastic hook stuck on the end.", "Hello, ramrod with plastic hook."]},
+      {"he": "הוו לבד קצר מדי. בתיק (🎒) חבר את הוו (hook) עם המוט (ramrod) כדי לקבל gaff ארוך.",
+       "done_if": ["It's a ramrod with a plastic hook stuck on the end.", "Hello, ramrod with plastic hook.", "It's a skeleton arm."]},
+      {"he": "השתמש ב-gaff על הגולגולת Murray כדי להפיל אותה מהקרש, ואז על יד השלד (skeleton arm) – היא מחזיקה חרב (cutlass)!",
+       "done_if": ["It's a skeleton arm.", "It's a skeleton arm with paste all over it.", "It's a sharp cutlass."]},
+      {"he": "יש לך חרב? חזור לתותח וחתוך איתה את החבל שקושר אותו."}
+    ],
+    "4": [
+      {"he": "זה המבט דרך הכוונת של התותח. כוון אל המבצר (fort) ולחץ כדי לירות."},
+      {"he": "תמשיך לנסות לפגוע במבצר. אם נתקעת, נסה להקיש עם שתי אצבעות כדי לחזור לסיפון."}
+    ]
+  },
+  "general": [
+    {"he": "טיפ: החלק אצבע על המסך כדי לראות את שמות החפצים. החזק אצבע על חפץ כדי לבחור מה לעשות איתו (להסתכל, להשתמש, לדבר)."}
+  ]
+}

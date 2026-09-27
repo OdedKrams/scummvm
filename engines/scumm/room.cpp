@@ -21,6 +21,7 @@
 
 
 #include "common/system.h"
+#include "common/learn-bridge.h"
 #include "scumm/actor.h"
 #include "scumm/boxes.h"
 #ifdef ENABLE_HE
@@ -40,6 +41,9 @@ namespace Scumm {
  * The actor is placed next to the object indicated by objectNr.
  */
 void ScummEngine::startScene(int room, Actor *a, int objectNr) {
+	// ScummLearn: tell the hint system which room the player is in.
+	Common::learnEmit("room", Common::String(), Common::String::format("%d", room));
+
 	int i, where;
 
 	debugC(DEBUG_GENERAL, "Loading room %d", room);
