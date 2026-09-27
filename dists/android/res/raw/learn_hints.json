@@ -1,6 +1,6 @@
 {
  "game": "comi",
- "cooldown_sec": 180,
+ "cooldown_sec": 300,
  "rooms": {
   "1": [
    {

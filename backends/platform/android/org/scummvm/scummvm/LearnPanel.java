@@ -96,17 +96,19 @@ public class LearnPanel {
 	private final Runnable _autoHide = this::hideIfNotHeld;
 
 	// ---- gold coins: earned by learning English, spent on hints ----
-	private static final int HINT_COST = 3;
+	private static final int HINT_COST = 5;
+	private static final long FREE_HINT_SEC = 300;   // a free hint every 5 minutes
 	private int _coins = 0;
 	private final Set<String> _rewarded = new HashSet<>();  // "L:line", "O:object", "C:choice"
 	private TextView _coinView;
 	private String _lineEn = null;                          // English of the line on screen
 
 	// ---- "Find the ...!" game ----
-	private static final long HUNT_FIRST_MS = 15000, HUNT_EVERY_MS = 45000, HUNT_HELP_MS = 20000,
-		HUNT_GIVE_UP_MS = 120000;
+	private static final long HUNT_FIRST_MS = 15000, HUNT_EVERY_MS = 120000, HUNT_HELP_MS = 45000,
+		HUNT_GIVE_UP_MS = 150000;
+	private static final int HUNT_MAX_PER_OBJECT = 3;  // the same object can be asked up to 3 times per room
 	private final java.util.List<String> _roomObjects = new java.util.ArrayList<>();
-	private final Set<String> _found = new HashSet<>();     // "room:name"
+	private final Set<String> _found = new HashSet<>();     // "room:name#n", n = 1..3
 	private TextView _huntCard;
 	private String _huntTarget = null;
 	private boolean _huntHelped = false;
@@ -311,8 +313,6 @@ public class LearnPanel {
 			switch (e.getActionMasked()) {
 				case MotionEvent.ACTION_DOWN:
 					_holding = true;
-					if (_showKind == SHOW_LINE && _lineEn != null)
-						reward("L:" + _lineEn, 1);
 					_ui.removeCallbacks(_autoHide);
 					bg.setColor(0xE0102040);
 					_pause.setPaused(true);
@@ -418,7 +418,6 @@ public class LearnPanel {
 				_ui.postDelayed(() -> cbg.setColor(0xFF2B3A67), 600);
 				if (_ttsReady)
 					_tts.speak(en, TextToSpeech.QUEUE_FLUSH, null, "scummlearn-choice");
-				reward("C:" + en, 1);
 			});
 			LinearLayout.LayoutParams clp = new LinearLayout.LayoutParams(
 				LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
@@ -611,7 +610,7 @@ public class LearnPanel {
 		if (!free && _coins < HINT_COST) {
 			long sec = (hintReadyAt() - System.currentTimeMillis() + 999) / 1000;
 			flash("עוד " + (HINT_COST - _coins) + " 🪙 לרמז, או לחכות "
-				+ String.format(Locale.ROOT, "%d:%02d", sec / 60, sec % 60) + "\nמרוויחים מטבעות מאנגלית: 🔎 חיפוש, החזקה על כתובית, הקשבה לשם של חפץ");
+				+ String.format(Locale.ROOT, "%d:%02d", sec / 60, sec % 60) + "\nמרוויחים מטבעות מאנגלית: 🔎 חיפוש חפצים, והקשבה לשם של חפץ");
 			return;
 		}
 		String hint = pickHint();
@@ -623,7 +622,7 @@ public class LearnPanel {
 		_hintCard.bringToFront();
 		_pause.setPaused(true);
 		if (free) {
-			long cooldown = (_hints != null ? _hints.optLong("cooldown_sec", 180) : 180) * 1000;
+			long cooldown = FREE_HINT_SEC * 1000;
 			getPrefs().edit().putLong(key("hint_ready_at"), System.currentTimeMillis() + cooldown).apply();
 		} else {
 			addCoins(-HINT_COST);
@@ -645,7 +644,7 @@ public class LearnPanel {
 		bg.setStroke(dp(2), 0xFFB8860B);
 		_coinView.setBackground(bg);
 		_coinView.setOnClickListener(v -> flash("יש לך " + _coins + " 🪙\nכל רמז עולה " + HINT_COST
-			+ " 🪙 (או חינם כל 3 דקות)\nמרוויחים: 🔎 מציאת חפץ = 3, החזקה על כתובית, הקשבה לשם של חפץ או לתשובה = 1"));
+			+ " 🪙 (או חינם כל 5 דקות)\nמרוויחים: 🔎 מציאת חפץ = 3 (2 אחרי עזרה בעברית), הקשבה לשם של חפץ = 1"));
 		FrameLayout.LayoutParams lp = new FrameLayout.LayoutParams(
 			FrameLayout.LayoutParams.WRAP_CONTENT, FrameLayout.LayoutParams.WRAP_CONTENT, Gravity.TOP | Gravity.START);
 		lp.setMargins(dp(10), dp(10), 0, 0);
@@ -782,11 +781,14 @@ public class LearnPanel {
 		}
 		java.util.List<String> left = new java.util.ArrayList<>();
 		for (String en : _roomObjects)
-			if (!_found.contains(_room + ":" + en.toLowerCase(Locale.ROOT)))
+			if (timesFound(en) < HUNT_MAX_PER_OBJECT)
 				left.add(en);
+		if (left.size() > 1)
+			left.remove(_lastHunt);   // not the same object twice in a row
 		if (left.isEmpty())
 			return false;
 		_huntTarget = left.get(_rnd.nextInt(left.size()));
+		_lastHunt = _huntTarget;
 		_huntHelped = false;
 		_huntCard.setText("🔎 " + huntPhrase(_huntTarget));
 		_huntCard.setVisibility(View.VISIBLE);
@@ -796,6 +798,16 @@ public class LearnPanel {
 		_ui.postDelayed(_huntGiveUp, HUNT_GIVE_UP_MS);
 		Log.d("ScummLearn", "hunt start " + _huntTarget);
 		return true;
+	}
+
+	private String _lastHunt = null;
+
+	private int timesFound(String en) {
+		String k = _room + ":" + en.toLowerCase(Locale.ROOT) + "#";
+		int n = 0;
+		while (n < HUNT_MAX_PER_OBJECT && _found.contains(k + (n + 1)))
+			n++;
+		return n;
 	}
 
 	private static String huntPhrase(String en) {
@@ -825,7 +837,7 @@ public class LearnPanel {
 	private void huntFound() {
 		String en = _huntTarget;
 		int n = _huntHelped ? 2 : 3;
-		_found.add(_room + ":" + en.toLowerCase(Locale.ROOT));
+		_found.add(_room + ":" + en.toLowerCase(Locale.ROOT) + "#" + (timesFound(en) + 1));
 		getPrefs().edit().putStringSet(key("found"), new HashSet<>(_found)).apply();
 		_rewarded.add("O:" + en.toLowerCase(Locale.ROOT)); // no extra coin for hearing it now
 		addCoins(n);
