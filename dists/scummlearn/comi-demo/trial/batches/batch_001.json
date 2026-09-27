@@ -1,0 +1,372 @@
+[
+ {
+  "id": "NEW.1",
+  "group": "NEW",
+  "text": "Joystick Disabled"
+ },
+ {
+  "id": "NEW.2",
+  "group": "NEW",
+  "text": "Recalibrating Joystick"
+ },
+ {
+  "id": "NEW.3",
+  "group": "NEW",
+  "text": "move the joystick to the upper left... hit any button"
+ },
+ {
+  "id": "NEW.4",
+  "group": "NEW",
+  "text": "move the joystick to the lower right... hit any button"
+ },
+ {
+  "id": "NEW.5",
+  "group": "NEW",
+  "text": "move the joystick to the center... hit any button"
+ },
+ {
+  "id": "NEW.6",
+  "group": "NEW",
+  "text": "Unable to initialize joystick"
+ },
+ {
+  "id": "NEW.23",
+  "group": "NEW",
+  "text": "Text Speed Slow ========== Fast"
+ },
+ {
+  "id": "NEW.24",
+  "group": "NEW",
+  "text": "Music Volume Low ========= High"
+ },
+ {
+  "id": "NEW.25",
+  "group": "NEW",
+  "text": "Voice Volume Low ========= High"
+ },
+ {
+  "id": "NEW.26",
+  "group": "NEW",
+  "text": "Sfx Volume Low ========= High"
+ },
+ {
+  "id": "LOGO.023",
+  "group": "LOGO",
+  "text": "helium balloons"
+ },
+ {
+  "id": "LOGO.024",
+  "group": "LOGO",
+  "text": "They're very festive."
+ },
+ {
+  "id": "LOGO.025",
+  "group": "LOGO",
+  "text": "It's a helium-filled balloon."
+ },
+ {
+  "id": "LOGO.026",
+  "group": "LOGO",
+  "text": "I can't use a balloon with that."
+ },
+ {
+  "id": "LOGO.027",
+  "group": "LOGO",
+  "text": "They're fun, but I need to use them with something else."
+ },
+ {
+  "id": "LOGO.028",
+  "group": "LOGO",
+  "text": "It's fun, but I need to use it with something else."
+ },
+ {
+  "id": "LOGO.029",
+  "group": "LOGO",
+  "text": "logo-logo-object"
+ },
+ {
+  "id": "LOGO.030",
+  "group": "LOGO",
+  "text": "logo-bear-object"
+ },
+ {
+  "id": "LOGO.031",
+  "group": "LOGO",
+  "text": "logo-disclaimer"
+ },
+ {
+  "id": "BOOT.002",
+  "group": "BOOT",
+  "text": "Game Paused. Press SPACE to Continue."
+ },
+ {
+  "id": "BOOT.003",
+  "group": "BOOT",
+  "text": "Unable to Find %s, (%c%d) Press Button."
+ },
+ {
+  "id": "BOOT.004",
+  "group": "BOOT",
+  "text": "Error reading disk %c, (%c%d) Press Button."
+ },
+ {
+  "id": "BOOT.005",
+  "group": "BOOT",
+  "text": "Are you sure you want to restart? (Y/N)Y"
+ },
+ {
+  "id": "BOOT.006",
+  "group": "BOOT",
+  "text": "Are you sure you want to quit? (Y/N)Y"
+ },
+ {
+  "id": "BOOT.007",
+  "group": "BOOT",
+  "text": "MONKEY ISLAND 3"
+ },
+ {
+  "id": "BOOT.008",
+  "group": "BOOT",
+  "text": "Save"
+ },
+ {
+  "id": "BOOT.009",
+  "group": "BOOT",
+  "text": "Load"
+ },
+ {
+  "id": "BOOT.010",
+  "group": "BOOT",
+  "text": "Play"
+ },
+ {
+  "id": "BOOT.011",
+  "group": "BOOT",
+  "text": "Cancel"
+ },
+ {
+  "id": "BOOT.012",
+  "group": "BOOT",
+  "text": "Quit"
+ },
+ {
+  "id": "BOOT.013",
+  "group": "BOOT",
+  "text": "OK"
+ },
+ {
+  "id": "BOOT.014",
+  "group": "BOOT",
+  "text": "You must enter a name"
+ },
+ {
+  "id": "BOOT.015",
+  "group": "BOOT",
+  "text": "The game was NOT saved (disk full?)"
+ },
+ {
+  "id": "BOOT.016",
+  "group": "BOOT",
+  "text": "The game was NOT loaded"
+ },
+ {
+  "id": "BOOT.017",
+  "group": "BOOT",
+  "text": "Saving '%s'"
+ },
+ {
+  "id": "BOOT.018",
+  "group": "BOOT",
+  "text": "Loading '%s'"
+ },
+ {
+  "id": "BOOT.019",
+  "group": "BOOT",
+  "text": "Name your SAVE game"
+ },
+ {
+  "id": "BOOT.020",
+  "group": "BOOT",
+  "text": "Select a game to LOAD"
+ },
+ {
+  "id": "BOOT.021",
+  "group": "BOOT",
+  "text": "Music"
+ },
+ {
+  "id": "BOOT.022",
+  "group": "BOOT",
+  "text": "Voice"
+ },
+ {
+  "id": "BOOT.023",
+  "group": "BOOT",
+  "text": "Sfx"
+ },
+ {
+  "id": "BOOT.024",
+  "group": "BOOT",
+  "text": "Disabled"
+ },
+ {
+  "id": "BOOT.025",
+  "group": "BOOT",
+  "text": "Text Speed"
+ },
+ {
+  "id": "BOOT.026",
+  "group": "BOOT",
+  "text": "Display Text"
+ },
+ {
+  "id": "BOOT.028",
+  "group": "BOOT",
+  "text": "Do you want to replace this saved game? (Y/N)Y"
+ },
+ {
+  "id": "BOOT.030",
+  "group": "BOOT",
+  "text": "TEXT Speed Slow xxxxxxxxxx Fast"
+ },
+ {
+  "id": "BOOT.031",
+  "group": "BOOT",
+  "text": "Volume Low xxxxxxxxx High"
+ },
+ {
+  "id": "BOOT.032",
+  "group": "BOOT",
+  "text": "sfx Volume Low xxxxxxxxx High"
+ },
+ {
+  "id": "BOOT.033",
+  "group": "BOOT",
+  "text": "Recalibrating Joystick"
+ },
+ {
+  "id": "BOOT.034",
+  "group": "BOOT",
+  "text": "move the joystick to the upper left... hit any button"
+ },
+ {
+  "id": "BOOT.035",
+  "group": "BOOT",
+  "text": "move the joystick to the lower right... hit any button"
+ },
+ {
+  "id": "BOOT.036",
+  "group": "BOOT",
+  "text": "move the joystick to the center... hit any button"
+ },
+ {
+  "id": "BOOT.037",
+  "group": "BOOT",
+  "text": "Joystick Disabled"
+ },
+ {
+  "id": "SYSTEM.023",
+  "group": "SYSTEM",
+  "text": "M"
+ },
+ {
+  "id": "SYSTEM.003",
+  "group": "SYSTEM",
+  "text": "I don't have anything."
+ },
+ {
+  "id": "SYSTEM.004",
+  "group": "SYSTEM",
+  "text": "I've got nothing to say."
+ },
+ {
+  "id": "SYSTEM.005",
+  "group": "SYSTEM",
+  "text": "Naw."
+ },
+ {
+  "id": "SYSTEM.006",
+  "group": "SYSTEM",
+  "text": "Hmmm."
+ },
+ {
+  "id": "SYSTEM.007",
+  "group": "SYSTEM",
+  "text": "Don't think so."
+ },
+ {
+  "id": "SYSTEM.008",
+  "group": "SYSTEM",
+  "text": "Hmmm... no."
+ },
+ {
+  "id": "SYSTEM.009",
+  "group": "SYSTEM",
+  "text": "I can't reach it."
+ },
+ {
+  "id": "SYSTEM.010",
+  "group": "SYSTEM",
+  "text": "I don't have that."
+ },
+ {
+  "id": "SYSTEM.011",
+  "group": "SYSTEM",
+  "text": "I don't think so."
+ },
+ {
+  "id": "SYSTEM.012",
+  "group": "SYSTEM",
+  "text": "Hmmm."
+ },
+ {
+  "id": "SYSTEM.013",
+  "group": "SYSTEM",
+  "text": "Hey!"
+ },
+ {
+  "id": "SYSTEM.014",
+  "group": "SYSTEM",
+  "text": "Fun."
+ },
+ {
+  "id": "SYSTEM.015",
+  "group": "SYSTEM",
+  "text": "That won't fit."
+ },
+ {
+  "id": "SYSTEM.016",
+  "group": "SYSTEM",
+  "text": "Pardon?"
+ },
+ {
+  "id": "SYSTEM.017",
+  "group": "SYSTEM",
+  "text": "No."
+ },
+ {
+  "id": "SYSTEM.018",
+  "group": "SYSTEM",
+  "text": "Molasses machine."
+ },
+ {
+  "id": "SYSTEM.019",
+  "group": "SYSTEM",
+  "text": "Street legal machine."
+ },
+ {
+  "id": "SYSTEM.020",
+  "group": "SYSTEM",
+  "text": "Trans-warp drive machine."
+ },
+ {
+  "id": "SYSTEM.021",
+  "group": "SYSTEM",
+  "text": "Machine rating is"
+ },
+ {
+  "id": "SYSTEM.022",
+  "group": "SYSTEM",
+  "text": "Are you sure you want to win? (Y/N)"
+ }
+]

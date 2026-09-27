@@ -1,0 +1,527 @@
+[
+ {
+  "id": "CANNON.095",
+  "group": "CANNON",
+  "text": "Hello, ramrod with plastic hook."
+ },
+ {
+  "id": "CANNON.088",
+  "group": "CANNON",
+  "text": "Scraping a hook on that would be pointless."
+ },
+ {
+  "id": "CANNON.097",
+  "group": "CANNON",
+  "text": "I can't just use this by itself."
+ },
+ {
+  "id": "CANNON.085",
+  "group": "CANNON",
+  "text": "plastic hook"
+ },
+ {
+  "id": "CANNON.086",
+  "group": "CANNON",
+  "text": "It's Wally's fake pirate hook."
+ },
+ {
+  "id": "CANNON.087",
+  "group": "CANNON",
+  "text": "It's not a toothpick."
+ },
+ {
+  "id": "CANNON.089",
+  "group": "CANNON",
+  "text": "I don't need to wear a hook."
+ },
+ {
+  "id": "CANNON.090",
+  "group": "CANNON",
+  "text": "I have two good hands."
+ },
+ {
+  "id": "CANNON.091",
+  "group": "CANNON",
+  "text": "I don't want to pop the balloon."
+ },
+ {
+  "id": "CANNON.121",
+  "group": "CANNON",
+  "text": "grate"
+ },
+ {
+  "id": "CANNON.122",
+  "group": "CANNON",
+  "text": "Grate."
+ },
+ {
+  "id": "CANNON.123",
+  "group": "CANNON",
+  "text": "There's nobody up there to hear me."
+ },
+ {
+  "id": "CANNON.124",
+  "group": "CANNON",
+  "text": "Nobody friendly, anyway."
+ },
+ {
+  "id": "CANNON.125",
+  "group": "CANNON",
+  "text": "I can't reach it."
+ },
+ {
+  "id": "CANNON.126",
+  "group": "CANNON",
+  "text": "I can't reach it."
+ },
+ {
+  "id": "CANNON.127",
+  "group": "CANNON",
+  "text": "The grate is solid wood. I can't push it open."
+ },
+ {
+  "id": "CANNON.128",
+  "group": "CANNON",
+  "text": "The hook is too big to fit through the grate."
+ },
+ {
+  "id": "CANNON.080",
+  "group": "CANNON",
+  "text": "ramrod"
+ },
+ {
+  "id": "CANNON.081",
+  "group": "CANNON",
+  "text": "Looks like a ramrod for the cannon."
+ },
+ {
+  "id": "CANNON.082",
+  "group": "CANNON",
+  "text": "I don't want to talk to the ramrod."
+ },
+ {
+  "id": "CANNON.083",
+  "group": "CANNON",
+  "text": "That doesn't need to be loaded."
+ },
+ {
+  "id": "CANNON.084",
+  "group": "CANNON",
+  "text": "This has to be used with something else."
+ },
+ {
+  "id": "CANNON.001",
+  "group": "CANNON",
+  "text": "I've got to get out of here and help Elaine!"
+ },
+ {
+  "id": "CANNON.002",
+  "group": "CANNON",
+  "text": "If I could only get through this one door..."
+ },
+ {
+  "id": "CANNON.003",
+  "group": "CANNON",
+  "text": "...then I could easily overpower the armed guards above..."
+ },
+ {
+  "id": "CANNON.004",
+  "group": "CANNON",
+  "text": "...slip over the side and make for the shore."
+ },
+ {
+  "id": "CANNON.005",
+  "group": "CANNON",
+  "text": "Quit yer mumbling, captive!"
+ },
+ {
+  "id": "CANNONV.001",
+  "group": "CANNONV",
+  "text": "Unlimited cannon balls mode ON."
+ },
+ {
+  "id": "CANNONV.002",
+  "group": "CANNONV",
+  "text": "Unlimited cannon balls mode STILL ON."
+ },
+ {
+  "id": "CANNONV.010",
+  "group": "CANNONV",
+  "text": "Hey! You're gettin' a little close there, pal!"
+ },
+ {
+  "id": "CANNONV.011",
+  "group": "CANNONV",
+  "text": "Watch where you're shootin'!"
+ },
+ {
+  "id": "CANNONV.012",
+  "group": "CANNONV",
+  "text": "Whose side are you on?"
+ },
+ {
+  "id": "CANNONV.013",
+  "group": "CANNONV",
+  "text": "You're gonna get us all killed! Again!"
+ },
+ {
+  "id": "CANNONV.014",
+  "group": "CANNONV",
+  "text": "It's like you're not one of LeChuck's evil minions!"
+ },
+ {
+  "id": "CANNONV.015",
+  "group": "CANNONV",
+  "text": "The fort, you fool! Aim for the fort!"
+ },
+ {
+  "id": "CANNONV.016",
+  "group": "CANNONV",
+  "text": "Wally! When we get back to the boat, you're gonna be in trouble!"
+ },
+ {
+  "id": "CANNONV.017",
+  "group": "CANNONV",
+  "text": "Who is manning that cannon?"
+ },
+ {
+  "id": "CANNONV.018",
+  "group": "CANNONV",
+  "text": "Aim farther out, you idiot!"
+ },
+ {
+  "id": "CANNONV.019",
+  "group": "CANNONV",
+  "text": "Stop it!"
+ },
+ {
+  "id": "CANNONV.005",
+  "group": "CANNONV",
+  "text": "Whoops!"
+ },
+ {
+  "id": "CANNONV.006",
+  "group": "CANNONV",
+  "text": "That was me. Sorry."
+ },
+ {
+  "id": "CANNONV.007",
+  "group": "CANNONV",
+  "text": "Sorry about that!"
+ },
+ {
+  "id": "CANNONV.008",
+  "group": "CANNONV",
+  "text": "Oops! My fault!"
+ },
+ {
+  "id": "CANNONV.009",
+  "group": "CANNONV",
+  "text": "Ouch."
+ },
+ {
+  "id": "CANNONV.003",
+  "group": "CANNONV",
+  "text": "Hey! I'm getting pretty good at this..."
+ },
+ {
+  "id": "CANNONV.004",
+  "group": "CANNONV",
+  "text": "Ewww, gross... all the bones and stuff are floating towards the ship."
+ },
+ {
+  "id": "WATERLN.027",
+  "group": "WATERLN",
+  "text": "That will reach it, but it can't catch hold."
+ },
+ {
+  "id": "WATERLN.001",
+  "group": "WATERLN",
+  "text": "I can't quite squeeze past this cannon."
+ },
+ {
+  "id": "WATERLN.002",
+  "group": "WATERLN",
+  "text": "Move out of the way!"
+ },
+ {
+  "id": "WATERLN.003",
+  "group": "WATERLN",
+  "text": "I can't fire the cannon with you standing there!"
+ },
+ {
+  "id": "WATERLN.012",
+  "group": "WATERLN",
+  "text": "Well, they've messed with the wrong skull this time!"
+ },
+ {
+  "id": "WATERLN.013",
+  "group": "WATERLN",
+  "text": "If I could just get my hands on that gunner! If I could just get my hands, period!"
+ },
+ {
+  "id": "WATERLN.014",
+  "group": "WATERLN",
+  "text": "Ah, well. I guess I'll just have to look on the bright side of this."
+ },
+ {
+  "id": "WATERLN.015",
+  "group": "WATERLN",
+  "text": "At least I've lost some weight."
+ },
+ {
+  "id": "WATERLN.016",
+  "group": "WATERLN",
+  "text": "Boy! There's not much to do out here when you're just a bodiless head."
+ },
+ {
+  "id": "WATERLN.017",
+  "group": "WATERLN",
+  "text": "I could pass the time by whistling if I had lips."
+ },
+ {
+  "id": "WATERLN.018",
+  "group": "WATERLN",
+  "text": "This is just SO unfair!"
+ },
+ {
+  "id": "WATERLN.019",
+  "group": "WATERLN",
+  "text": "Now everybody's going to storm the fort and I'm going to be stuck here."
+ },
+ {
+  "id": "WATERLN.020",
+  "group": "WATERLN",
+  "text": "Hey!"
+ },
+ {
+  "id": "MURRAY.003",
+  "group": "MURRAY",
+  "text": "Can I call you BOB?"
+ },
+ {
+  "id": "MURRAY.002",
+  "group": "MURRAY",
+  "text": "Lose something?"
+ },
+ {
+  "id": "MURRAY.001",
+  "group": "MURRAY",
+  "text": "I'm Guybrush Threepwood, a mighty pirate!"
+ },
+ {
+  "id": "MURRAY.004",
+  "group": "MURRAY",
+  "text": "I'm Guybrush. Sorry about blasting your boat."
+ },
+ {
+  "id": "MURRAY.027",
+  "group": "MURRAY",
+  "text": "You may call me Murray!"
+ },
+ {
+  "id": "MURRAY.028",
+  "group": "MURRAY",
+  "text": "I'm a powerful demonic force!"
+ },
+ {
+  "id": "MURRAY.029",
+  "group": "MURRAY",
+  "text": "I'm the harbinger of your doom!"
+ },
+ {
+  "id": "MURRAY.030",
+  "group": "MURRAY",
+  "text": "And the forces of darkness will applaud me as I STRIDE through the gates of hell carrying your head on a pike!"
+ },
+ {
+  "id": "MURRAY.031",
+  "group": "MURRAY",
+  "text": "'Stride?'"
+ },
+ {
+  "id": "MURRAY.032",
+  "group": "MURRAY",
+  "text": "Alright then, 'ROLL! ROLL through the gates of hell.'"
+ },
+ {
+  "id": "MURRAY.033",
+  "group": "MURRAY",
+  "text": "Must you take the fun out of everything?"
+ },
+ {
+  "id": "MURRAY.017",
+  "group": "MURRAY",
+  "text": "I am Murray!"
+ },
+ {
+  "id": "MURRAY.018",
+  "group": "MURRAY",
+  "text": "The invincible, demonic skull!"
+ },
+ {
+  "id": "MURRAY.019",
+  "group": "MURRAY",
+  "text": "Quake in fear, mortal!"
+ },
+ {
+  "id": "MURRAY.020",
+  "group": "MURRAY",
+  "text": "For your insolence, I shall now devour you!"
+ },
+ {
+  "id": "MURRAY.021",
+  "group": "MURRAY",
+  "text": "Uh-huh."
+ },
+ {
+  "id": "MURRAY.022",
+  "group": "MURRAY",
+  "text": "Could you..."
+ },
+ {
+  "id": "MURRAY.023",
+  "group": "MURRAY",
+  "text": "...er..."
+ },
+ {
+  "id": "MURRAY.024",
+  "group": "MURRAY",
+  "text": "Could you pick me up, so I can bite you?"
+ },
+ {
+  "id": "MURRAY.025",
+  "group": "MURRAY",
+  "text": "No."
+ },
+ {
+  "id": "MURRAY.026",
+  "group": "MURRAY",
+  "text": "Just thought I'd ask."
+ },
+ {
+  "id": "MURRAY.005",
+  "group": "MURRAY",
+  "text": "I'm Murray,..."
+ },
+ {
+  "id": "MURRAY.006",
+  "group": "MURRAY",
+  "text": "...the demonic skeleton..."
+ },
+ {
+  "id": "MURRAY.007",
+  "group": "MURRAY",
+  "text": "...uh..."
+ },
+ {
+  "id": "MURRAY.008",
+  "group": "MURRAY",
+  "text": "...the mighty demonic skull!"
+ },
+ {
+  "id": "MURRAY.009",
+  "group": "MURRAY",
+  "text": "And I'm in need of some bones!"
+ },
+ {
+  "id": "MURRAY.010",
+  "group": "MURRAY",
+  "text": "Maybe I'll just take yours!"
+ },
+ {
+  "id": "MURRAY.011",
+  "group": "MURRAY",
+  "text": "Bwahahahaha!"
+ },
+ {
+  "id": "MURRAY.012",
+  "group": "MURRAY",
+  "text": "What are you going to do?"
+ },
+ {
+  "id": "MURRAY.013",
+  "group": "MURRAY",
+  "text": "Head-butt me?"
+ },
+ {
+  "id": "MURRAY.016",
+  "group": "MURRAY",
+  "text": "I'll think of something."
+ },
+ {
+  "id": "MURRAY.034",
+  "group": "MURRAY",
+  "text": "Then that sorrow will be the last thing you feel!"
+ },
+ {
+  "id": "MURRAY.035",
+  "group": "MURRAY",
+  "text": "You have come face to face with the terrible demon skull Murray!"
+ },
+ {
+  "id": "MURRAY.036",
+  "group": "MURRAY",
+  "text": "Now, let me hear your screams of terror!"
+ },
+ {
+  "id": "MURRAY.037",
+  "group": "MURRAY",
+  "text": "Eeek."
+ },
+ {
+  "id": "MURRAY.038",
+  "group": "MURRAY",
+  "text": "Aaah."
+ },
+ {
+  "id": "MURRAY.039",
+  "group": "MURRAY",
+  "text": "Ooooh."
+ },
+ {
+  "id": "MURRAY.040",
+  "group": "MURRAY",
+  "text": "I'm too petrified to say anything."
+ },
+ {
+  "id": "MURRAY.041",
+  "group": "MURRAY",
+  "text": "Bwahahahahahahaha!"
+ },
+ {
+  "id": "MURRAY.042",
+  "group": "MURRAY",
+  "text": "Why do you villains always laugh so much?"
+ },
+ {
+  "id": "MURRAY.044",
+  "group": "MURRAY",
+  "text": "You'd look great with a melting candle on your forehead."
+ },
+ {
+  "id": "MURRAY.043",
+  "group": "MURRAY",
+  "text": "You're about as fearsome as a doorstop."
+ },
+ {
+  "id": "MURRAY.046",
+  "group": "MURRAY",
+  "text": "I wasn't laughing about anything in particular."
+ },
+ {
+  "id": "MURRAY.047",
+  "group": "MURRAY",
+  "text": "Somewhere, there's a fish nibbling on my foot and it really tickles."
+ },
+ {
+  "id": "MURRAY.048",
+  "group": "MURRAY",
+  "text": "Is it a really EVIL looking doorstop?"
+ },
+ {
+  "id": "MURRAY.049",
+  "group": "MURRAY",
+  "text": "Never mind."
+ }
+]

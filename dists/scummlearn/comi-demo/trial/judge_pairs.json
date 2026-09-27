@@ -1,0 +1,2711 @@
+[
+ {
+  "id": "LOGO.023",
+  "win": "A",
+  "err_A": false,
+  "err_B": false,
+  "why": "A is natural construct; B's preposition is odd"
+ },
+ {
+  "id": "LOGO.024",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "Both natural, equally clear"
+ },
+ {
+  "id": "LOGO.028",
+  "win": "B",
+  "err_A": false,
+  "err_B": false,
+  "why": "B's pronoun more colloquial for kids"
+ },
+ {
+  "id": "LOGO.001",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "Both convey meaning naturally"
+ },
+ {
+  "id": "LOGO.002",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "Both fine; A simpler, B fuller"
+ },
+ {
+  "id": "CANNON.007",
+  "win": "B",
+  "err_A": false,
+  "err_B": false,
+  "why": "B's phrasing slightly more natural"
+ },
+ {
+  "id": "CANNON.012",
+  "win": "A",
+  "err_A": false,
+  "err_B": true,
+  "why": "B mistranslates chest as body part"
+ },
+ {
+  "id": "CANNON.009",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "Both correct synonyms for flogging"
+ },
+ {
+  "id": "CANNON.010",
+  "win": "A",
+  "err_A": false,
+  "err_B": false,
+  "why": "A's word simpler for kids"
+ },
+ {
+  "id": "CANNON.017",
+  "win": "A",
+  "err_A": false,
+  "err_B": true,
+  "why": "B invents non-word for manatee"
+ },
+ {
+  "id": "CANNON.018",
+  "win": "A",
+  "err_A": false,
+  "err_B": false,
+  "why": "A closer to literal meaning"
+ },
+ {
+  "id": "CANNON.019",
+  "win": "B",
+  "err_A": false,
+  "err_B": false,
+  "why": "B's phrasing slightly more natural"
+ },
+ {
+  "id": "CANNON.024",
+  "win": "A",
+  "err_A": false,
+  "err_B": false,
+  "why": "A better matches stay-put meaning"
+ },
+ {
+  "id": "CANNON.025",
+  "win": "A",
+  "err_A": false,
+  "err_B": false,
+  "why": "A better matches stay-put meaning"
+ },
+ {
+  "id": "CANNON.026",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "Both convey command reasonably"
+ },
+ {
+  "id": "WALLYDLG.002",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "Both mean filthy/mangy equally well"
+ },
+ {
+  "id": "WALLYDLG.004",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "Just interjection spelling variants"
+ },
+ {
+  "id": "WALLYDLG.005",
+  "win": "A",
+  "err_A": false,
+  "err_B": false,
+  "why": "A uses correct word for jacket"
+ },
+ {
+  "id": "WALLYDLG.006",
+  "win": "B",
+  "err_A": false,
+  "err_B": false,
+  "why": "B keeps question form, correct word"
+ },
+ {
+  "id": "WALLYDLG.007",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "Both fine synonyms for evil"
+ },
+ {
+  "id": "WALLYDLG.008",
+  "win": "A",
+  "err_A": false,
+  "err_B": false,
+  "why": "B has awkward word order"
+ },
+ {
+  "id": "WALLYDLG.009",
+  "win": "A",
+  "err_A": false,
+  "err_B": true,
+  "why": "B has garbled unreadable phrasing"
+ },
+ {
+  "id": "WALLYDLG.011",
+  "win": "B",
+  "err_A": true,
+  "err_B": false,
+  "why": "A has broken grammar, unnatural"
+ },
+ {
+  "id": "WALLYDLG.012",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "Both fine, B simpler"
+ },
+ {
+  "id": "WALLYDLG.013",
+  "win": "A",
+  "err_A": false,
+  "err_B": true,
+  "why": "B garbled, confuses seas with days"
+ },
+ {
+  "id": "WALLYDLG.014",
+  "win": "B",
+  "err_A": false,
+  "err_B": false,
+  "why": "B shorter, more natural for kids"
+ },
+ {
+  "id": "WALLYDLG.018",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "Both fine equivalent insults"
+ },
+ {
+  "id": "WALLYDLG.019",
+  "win": "B",
+  "err_A": false,
+  "err_B": false,
+  "why": "B has correct grammar (victim to)"
+ },
+ {
+  "id": "WALLYDLG.026",
+  "win": "A",
+  "err_A": false,
+  "err_B": false,
+  "why": "A keeps the object 'one'"
+ },
+ {
+  "id": "WALLYDLG.027",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "Both natural equivalents"
+ },
+ {
+  "id": "WALLYDLG.030",
+  "win": "B",
+  "err_A": true,
+  "err_B": false,
+  "why": "A uses a non-word, unclear"
+ },
+ {
+  "id": "WALLYDLG.031",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "Both mean shut up equally"
+ },
+ {
+  "id": "WALLYDLG.032",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "Both convey silencing meaning fine"
+ },
+ {
+  "id": "WALLYDLG.033",
+  "win": "A",
+  "err_A": false,
+  "err_B": true,
+  "why": "B is not idiomatic for disgust"
+ },
+ {
+  "id": "WALLYDLG.034",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "Same meaning, minor style only"
+ },
+ {
+  "id": "WALLYDLG.035",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "Same meaning, minor style only"
+ },
+ {
+  "id": "WALLYDLG.036",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "Same meaning, minor style only"
+ },
+ {
+  "id": "WALLYDLG.039",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "Ambiguous without more context"
+ },
+ {
+  "id": "WALLYDLG.040",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "Both verbs acceptable for beard"
+ },
+ {
+  "id": "WALLYDLG.041",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "Both acceptable insult translations"
+ },
+ {
+  "id": "WALLYDLG.043",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "Just spelling variants of hook sound"
+ },
+ {
+  "id": "WALLYDLG.042",
+  "win": "A",
+  "err_A": false,
+  "err_B": false,
+  "why": "A uses standard word for eyepatch"
+ },
+ {
+  "id": "WALLYDLG.044",
+  "win": "B",
+  "err_A": false,
+  "err_B": false,
+  "why": "B uses correct verb to borrow"
+ },
+ {
+  "id": "MURRAY.045",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "Both natural equivalents"
+ },
+ {
+  "id": "WALLYDLG.045",
+  "win": "A",
+  "err_A": false,
+  "err_B": false,
+  "why": "A keeps locker reference better"
+ },
+ {
+  "id": "WALLYDLG.046",
+  "win": "B",
+  "err_A": true,
+  "err_B": false,
+  "why": "A drops key nine-tails detail"
+ },
+ {
+  "id": "WALLYDLG.047",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "Both keep the joke numbers"
+ },
+ {
+  "id": "WALLYDLG.048",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "Both fine, cut off equally"
+ },
+ {
+  "id": "WALLYDLG.049",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "Filler sounds, both acceptable"
+ },
+ {
+  "id": "WALLYDLG.051",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "Filler sounds, both acceptable"
+ },
+ {
+  "id": "WALLYDLG.053",
+  "win": "B",
+  "err_A": true,
+  "err_B": false,
+  "why": "A uses wrong tense, changes meaning"
+ },
+ {
+  "id": "WALLYDLG.054",
+  "win": "A",
+  "err_A": false,
+  "err_B": true,
+  "why": "B's reply doesn't logically match"
+ },
+ {
+  "id": "WALLYDLG.055",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "Both fine, A slightly better gender"
+ },
+ {
+  "id": "WALLYDLG.056",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "Both natural equivalents"
+ },
+ {
+  "id": "WALLYDLG.058",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "Both natural equivalents"
+ },
+ {
+  "id": "WALLYDLG.060",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "Both natural, minor pronoun difference"
+ },
+ {
+  "id": "WALLYDLG.061",
+  "win": "B",
+  "err_A": false,
+  "err_B": false,
+  "why": "B uses correct verb for wearing"
+ },
+ {
+  "id": "WALLYDLG.062",
+  "win": "B",
+  "err_A": true,
+  "err_B": false,
+  "why": "A's grammar reverses the meaning"
+ },
+ {
+  "id": "WALLYDLG.063",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "Both natural equivalents"
+ },
+ {
+  "id": "WALLYDLG.065",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "Both natural, B slightly better verb"
+ },
+ {
+  "id": "WALLYDLG.066",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "Only punctuation differs"
+ },
+ {
+  "id": "WALLYDLG.067",
+  "win": "A",
+  "err_A": false,
+  "err_B": false,
+  "why": "A keeps contradiction tone better"
+ },
+ {
+  "id": "WALLYDLG.068",
+  "win": "B",
+  "err_A": false,
+  "err_B": false,
+  "why": "B cleaner and more natural"
+ },
+ {
+  "id": "WALLYDLG.069",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "Both fine, B more colloquial"
+ },
+ {
+  "id": "WALLYDLG.070",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "Both convey admission clearly"
+ },
+ {
+  "id": "WALLYDLG.071",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "Only wording variant, same meaning"
+ },
+ {
+  "id": "WALLYDLG.072",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "Minor singular/plural difference only"
+ },
+ {
+  "id": "WALLYDLG.073",
+  "win": "B",
+  "err_A": false,
+  "err_B": false,
+  "why": "B includes 'just', less redundant"
+ },
+ {
+  "id": "WALLYDLG.074",
+  "win": "A",
+  "err_A": false,
+  "err_B": false,
+  "why": "A matches present tense of English"
+ },
+ {
+  "id": "WALLYDLG.075",
+  "win": "A",
+  "err_A": false,
+  "err_B": true,
+  "why": "B uses wrong word, not hangnail"
+ },
+ {
+  "id": "WALLYDLG.076",
+  "win": "A",
+  "err_A": false,
+  "err_B": true,
+  "why": "B's verb means stuck, not infected"
+ },
+ {
+  "id": "WALLYDLG.077",
+  "win": "B",
+  "err_A": false,
+  "err_B": false,
+  "why": "B better matches scallawag/rascal tone"
+ },
+ {
+  "id": "WALLYDLG.078",
+  "win": "A",
+  "err_A": false,
+  "err_B": false,
+  "why": "A better matches scofflaw meaning"
+ },
+ {
+  "id": "WALLYDLG.079",
+  "win": "B",
+  "err_A": true,
+  "err_B": false,
+  "why": "A's word means smoking, not steaming"
+ },
+ {
+  "id": "WALLYDLG.082",
+  "win": "B",
+  "err_A": false,
+  "err_B": false,
+  "why": "B more idiomatic Hebrew expression"
+ },
+ {
+  "id": "WALLYDLG.083",
+  "win": "B",
+  "err_A": false,
+  "err_B": false,
+  "why": "B keeps 'even', more complete"
+ },
+ {
+  "id": "WALLYDLG.084",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "Both natural equivalents"
+ },
+ {
+  "id": "WALLYDLG.085",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "Both natural equivalents"
+ },
+ {
+  "id": "WALLYDLG.086",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "Both natural equivalents"
+ },
+ {
+  "id": "WALLYDLG.087",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "Only spelling variant, same word"
+ },
+ {
+  "id": "WALLYDLG.088",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "Filler sounds, both acceptable"
+ },
+ {
+  "id": "WALLYDLG.092",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "Ambiguous without more context"
+ },
+ {
+  "id": "WALLYDLG.093",
+  "win": "B",
+  "err_A": false,
+  "err_B": false,
+  "why": "B closer literal match, natural"
+ },
+ {
+  "id": "WALLYDLG.094",
+  "win": "B",
+  "err_A": false,
+  "err_B": false,
+  "why": "B's filler more kid-friendly"
+ },
+ {
+  "id": "WALLYDLG.095",
+  "win": "A",
+  "err_A": false,
+  "err_B": true,
+  "why": "B's phrasing is awkward, unclear"
+ },
+ {
+  "id": "WALLYDLG.097",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "Same meaning, word order only"
+ },
+ {
+  "id": "WALLYDLG.098",
+  "win": "A",
+  "err_A": false,
+  "err_B": false,
+  "why": "B adds 'a bit', not in original"
+ },
+ {
+  "id": "WALLYDLG.099",
+  "win": "B",
+  "err_A": false,
+  "err_B": false,
+  "why": "B more complete and clear"
+ },
+ {
+  "id": "WALLYDLG.101",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "Both natural equivalents"
+ },
+ {
+  "id": "WALLYDLG.104",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "Both natural, common phrasing"
+ },
+ {
+  "id": "WALLYDLG.105",
+  "win": "A",
+  "err_A": false,
+  "err_B": false,
+  "why": "A's self-intro reads more natural"
+ },
+ {
+  "id": "WALLYDLG.106",
+  "win": "B",
+  "err_A": false,
+  "err_B": false,
+  "why": "B keeps 'oh' better"
+ },
+ {
+  "id": "WALLYDLG.107",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "Transliteration variant only"
+ },
+ {
+  "id": "WALLYDLG.111",
+  "win": "B",
+  "err_A": false,
+  "err_B": false,
+  "why": "B uses precise word for dungeon"
+ },
+ {
+  "id": "WALLYDLG.112",
+  "win": "A",
+  "err_A": false,
+  "err_B": true,
+  "why": "B drops 'living', changes tense"
+ },
+ {
+  "id": "WALLYDLG.113",
+  "win": "B",
+  "err_A": false,
+  "err_B": false,
+  "why": "B sounds closer to name Brush"
+ },
+ {
+  "id": "WALLYDLG.114",
+  "win": "A",
+  "err_A": false,
+  "err_B": false,
+  "why": "A more direct, simpler for kids"
+ },
+ {
+  "id": "WALLYDLG.115",
+  "win": "A",
+  "err_A": false,
+  "err_B": false,
+  "why": "A's word matches seminar better"
+ },
+ {
+  "id": "WALLYDLG.116",
+  "win": "B",
+  "err_A": true,
+  "err_B": false,
+  "why": "A loses the audio-parrot pun entirely"
+ },
+ {
+  "id": "WALLYDLG.119",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "Same meaning, word order only"
+ },
+ {
+  "id": "WALLYDLG.120",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "Same meaning, word order only"
+ },
+ {
+  "id": "WALLYDLG.121",
+  "win": "B",
+  "err_A": false,
+  "err_B": false,
+  "why": "B matches 'seminars' more accurately"
+ },
+ {
+  "id": "WALLYDLG.122",
+  "win": "A",
+  "err_A": false,
+  "err_B": false,
+  "why": "A keeps 'motivational', B drops it"
+ },
+ {
+  "id": "WALLYDLG.123",
+  "win": "A",
+  "err_A": false,
+  "err_B": true,
+  "why": "B drops 'audio', loses joke detail"
+ },
+ {
+  "id": "WALLYDLG.124",
+  "win": "B",
+  "err_A": false,
+  "err_B": false,
+  "why": "B more complete, matches literature"
+ },
+ {
+  "id": "WALLYDLG.126",
+  "win": "A",
+  "err_A": false,
+  "err_B": true,
+  "why": "B's word means pleading, not hype"
+ },
+ {
+  "id": "WALLYDLG.127",
+  "win": "A",
+  "err_A": false,
+  "err_B": false,
+  "why": "A closer to 'focus' meaning"
+ },
+ {
+  "id": "WALLYDLG.128",
+  "win": "B",
+  "err_A": false,
+  "err_B": false,
+  "why": "B uses precise word for empowering"
+ },
+ {
+  "id": "WALLYDLG.130",
+  "win": "A",
+  "err_A": false,
+  "err_B": true,
+  "why": "B has a garbled/wrong adjective"
+ },
+ {
+  "id": "WALLYDLG.131",
+  "win": "B",
+  "err_A": false,
+  "err_B": false,
+  "why": "B more complete, keeps both words"
+ },
+ {
+  "id": "WALLYDLG.133",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "Both grammatically fine pronoun choices"
+ },
+ {
+  "id": "WALLYDLG.134",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "Same meaning, minor style only"
+ },
+ {
+  "id": "WALLYDLG.135",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "Both good simplifications for kids"
+ },
+ {
+  "id": "WALLYDLG.136",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "Same meaning, minor style only"
+ },
+ {
+  "id": "WALLYDLG.137",
+  "win": "B",
+  "err_A": true,
+  "err_B": false,
+  "why": "A drops 'scum', loses insult force"
+ },
+ {
+  "id": "WALLYDLG.138",
+  "win": "A",
+  "err_A": false,
+  "err_B": true,
+  "why": "B drops the funny 'own legs' detail"
+ },
+ {
+  "id": "WALLYDLG.139",
+  "win": "B",
+  "err_A": true,
+  "err_B": false,
+  "why": "A has singular/plural grammar error"
+ },
+ {
+  "id": "WALLYDLG.140",
+  "win": "B",
+  "err_A": false,
+  "err_B": false,
+  "why": "B's verb form more precise"
+ },
+ {
+  "id": "WALLYDLG.141",
+  "win": "B",
+  "err_A": true,
+  "err_B": false,
+  "why": "A loses audio-parrot pun again"
+ },
+ {
+  "id": "WALLYDLG.142",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "Only hyphenation differs"
+ },
+ {
+  "id": "WALLYDLG.143",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "Same meaning, minor style only"
+ },
+ {
+  "id": "WALLYDLG.144",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "Same meaning, minor style only"
+ },
+ {
+  "id": "WALLYDLG.145",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "Same meaning, minor style only"
+ },
+ {
+  "id": "WALLYDLG.146",
+  "win": "B",
+  "err_A": false,
+  "err_B": false,
+  "why": "B keeps 'just/exactly' nuance"
+ },
+ {
+  "id": "WALLYDLG.147",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "Both understandable, A slightly fuller"
+ },
+ {
+  "id": "WALLYDLG.148",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "Idiom untranslatable, both reasonable"
+ },
+ {
+  "id": "WALLYDLG.149",
+  "win": "A",
+  "err_A": false,
+  "err_B": true,
+  "why": "B replaces timbers with bones, wrong"
+ },
+ {
+  "id": "WALLYDLG.150",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "Both fit parrot context fine"
+ },
+ {
+  "id": "WALLYDLG.151",
+  "win": "A",
+  "err_A": false,
+  "err_B": true,
+  "why": "B drops 'command respect' meaning"
+ },
+ {
+  "id": "WALLYDLG.153",
+  "win": "A",
+  "err_A": false,
+  "err_B": true,
+  "why": "B drops literature detail"
+ },
+ {
+  "id": "WALLYDLG.157",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "both fine imperative forms"
+ },
+ {
+  "id": "WALLYDLG.158",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "both natural equivalents"
+ },
+ {
+  "id": "WALLYDLG.159",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "both natural equivalents"
+ },
+ {
+  "id": "WALLYDLG.161",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "both natural equivalents"
+ },
+ {
+  "id": "WALLYDLG.162",
+  "win": "A",
+  "err_A": false,
+  "err_B": true,
+  "why": "B implies literal sleep, wrong nuance"
+ },
+ {
+  "id": "WALLYDLG.163",
+  "win": "B",
+  "err_A": false,
+  "err_B": false,
+  "why": "B closer to failure meaning"
+ },
+ {
+  "id": "WALLYDLG.164",
+  "win": "A",
+  "err_A": false,
+  "err_B": true,
+  "why": "B garbles name Brush"
+ },
+ {
+  "id": "WALLYDLG.165",
+  "win": "A",
+  "err_A": false,
+  "err_B": true,
+  "why": "B missing definite article, awkward"
+ },
+ {
+  "id": "WALLYDLG.166",
+  "win": "A",
+  "err_A": false,
+  "err_B": false,
+  "why": "A closer to besides"
+ },
+ {
+  "id": "WALLYDLG.167",
+  "win": "A",
+  "err_A": false,
+  "err_B": true,
+  "why": "B uses broken verb form"
+ },
+ {
+  "id": "WALLYDLG.168",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "both interjections fine"
+ },
+ {
+  "id": "WALLYDLG.169",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "both acceptable"
+ },
+ {
+  "id": "WALLYDLG.170",
+  "win": "B",
+  "err_A": false,
+  "err_B": false,
+  "why": "B keeps heaps and piles imagery"
+ },
+ {
+  "id": "WALLYDLG.171",
+  "win": "B",
+  "err_A": false,
+  "err_B": false,
+  "why": "B keeps ever nuance"
+ },
+ {
+  "id": "WALLYDLG.173",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "both interjections fine"
+ },
+ {
+  "id": "WALLYDLG.174",
+  "win": "A",
+  "err_A": false,
+  "err_B": false,
+  "why": "A slightly fuller"
+ },
+ {
+  "id": "WALLYDLG.175",
+  "win": "A",
+  "err_A": false,
+  "err_B": true,
+  "why": "B wrong tense changes meaning"
+ },
+ {
+  "id": "WALLYDLG.176",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "both natural"
+ },
+ {
+  "id": "WALLYDLG.177",
+  "win": "A",
+  "err_A": false,
+  "err_B": false,
+  "why": "A more complete/accurate"
+ },
+ {
+  "id": "WALLYDLG.178",
+  "win": "A",
+  "err_A": false,
+  "err_B": true,
+  "why": "B has incorrect verb form"
+ },
+ {
+  "id": "WALLYDLG.179",
+  "win": "B",
+  "err_A": false,
+  "err_B": false,
+  "why": "B uses correct fort word"
+ },
+ {
+  "id": "WALLYDLG.180",
+  "win": "A",
+  "err_A": false,
+  "err_B": true,
+  "why": "B drops sea-bass insult"
+ },
+ {
+  "id": "WALLYDLG.181",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "both accurate"
+ },
+ {
+  "id": "WALLYDLG.182",
+  "win": "B",
+  "err_A": true,
+  "err_B": false,
+  "why": "A loses blowfish/coward imagery"
+ },
+ {
+  "id": "WALLYDLG.183",
+  "win": "B",
+  "err_A": false,
+  "err_B": false,
+  "why": "B matches peep better"
+ },
+ {
+  "id": "WALLYDLG.184",
+  "win": "A",
+  "err_A": false,
+  "err_B": true,
+  "why": "B phonetic word meaningless in Hebrew"
+ },
+ {
+  "id": "WALLYDLG.185",
+  "win": "A",
+  "err_A": false,
+  "err_B": true,
+  "why": "B literal, loses idiom meaning"
+ },
+ {
+  "id": "WALLYDLG.186",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "both convey insult fine"
+ },
+ {
+  "id": "WALLYDLG.188",
+  "win": "A",
+  "err_A": false,
+  "err_B": true,
+  "why": "B shifts to warning not disbelief"
+ },
+ {
+  "id": "WALLYDLG.189",
+  "win": "B",
+  "err_A": true,
+  "err_B": false,
+  "why": "A has gender agreement error"
+ },
+ {
+  "id": "WALLYDLG.190",
+  "win": "B",
+  "err_A": false,
+  "err_B": false,
+  "why": "B clearer for kids"
+ },
+ {
+  "id": "WALLYDLG.191",
+  "win": "B",
+  "err_A": true,
+  "err_B": false,
+  "why": "A mistranslates shoot as send"
+ },
+ {
+  "id": "WALLYDLG.194",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "both accurate"
+ },
+ {
+  "id": "WALLYDLG.196",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "both convey threat"
+ },
+ {
+  "id": "WALLYDLG.197",
+  "win": "A",
+  "err_A": false,
+  "err_B": true,
+  "why": "B loses swab-specific insult"
+ },
+ {
+  "id": "WALLYDLG.198",
+  "win": "tie",
+  "err_A": true,
+  "err_B": true,
+  "why": "both lose let-you-have-it idiom"
+ },
+ {
+  "id": "WALLYDLG.199",
+  "win": "B",
+  "err_A": true,
+  "err_B": false,
+  "why": "A loses jellyfish image entirely"
+ },
+ {
+  "id": "WALLYDLG.200",
+  "win": "B",
+  "err_A": true,
+  "err_B": false,
+  "why": "A loses sasquatch image entirely"
+ },
+ {
+  "id": "WALLYDLG.201",
+  "win": "A",
+  "err_A": false,
+  "err_B": true,
+  "why": "B uses nonstandard verb form"
+ },
+ {
+  "id": "CANNON.034",
+  "win": "A",
+  "err_A": false,
+  "err_B": true,
+  "why": "B has garbled unreadable word"
+ },
+ {
+  "id": "CANNON.035",
+  "win": "B",
+  "err_A": true,
+  "err_B": false,
+  "why": "A word means engrave, wrong meaning"
+ },
+ {
+  "id": "CANNON.036",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "both fine equivalents"
+ },
+ {
+  "id": "CANNON.037",
+  "win": "B",
+  "err_A": true,
+  "err_B": false,
+  "why": "A uses wrong verb, wearing not dressing"
+ },
+ {
+  "id": "CANNON.038",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "both fine"
+ },
+ {
+  "id": "CANNON.039",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "both fine"
+ },
+ {
+  "id": "CANNON.040",
+  "win": "B",
+  "err_A": false,
+  "err_B": false,
+  "why": "B matches rubble better"
+ },
+ {
+  "id": "CANNON.041",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "both keep dramatic pause"
+ },
+ {
+  "id": "CANNON.042",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "both fine, B simpler"
+ },
+ {
+  "id": "CANNON.043",
+  "win": "A",
+  "err_A": false,
+  "err_B": true,
+  "why": "B mistranslates violence and desensitizing"
+ },
+ {
+  "id": "CANNON.050",
+  "win": "A",
+  "err_A": false,
+  "err_B": true,
+  "why": "B garbled nonsense words"
+ },
+ {
+  "id": "CANNON.051",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "both fine"
+ },
+ {
+  "id": "CANNON.053",
+  "win": "A",
+  "err_A": false,
+  "err_B": false,
+  "why": "B awkward sentence opener"
+ },
+ {
+  "id": "CANNON.055",
+  "win": "A",
+  "err_A": false,
+  "err_B": true,
+  "why": "B garbled, drops hellspawn"
+ },
+ {
+  "id": "CANNON.056",
+  "win": "B",
+  "err_A": true,
+  "err_B": false,
+  "why": "A mistranslates watch out as fear well"
+ },
+ {
+  "id": "CANNON.057",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "both fine"
+ },
+ {
+  "id": "CANNON.044",
+  "win": "B",
+  "err_A": false,
+  "err_B": false,
+  "why": "B natural greeting, A phone-only"
+ },
+ {
+  "id": "CANNON.045",
+  "win": "B",
+  "err_A": true,
+  "err_B": false,
+  "why": "A logic confusing, and vs or"
+ },
+ {
+  "id": "CANNON.049",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "both acceptable number choice"
+ },
+ {
+  "id": "CANNON.058",
+  "win": "B",
+  "err_A": true,
+  "err_B": false,
+  "why": "A uses incorrect no-one construction"
+ },
+ {
+  "id": "CANNON.027",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "both convey idiom"
+ },
+ {
+  "id": "CANNON.028",
+  "win": "A",
+  "err_A": false,
+  "err_B": true,
+  "why": "B has redundant double possessive"
+ },
+ {
+  "id": "CANNON.029",
+  "win": "A",
+  "err_A": false,
+  "err_B": true,
+  "why": "B mistranslates room as distance"
+ },
+ {
+  "id": "CANNON.030",
+  "win": "A",
+  "err_A": false,
+  "err_B": true,
+  "why": "B mistranslates room as distance"
+ },
+ {
+  "id": "CANNON.031",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "spelling variant, both readable"
+ },
+ {
+  "id": "CANNON.032",
+  "win": "A",
+  "err_A": false,
+  "err_B": false,
+  "why": "A keeps subject, more complete"
+ },
+ {
+  "id": "CANNON.033",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "both fine"
+ },
+ {
+  "id": "WALLYDLG.203",
+  "win": "B",
+  "err_A": true,
+  "err_B": false,
+  "why": "A uses nonstandard broken idiom"
+ },
+ {
+  "id": "WALLYDLG.206",
+  "win": "A",
+  "err_A": false,
+  "err_B": true,
+  "why": "B uses wrong/made-up verb and number"
+ },
+ {
+  "id": "WALLYDLG.210",
+  "win": "B",
+  "err_A": true,
+  "err_B": false,
+  "why": "A word means pins, nonsensical"
+ },
+ {
+  "id": "WALLYDLG.211",
+  "win": "B",
+  "err_A": true,
+  "err_B": false,
+  "why": "A missing object marker, ungrammatical"
+ },
+ {
+  "id": "WALLYDLG.216",
+  "win": "A",
+  "err_A": false,
+  "err_B": false,
+  "why": "A word fits ferocious better"
+ },
+ {
+  "id": "WALLYDLG.219",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "both awkward double negative equally"
+ },
+ {
+  "id": "WALLYDLG.220",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "both interjections fine"
+ },
+ {
+  "id": "WALLYDLG.221",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "both natural comforting phrases"
+ },
+ {
+  "id": "CANNON.060",
+  "win": "B",
+  "err_A": false,
+  "err_B": false,
+  "why": "B simpler word, more accurate phrasing"
+ },
+ {
+  "id": "CANNON.063",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "both fine"
+ },
+ {
+  "id": "CANNON.064",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "both fine"
+ },
+ {
+  "id": "CANNON.020",
+  "win": "B",
+  "err_A": false,
+  "err_B": false,
+  "why": "B more natural colloquial phrasing"
+ },
+ {
+  "id": "CANNON.021",
+  "win": "A",
+  "err_A": false,
+  "err_B": false,
+  "why": "A captures emphatic tone slightly better"
+ },
+ {
+  "id": "CANNON.022",
+  "win": "A",
+  "err_A": false,
+  "err_B": true,
+  "why": "B mistranslates hands off as hands up"
+ },
+ {
+  "id": "CANNON.023",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "spelling variants both fine"
+ },
+ {
+  "id": "WALLYDLG.218",
+  "win": "A",
+  "err_A": false,
+  "err_B": true,
+  "why": "B word means groan, wrong sound type"
+ },
+ {
+  "id": "WALLYDLG.222",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "both valid words for weeping"
+ },
+ {
+  "id": "CANNON.073",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "both natural, B more colorful"
+ },
+ {
+  "id": "CANNON.076",
+  "win": "B",
+  "err_A": true,
+  "err_B": false,
+  "why": "A uses inappropriate vulgar slang for kids"
+ },
+ {
+  "id": "CANNON.077",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "both fine"
+ },
+ {
+  "id": "CANNON.078",
+  "win": "A",
+  "err_A": false,
+  "err_B": true,
+  "why": "B mistranslates poor as crook"
+ },
+ {
+  "id": "CANNON.079",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "both fine"
+ },
+ {
+  "id": "CANNON.098",
+  "win": "B",
+  "err_A": true,
+  "err_B": false,
+  "why": "A uses confusing/wrong word for restraint"
+ },
+ {
+  "id": "CANNON.099",
+  "win": "B",
+  "err_A": true,
+  "err_B": false,
+  "why": "A uses confusing/wrong word for restraint"
+ },
+ {
+  "id": "CANNON.101",
+  "win": "A",
+  "err_A": false,
+  "err_B": true,
+  "why": "B grammatically broken, wrong word"
+ },
+ {
+  "id": "CANNON.102",
+  "win": "B",
+  "err_A": true,
+  "err_B": false,
+  "why": "A uses solve instead of untie"
+ },
+ {
+  "id": "CANNON.105",
+  "win": "B",
+  "err_A": true,
+  "err_B": false,
+  "why": "A uses nonstandard invalid verb"
+ },
+ {
+  "id": "CANNON.108",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "both fine gender choices"
+ },
+ {
+  "id": "CANNON.109",
+  "win": "A",
+  "err_A": false,
+  "err_B": false,
+  "why": "B drops verb, slightly unclear"
+ },
+ {
+  "id": "CANNON.070",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "both fine"
+ },
+ {
+  "id": "CANNON.071",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "both fine"
+ },
+ {
+  "id": "CANNON.130",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "both fine word choices"
+ },
+ {
+  "id": "CANNON.131",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "both fine"
+ },
+ {
+  "id": "CANNON.132",
+  "win": "A",
+  "err_A": false,
+  "err_B": false,
+  "why": "A uses more accurate word for diet"
+ },
+ {
+  "id": "CANNON.133",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "both fine"
+ },
+ {
+  "id": "CANNON.135",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "both fine"
+ },
+ {
+  "id": "CANNON.119",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "both fine"
+ },
+ {
+  "id": "CANNON.120",
+  "win": "B",
+  "err_A": false,
+  "err_B": false,
+  "why": "B more precise on cannon balls"
+ },
+ {
+  "id": "CANNON.112",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "both valid keyhole terms"
+ },
+ {
+  "id": "CANNON.113",
+  "win": "A",
+  "err_A": false,
+  "err_B": true,
+  "why": "B uses odd incorrect lock-picking term"
+ },
+ {
+  "id": "CANNON.114",
+  "win": "A",
+  "err_A": false,
+  "err_B": true,
+  "why": "B uses odd incorrect lock-picking term"
+ },
+ {
+  "id": "CANNON.115",
+  "win": "A",
+  "err_A": false,
+  "err_B": true,
+  "why": "B wrong grammatical number, plural mismatch"
+ },
+ {
+  "id": "CANNON.116",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "both valid keyhole terms"
+ },
+ {
+  "id": "CANNON.066",
+  "win": "B",
+  "err_A": true,
+  "err_B": false,
+  "why": "A has gender agreement mismatch with door"
+ },
+ {
+  "id": "CANNON.067",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "both fine"
+ },
+ {
+  "id": "CANNON.068",
+  "win": "B",
+  "err_A": false,
+  "err_B": false,
+  "why": "B keeps cutlass short-sword nuance"
+ },
+ {
+  "id": "CANNON.110",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "both fine"
+ },
+ {
+  "id": "CANNON.093",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "both fine"
+ },
+ {
+  "id": "CANNON.094",
+  "win": "A",
+  "err_A": false,
+  "err_B": true,
+  "why": "B uses nonstandard/invalid word"
+ },
+ {
+  "id": "CANNON.095",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "both fine"
+ },
+ {
+  "id": "CANNON.088",
+  "win": "B",
+  "err_A": false,
+  "err_B": false,
+  "why": "B verb closer to scraping"
+ },
+ {
+  "id": "CANNON.097",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "punctuation only difference"
+ },
+ {
+  "id": "CANNON.086",
+  "win": "B",
+  "err_A": false,
+  "err_B": false,
+  "why": "B keeps pirate descriptor"
+ },
+ {
+  "id": "CANNON.087",
+  "win": "B",
+  "err_A": false,
+  "err_B": false,
+  "why": "B unambiguous toothpick term"
+ },
+ {
+  "id": "CANNON.089",
+  "win": "B",
+  "err_A": true,
+  "err_B": false,
+  "why": "A uses wrong verb register for wearing hook"
+ },
+ {
+  "id": "CANNON.090",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "identical aside punctuation"
+ },
+ {
+  "id": "CANNON.091",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "identical aside punctuation"
+ },
+ {
+  "id": "CANNON.123",
+  "win": "A",
+  "err_A": false,
+  "err_B": false,
+  "why": "B drops up-there location detail"
+ },
+ {
+  "id": "CANNON.124",
+  "win": "B",
+  "err_A": true,
+  "err_B": false,
+  "why": "A mistranslates anyway as at least"
+ },
+ {
+  "id": "CANNON.127",
+  "win": "B",
+  "err_A": true,
+  "err_B": false,
+  "why": "A incomplete construction, missing object"
+ },
+ {
+  "id": "CANNON.128",
+  "win": "A",
+  "err_A": false,
+  "err_B": true,
+  "why": "B uses wrong transitive verb form"
+ },
+ {
+  "id": "CANNON.080",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "both established terms"
+ },
+ {
+  "id": "CANNON.081",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "Both accurate synonyms for ramrod"
+ },
+ {
+  "id": "CANNON.082",
+  "win": "A",
+  "err_A": false,
+  "err_B": false,
+  "why": "B's preposition 'to the rod' unnatural"
+ },
+ {
+  "id": "CANNON.083",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "Both correct, natural phrasing"
+ },
+ {
+  "id": "CANNON.084",
+  "win": "B",
+  "err_A": true,
+  "err_B": false,
+  "why": "A has wrong subject, backwards grammar"
+ },
+ {
+  "id": "CANNON.001",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "Both convey escaping, fine either way"
+ },
+ {
+  "id": "CANNON.002",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "Both natural, same meaning"
+ },
+ {
+  "id": "CANNON.003",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "Both fine synonyms for overpower"
+ },
+ {
+  "id": "CANNON.004",
+  "win": "B",
+  "err_A": true,
+  "err_B": false,
+  "why": "A says walk to shore, wrong, should swim"
+ },
+ {
+  "id": "CANNON.005",
+  "win": "A",
+  "err_A": false,
+  "err_B": true,
+  "why": "B uses 'רברוב', not a real word"
+ },
+ {
+  "id": "CANNONV.001",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "Both accurate and clear"
+ },
+ {
+  "id": "CANNONV.002",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "Both accurate and clear"
+ },
+ {
+  "id": "CANNONV.010",
+  "win": "A",
+  "err_A": false,
+  "err_B": false,
+  "why": "B's 'חברה' is odd address term"
+ },
+ {
+  "id": "CANNONV.011",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "Both natural, same meaning"
+ },
+ {
+  "id": "CANNONV.012",
+  "win": "B",
+  "err_A": false,
+  "err_B": false,
+  "why": "A drops 'on', slightly incomplete"
+ },
+ {
+  "id": "CANNONV.013",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "Both same active-kill phrasing"
+ },
+ {
+  "id": "CANNONV.014",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "B slightly more natural word for minions"
+ },
+ {
+  "id": "CANNONV.015",
+  "win": "B",
+  "err_A": true,
+  "err_B": false,
+  "why": "A says hut, should be fort"
+ },
+ {
+  "id": "CANNONV.016",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "Both convey future trouble fine"
+ },
+ {
+  "id": "CANNONV.017",
+  "win": "B",
+  "err_A": false,
+  "err_B": false,
+  "why": "B's 'operates' fits manning better"
+ },
+ {
+  "id": "CANNONV.018",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "Same meaning, minor word order"
+ },
+ {
+  "id": "CANNONV.019",
+  "win": "B",
+  "err_A": false,
+  "err_B": false,
+  "why": "Singular target more likely fits context"
+ },
+ {
+  "id": "CANNONV.008",
+  "win": "B",
+  "err_A": true,
+  "err_B": false,
+  "why": "A means 'it's mine', wrong meaning"
+ },
+ {
+  "id": "CANNONV.009",
+  "win": "A",
+  "err_A": false,
+  "err_B": true,
+  "why": "B's 'אוץ' is not a real interjection"
+ },
+ {
+  "id": "CANNONV.003",
+  "win": "B",
+  "err_A": true,
+  "err_B": false,
+  "why": "A is ungrammatical, nonsensical phrasing"
+ },
+ {
+  "id": "CANNONV.004",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "Both natural kid-friendly phrasing"
+ },
+ {
+  "id": "WATERLN.027",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "Both convey the meaning adequately"
+ },
+ {
+  "id": "WATERLN.001",
+  "win": "B",
+  "err_A": true,
+  "err_B": false,
+  "why": "A's word means 'ejected', wrong sense"
+ },
+ {
+  "id": "WATERLN.002",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "Both natural, B slightly punchier"
+ },
+ {
+  "id": "WATERLN.003",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "Both idiomatic ways to say fire cannon"
+ },
+ {
+  "id": "WATERLN.012",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "Both fine, differ only in filler word"
+ },
+ {
+  "id": "WATERLN.013",
+  "win": "B",
+  "err_A": true,
+  "err_B": false,
+  "why": "A says 'cook/butcher' not gunner"
+ },
+ {
+  "id": "WATERLN.014",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "Both convey same idea naturally"
+ },
+ {
+  "id": "WATERLN.015",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "B slightly more idiomatic, no error"
+ },
+ {
+  "id": "WATERLN.016",
+  "win": "A",
+  "err_A": false,
+  "err_B": true,
+  "why": "B mistranslates 'Boy!' as young man"
+ },
+ {
+  "id": "WATERLN.017",
+  "win": "A",
+  "err_A": false,
+  "err_B": true,
+  "why": "B misspells whistling as invalid word"
+ },
+ {
+  "id": "WATERLN.018",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "B captures 'just' slightly better"
+ },
+ {
+  "id": "WATERLN.019",
+  "win": "A",
+  "err_A": false,
+  "err_B": true,
+  "why": "B says slingshot, not fort"
+ },
+ {
+  "id": "MURRAY.003",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "Both natural equivalents"
+ },
+ {
+  "id": "MURRAY.001",
+  "win": "A",
+  "err_A": false,
+  "err_B": true,
+  "why": "B changes mighty to brave, wrong nuance"
+ },
+ {
+  "id": "MURRAY.004",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "Both natural, B slightly smoother"
+ },
+ {
+  "id": "MURRAY.029",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "Both acceptable synonyms for doom"
+ },
+ {
+  "id": "MURRAY.030",
+  "win": "B",
+  "err_A": true,
+  "err_B": false,
+  "why": "A has bad grammar for clapping/striding"
+ },
+ {
+  "id": "MURRAY.031",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "Both work as echoing the odd word"
+ },
+ {
+  "id": "MURRAY.032",
+  "win": "B",
+  "err_A": true,
+  "err_B": false,
+  "why": "A uses wrong person, command not self"
+ },
+ {
+  "id": "MURRAY.033",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "Both convey the joke fine"
+ },
+ {
+  "id": "MURRAY.018",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "Both concise and accurate"
+ },
+ {
+  "id": "MURRAY.020",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "Both convey devour adequately"
+ },
+ {
+  "id": "MURRAY.021",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "Both fine interjections"
+ },
+ {
+  "id": "MURRAY.023",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "Both fine hesitation fillers"
+ },
+ {
+  "id": "MURRAY.026",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "Both natural, B slightly more casual"
+ },
+ {
+  "id": "MURRAY.008",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "Both fit mighty well"
+ },
+ {
+  "id": "MURRAY.009",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "Both understandable, A keeps 'some'"
+ },
+ {
+  "id": "MURRAY.010",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "Both equivalent"
+ },
+ {
+  "id": "MURRAY.011",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "Both fine laugh transliterations"
+ },
+ {
+  "id": "MURRAY.013",
+  "win": "A",
+  "err_A": false,
+  "err_B": false,
+  "why": "B's phrasing ambiguous, less precise headbutt"
+ },
+ {
+  "id": "MURRAY.016",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "Identical besides punctuation"
+ },
+ {
+  "id": "MURRAY.034",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "B's tense slightly more correct, both work"
+ },
+ {
+  "id": "MURRAY.035",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "Both slightly awkward but understandable"
+ },
+ {
+  "id": "MURRAY.036",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "Both fine synonyms for terror"
+ },
+ {
+  "id": "MURRAY.037",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "Both fine interjections"
+ },
+ {
+  "id": "MURRAY.038",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "Both fine interjections"
+ },
+ {
+  "id": "MURRAY.039",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "Both usable as sound effect"
+ },
+ {
+  "id": "MURRAY.040",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "Both understandable, B more formally correct"
+ },
+ {
+  "id": "MURRAY.041",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "Both fine laughs"
+ },
+ {
+  "id": "MURRAY.042",
+  "win": "A",
+  "err_A": false,
+  "err_B": true,
+  "why": "B drops 'villains', changes the joke"
+ },
+ {
+  "id": "MURRAY.044",
+  "win": "A",
+  "err_A": false,
+  "err_B": false,
+  "why": "B shifts tense, less matches hypothetical taunt"
+ },
+ {
+  "id": "MURRAY.043",
+  "win": "B",
+  "err_A": true,
+  "err_B": false,
+  "why": "A drops 'scary', loses the joke"
+ },
+ {
+  "id": "MURRAY.046",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "Both equivalent"
+ },
+ {
+  "id": "MURRAY.047",
+  "win": "A",
+  "err_A": false,
+  "err_B": true,
+  "why": "B says biting/crazy, wrong verbs"
+ },
+ {
+  "id": "MURRAY.048",
+  "win": "B",
+  "err_A": true,
+  "err_B": false,
+  "why": "A repeats wrong term for doorstop"
+ },
+ {
+  "id": "MURRAY.049",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "Identical besides punctuation"
+ },
+ {
+  "id": "MURRAY.050",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "Both equivalent"
+ },
+ {
+  "id": "MURRAY.051",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "Both work as reply"
+ },
+ {
+  "id": "MURRAY.053",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "Both convey scream in terror"
+ },
+ {
+  "id": "MURRAY.055",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "Both fine, minor omission of 'that'"
+ },
+ {
+  "id": "MURRAY.056",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "Both fine, run/flee interchangeable here"
+ },
+ {
+  "id": "MURRAY.057",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "Both fine, run/flee interchangeable here"
+ },
+ {
+  "id": "MURRAY.058",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "Both understandable in context"
+ },
+ {
+  "id": "MURRAY.059",
+  "win": "A",
+  "err_A": false,
+  "err_B": false,
+  "why": "B says dreams not nightmares, minor"
+ },
+ {
+  "id": "MURRAY.060",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "B slightly more natural dismissive tone"
+ },
+ {
+  "id": "MURRAY.062",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "B keeps 'never', A drops it, minor"
+ },
+ {
+  "id": "MURRAY.063",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "Both understandable, eyes vs eyeballs"
+ },
+ {
+  "id": "MURRAY.066",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "Both equally simplified"
+ },
+ {
+  "id": "MURRAY.068",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "Both natural"
+ },
+ {
+  "id": "MURRAY.069",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "Identical meaning, word order swap"
+ },
+ {
+  "id": "MURRAY.070",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "Both fine, A slightly more idiomatic"
+ },
+ {
+  "id": "MURRAY.071",
+  "win": "A",
+  "err_A": false,
+  "err_B": false,
+  "why": "B sounds like handing an object, mismatched"
+ },
+ {
+  "id": "MURRAY.072",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "Both fine synonyms for walk around"
+ },
+ {
+  "id": "MURRAY.073",
+  "win": "B",
+  "err_A": true,
+  "err_B": false,
+  "why": "A's verb is missing its object"
+ },
+ {
+  "id": "MURRAY.075",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "Both natural"
+ },
+ {
+  "id": "MURRAY.076",
+  "win": "A",
+  "err_A": false,
+  "err_B": true,
+  "why": "B's word ambiguous, could mean friendships"
+ },
+ {
+  "id": "WATERLN.021",
+  "win": "A",
+  "err_A": false,
+  "err_B": true,
+  "why": "B says hand, should be arm"
+ },
+ {
+  "id": "WATERLN.004",
+  "win": "A",
+  "err_A": false,
+  "err_B": true,
+  "why": "B says hand, should be arm"
+ },
+ {
+  "id": "WATERLN.005",
+  "win": "B",
+  "err_A": true,
+  "err_B": false,
+  "why": "A has subject-verb number mismatch"
+ },
+ {
+  "id": "WATERLN.006",
+  "win": "A",
+  "err_A": false,
+  "err_B": true,
+  "why": "B says harass not torture, plus grammar error"
+ },
+ {
+  "id": "WATERLN.008",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "Both natural"
+ },
+ {
+  "id": "WATERLN.010",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "Both idiomatic fits"
+ },
+ {
+  "id": "WATERLN.011",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "Both fine interjections"
+ },
+ {
+  "id": "WATERLN.023",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "Both fine synonyms for debris"
+ },
+ {
+  "id": "WATERLN.024",
+  "win": "B",
+  "err_A": true,
+  "err_B": false,
+  "why": "A says hand, should be arm"
+ },
+ {
+  "id": "WATERLN.025",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "Both convey same meaning"
+ },
+ {
+  "id": "WATERLN.028",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "Both reasonable names for cutlass"
+ },
+ {
+  "id": "WATERLN.029",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "Both reasonable, consistent with pair"
+ },
+ {
+  "id": "WATERLN.030",
+  "win": "A",
+  "err_A": false,
+  "err_B": true,
+  "why": "B uses invalid/nonsense word"
+ },
+ {
+  "id": "WATERLN.031",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "Both correct"
+ },
+ {
+  "id": "WATERLN.032",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "Both correct, minor style difference"
+ },
+ {
+  "id": "WATERLN.033",
+  "win": "B",
+  "err_A": true,
+  "err_B": false,
+  "why": "A says hand, should be arm"
+ },
+ {
+  "id": "WATERLN.034",
+  "win": "B",
+  "err_A": true,
+  "err_B": false,
+  "why": "A says hand, should be arm"
+ },
+ {
+  "id": "WATERLN.035",
+  "win": "B",
+  "err_A": true,
+  "err_B": false,
+  "why": "A says hand, should be arm"
+ },
+ {
+  "id": "WATERLN.036",
+  "win": "B",
+  "err_A": true,
+  "err_B": false,
+  "why": "A says hand, should be arm"
+ },
+ {
+  "id": "WATERLN.038",
+  "win": "A",
+  "err_A": false,
+  "err_B": true,
+  "why": "B's phrasing is awkward and unclear"
+ },
+ {
+  "id": "WATERLN.040",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "Both fine synonyms for horrible"
+ },
+ {
+  "id": "WATERLN.041",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "Both convey the meaning well"
+ },
+ {
+  "id": "WATERLN.042",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "Both equivalent"
+ },
+ {
+  "id": "WATERLN.044",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "B slightly more idiomatic, both fine"
+ },
+ {
+  "id": "WATERLN.045",
+  "win": "A",
+  "err_A": false,
+  "err_B": true,
+  "why": "B's word for porthole is invalid"
+ },
+ {
+  "id": "WATERLN.046",
+  "win": "A",
+  "err_A": false,
+  "err_B": true,
+  "why": "B's word for porthole is invalid"
+ },
+ {
+  "id": "WATERLN.047",
+  "win": "A",
+  "err_A": false,
+  "err_B": true,
+  "why": "B drops 'hear me', changes meaning"
+ },
+ {
+  "id": "WATERLN.048",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "Both equivalent"
+ },
+ {
+  "id": "WATERLN.050",
+  "win": "A",
+  "err_A": false,
+  "err_B": true,
+  "why": "B's word for porthole is invalid"
+ },
+ {
+  "id": "WATERLN.051",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "Both reasonable for cargo hold"
+ },
+ {
+  "id": "WATERLN.052",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "Both equivalent"
+ },
+ {
+  "id": "WATERLN.054",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "Both equivalent"
+ },
+ {
+  "id": "WATERLN.056",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "Both equivalent, word order swap"
+ },
+ {
+  "id": "WATERLN.057",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "Both equivalent, word order swap"
+ },
+ {
+  "id": "WATERLN.058",
+  "win": "A",
+  "err_A": false,
+  "err_B": true,
+  "why": "B drops 'to get over there'"
+ },
+ {
+  "id": "WATERLN.059",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "Both valid names for muzzle"
+ },
+ {
+  "id": "WATERLN.060",
+  "win": "tie",
+  "err_A": false,
+  "err_B": false,
+  "why": "Both valid, consistent with pair"
+ },
+ {
+  "id": "WATERLN.061",
+  "win": "A",
+  "err_A": false,
+  "err_B": true,
+  "why": "B's word means overloaded, not primed"
+ }
+]

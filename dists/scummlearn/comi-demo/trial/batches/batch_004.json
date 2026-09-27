@@ -1,0 +1,527 @@
+[
+ {
+  "id": "CANNON.034",
+  "group": "CANNON",
+  "text": "Blast ye scurvy dogs!"
+ },
+ {
+  "id": "CANNON.035",
+  "group": "CANNON",
+  "text": "This will make you rue the day!"
+ },
+ {
+  "id": "CANNON.036",
+  "group": "CANNON",
+  "text": "Avast, ye swabs! Prepare fer yer doom!"
+ },
+ {
+  "id": "CANNON.037",
+  "group": "CANNON",
+  "text": "Ya drink bilge water, and yer mothers dress you funny!"
+ },
+ {
+  "id": "CANNON.038",
+  "group": "CANNON",
+  "text": "Take that!"
+ },
+ {
+  "id": "CANNON.039",
+  "group": "CANNON",
+  "text": "Let's see if you can take this!"
+ },
+ {
+  "id": "CANNON.040",
+  "group": "CANNON",
+  "text": "I'll reduce yer fort ta rubble!"
+ },
+ {
+  "id": "CANNON.041",
+  "group": "CANNON",
+  "text": "I feel like I could, TAKE ON THE WORLD!"
+ },
+ {
+  "id": "CANNON.042",
+  "group": "CANNON",
+  "text": "You in the fort! Yer doom be at hand!"
+ },
+ {
+  "id": "CANNON.043",
+  "group": "CANNON",
+  "text": "Somehow, I find all this violence desensitizing."
+ },
+ {
+  "id": "CANNON.050",
+  "group": "CANNON",
+  "text": "If there are any of you stinking, wretched fiends of the damned in there..."
+ },
+ {
+  "id": "CANNON.051",
+  "group": "CANNON",
+  "text": "...could you open this door?"
+ },
+ {
+  "id": "CANNON.052",
+  "group": "CANNON",
+  "text": "It's not that I'm trying to escape or anything."
+ },
+ {
+  "id": "CANNON.053",
+  "group": "CANNON",
+  "text": "It's just that I'd like to step outside and enjoy an adult beverage."
+ },
+ {
+  "id": "CANNON.054",
+  "group": "CANNON",
+  "text": "Hey!"
+ },
+ {
+  "id": "CANNON.055",
+  "group": "CANNON",
+  "text": "If there are any of you rancid, evil, deviant hellspawn behind this door..."
+ },
+ {
+  "id": "CANNON.056",
+  "group": "CANNON",
+  "text": "You'd better watch out!"
+ },
+ {
+  "id": "CANNON.057",
+  "group": "CANNON",
+  "text": "'Cause I'm breaking out of here!"
+ },
+ {
+  "id": "CANNON.044",
+  "group": "CANNON",
+  "text": "Hello!"
+ },
+ {
+  "id": "CANNON.045",
+  "group": "CANNON",
+  "text": "Is there anybody in there who's not evil or dead?"
+ },
+ {
+  "id": "CANNON.046",
+  "group": "CANNON",
+  "text": "Hmmm..."
+ },
+ {
+  "id": "CANNON.047",
+  "group": "CANNON",
+  "text": "There's no point calling out."
+ },
+ {
+  "id": "CANNON.048",
+  "group": "CANNON",
+  "text": "If there was anyone in there..."
+ },
+ {
+  "id": "CANNON.049",
+  "group": "CANNON",
+  "text": "...they would be some sort of minion of darkness."
+ },
+ {
+  "id": "CANNON.058",
+  "group": "CANNON",
+  "text": "No one can hear me through this door."
+ },
+ {
+  "id": "CANNON.059",
+  "group": "CANNON",
+  "text": "If only I could get it open!"
+ },
+ {
+  "id": "CANNON.027",
+  "group": "CANNON",
+  "text": "Any closer and it's curtains for you!"
+ },
+ {
+  "id": "CANNON.028",
+  "group": "CANNON",
+  "text": "You're in my personal space, ya lubber!"
+ },
+ {
+  "id": "CANNON.029",
+  "group": "CANNON",
+  "text": "If you give me room to be my own pirate..."
+ },
+ {
+  "id": "CANNON.030",
+  "group": "CANNON",
+  "text": "...then I can give you room to be your own pirate."
+ },
+ {
+  "id": "CANNON.031",
+  "group": "CANNON",
+  "text": "I'm glad we had this talk."
+ },
+ {
+  "id": "CANNON.032",
+  "group": "CANNON",
+  "text": "Ya wretched refuse!"
+ },
+ {
+  "id": "CANNON.033",
+  "group": "CANNON",
+  "text": "Ya better fear!"
+ },
+ {
+  "id": "WALLYDLG.202",
+  "group": "WALLYDLG",
+  "text": "OK!"
+ },
+ {
+  "id": "WALLYDLG.203",
+  "group": "WALLYDLG",
+  "text": "That's it!"
+ },
+ {
+  "id": "WALLYDLG.206",
+  "group": "WALLYDLG",
+  "text": "I'm gonna blast ya!"
+ },
+ {
+  "id": "WALLYDLG.207",
+  "group": "WALLYDLG",
+  "text": "I'm gonna..."
+ },
+ {
+  "id": "WALLYDLG.208",
+  "group": "WALLYDLG",
+  "text": "...I'm..."
+ },
+ {
+  "id": "WALLYDLG.209",
+  "group": "WALLYDLG",
+  "text": "...gonna..."
+ },
+ {
+  "id": "WALLYDLG.210",
+  "group": "WALLYDLG",
+  "text": "...<sniff>..."
+ },
+ {
+  "id": "WALLYDLG.211",
+  "group": "WALLYDLG",
+  "text": "Oh, I can't do it!"
+ },
+ {
+  "id": "WALLYDLG.212",
+  "group": "WALLYDLG",
+  "text": "I just can't!"
+ },
+ {
+  "id": "WALLYDLG.213",
+  "group": "WALLYDLG",
+  "text": "<sob>"
+ },
+ {
+  "id": "WALLYDLG.214",
+  "group": "WALLYDLG",
+  "text": "You're right, Mr. Wood!"
+ },
+ {
+  "id": "WALLYDLG.215",
+  "group": "WALLYDLG",
+  "text": "I'm just not a pirate!"
+ },
+ {
+  "id": "WALLYDLG.216",
+  "group": "WALLYDLG",
+  "text": "I'm not ferocious, or bloodthirsty, or hateful, or anything!"
+ },
+ {
+  "id": "WALLYDLG.217",
+  "group": "WALLYDLG",
+  "text": "I'm not even..."
+ },
+ {
+  "id": "WALLYDLG.219",
+  "group": "WALLYDLG",
+  "text": "I'm not even unpleasant!"
+ },
+ {
+  "id": "WALLYDLG.220",
+  "group": "WALLYDLG",
+  "text": "Waaaaaaaaah!"
+ },
+ {
+  "id": "WALLYDLG.221",
+  "group": "WALLYDLG",
+  "text": "There, there."
+ },
+ {
+  "id": "CANNON.060",
+  "group": "CANNON",
+  "text": "I see a diorama of the children of the world living in peace and freedom."
+ },
+ {
+  "id": "CANNON.061",
+  "group": "CANNON",
+  "text": "No, wait."
+ },
+ {
+  "id": "CANNON.062",
+  "group": "CANNON",
+  "text": "It can't be that."
+ },
+ {
+  "id": "CANNON.063",
+  "group": "CANNON",
+  "text": "It's just too dark to make out what's in there."
+ },
+ {
+  "id": "CANNON.064",
+  "group": "CANNON",
+  "text": "It's too dark to see."
+ },
+ {
+  "id": "CANNON.020",
+  "group": "CANNON",
+  "text": "Get your hands off that cannon!"
+ },
+ {
+  "id": "CANNON.021",
+  "group": "CANNON",
+  "text": "Don't you touch that cannon!"
+ },
+ {
+  "id": "CANNON.022",
+  "group": "CANNON",
+  "text": "That's LeChuck's property! Hands off!"
+ },
+ {
+  "id": "CANNON.023",
+  "group": "CANNON",
+  "text": "Don't touch that!"
+ },
+ {
+  "id": "WALLYDLG.218",
+  "group": "WALLYDLG",
+  "text": "<whimper>"
+ },
+ {
+  "id": "WALLYDLG.222",
+  "group": "WALLYDLG",
+  "text": "<weep>"
+ },
+ {
+  "id": "CANNON.073",
+  "group": "CANNON",
+  "text": "I don't think I've ever seen a cuter pirate."
+ },
+ {
+  "id": "CANNON.074",
+  "group": "CANNON",
+  "text": "I don't want to disturb him."
+ },
+ {
+  "id": "CANNON.075",
+  "group": "CANNON",
+  "text": "He's had a hard day."
+ },
+ {
+  "id": "CANNON.076",
+  "group": "CANNON",
+  "text": "If I rough him up, he may shoot me."
+ },
+ {
+  "id": "CANNON.077",
+  "group": "CANNON",
+  "text": "I don't want to slap the little guy around."
+ },
+ {
+  "id": "CANNON.078",
+  "group": "CANNON",
+  "text": "I'm not going to bludgeon poor Wally with this."
+ },
+ {
+  "id": "CANNON.079",
+  "group": "CANNON",
+  "text": "Wally doesn't need this hook any more."
+ },
+ {
+  "id": "CANNON.098",
+  "group": "CANNON",
+  "text": "cannon restraint rope"
+ },
+ {
+  "id": "CANNON.099",
+  "group": "CANNON",
+  "text": "It's the restraining rope for the cannon."
+ },
+ {
+  "id": "CANNON.100",
+  "group": "CANNON",
+  "text": "The rope has been cut."
+ },
+ {
+  "id": "CANNON.101",
+  "group": "CANNON",
+  "text": "There's nothing restraining the cannon now."
+ },
+ {
+  "id": "CANNON.102",
+  "group": "CANNON",
+  "text": "I could never untie that big a knot."
+ },
+ {
+  "id": "CANNON.105",
+  "group": "CANNON",
+  "text": "I couldn't chew through that."
+ },
+ {
+  "id": "CANNON.106",
+  "group": "CANNON",
+  "text": "No."
+ },
+ {
+  "id": "CANNON.108",
+  "group": "CANNON",
+  "text": "It's already cut."
+ },
+ {
+  "id": "CANNON.109",
+  "group": "CANNON",
+  "text": "Hooking the rope won't do anything."
+ },
+ {
+  "id": "CANNON.069",
+  "group": "CANNON",
+  "text": "cannon"
+ },
+ {
+  "id": "CANNON.070",
+  "group": "CANNON",
+  "text": "It's one of those new, self-loading cannons I've heard so much about."
+ },
+ {
+  "id": "CANNON.071",
+  "group": "CANNON",
+  "text": "It's already loaded and ready to fire."
+ },
+ {
+  "id": "CANNON.130",
+  "group": "CANNON",
+  "text": "It's an old, short, frayed rope."
+ },
+ {
+  "id": "CANNON.131",
+  "group": "CANNON",
+  "text": "It's tangled up in all that debris. I can't pick it up."
+ },
+ {
+  "id": "CANNON.132",
+  "group": "CANNON",
+  "text": "I've got enough fiber in my diet already."
+ },
+ {
+  "id": "CANNON.133",
+  "group": "CANNON",
+  "text": "Even if I could cut it loose, it's too short and frayed to be of any use."
+ },
+ {
+  "id": "CANNON.134",
+  "group": "CANNON",
+  "text": "useless rope"
+ },
+ {
+  "id": "CANNON.135",
+  "group": "CANNON",
+  "text": "The rope is too short and frayed to be of any use."
+ },
+ {
+  "id": "CANNON.136",
+  "group": "CANNON",
+  "text": "useless rope"
+ },
+ {
+  "id": "CANNON.117",
+  "group": "CANNON",
+  "text": "cannon balls"
+ },
+ {
+  "id": "CANNON.118",
+  "group": "CANNON",
+  "text": "Nice cannon balls."
+ },
+ {
+  "id": "CANNON.119",
+  "group": "CANNON",
+  "text": "They're too heavy to carry."
+ },
+ {
+  "id": "CANNON.120",
+  "group": "CANNON",
+  "text": "The ramrod is for the cannon, not the cannon balls."
+ },
+ {
+  "id": "CANNON.112",
+  "group": "CANNON",
+  "text": "keyhole"
+ },
+ {
+  "id": "CANNON.113",
+  "group": "CANNON",
+  "text": "I don't have my lock-picking tools."
+ },
+ {
+  "id": "CANNON.114",
+  "group": "CANNON",
+  "text": "I never have been any good at lock-picking."
+ },
+ {
+  "id": "CANNON.115",
+  "group": "CANNON",
+  "text": "But I am still a mighty pirate, believe you me."
+ },
+ {
+  "id": "CANNON.116",
+  "group": "CANNON",
+  "text": "That's too big to fit in the keyhole."
+ },
+ {
+  "id": "CANNON.065",
+  "group": "CANNON",
+  "text": "locked door"
+ },
+ {
+  "id": "CANNON.066",
+  "group": "CANNON",
+  "text": "It looks pretty sturdy."
+ },
+ {
+  "id": "CANNON.067",
+  "group": "CANNON",
+  "text": "I couldn't force that door open with my bare hands."
+ },
+ {
+  "id": "CANNON.068",
+  "group": "CANNON",
+  "text": "The door is too strong for the cutlass to cut through."
+ },
+ {
+  "id": "CANNON.110",
+  "group": "CANNON",
+  "text": "pirate literature"
+ },
+ {
+  "id": "CANNON.111",
+  "group": "CANNON",
+  "text": "This is only for reading."
+ },
+ {
+  "id": "CANNON.092",
+  "group": "CANNON",
+  "text": "gaff"
+ },
+ {
+  "id": "CANNON.093",
+  "group": "CANNON",
+  "text": "It's a ramrod with a plastic hook stuck on the end."
+ },
+ {
+  "id": "CANNON.094",
+  "group": "CANNON",
+  "text": "That doesn't look appetizing."
+ }
+]

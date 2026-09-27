@@ -32,6 +32,7 @@ static LearnSink g_learnSink = nullptr;
 static WriteStream *g_learnLog = nullptr;
 static bool g_learnLogTried = false;
 static String g_lastKey;
+static String g_packDomain;
 
 void setLearnSink(LearnSink sink) {
 	g_learnSink = sink;
@@ -90,16 +91,57 @@ static void openLog() {
 		g_learnLog->writeString(previous);
 }
 
+static bool readWhole(const Path &file, String &out) {
+	File in;
+	if (!in.open(FSNode(file)))
+		return false;
+	out = in.readString(0, in.size());
+	return true;
+}
+
+/**
+ * Once per game start: find the game's learning pack (translations, word list, hints)
+ * and hand it to the app. Looked up in the game folder first, then in the save folder:
+ *   <game folder>/learn_pack.json
+ *   <save folder>/learn_<gameid>.json
+ * The app falls back to its built-in pack when none is found.
+ */
+static void sendGamePack() {
+	String domain = ConfMan.getActiveDomainName();
+	if (domain == g_packDomain)
+		return;
+	g_packDomain = domain;
+
+	String gameid = ConfMan.get("gameid");
+	String pack;
+	Path gameDir = ConfMan.getPath("path");
+	Path saveDir = ConfMan.getPath("savepath");
+	bool found = (!gameDir.empty() && readWhole(gameDir.appendComponent("learn_pack.json"), pack)) ||
+		(!saveDir.empty() && readWhole(saveDir.appendComponent("learn_" + gameid + ".json"), pack));
+	pack.trim();
+	if (!found || pack.empty() || pack[0] != '{')
+		pack = "null";
+	debug(1, "LEARN game %s (%s), pack %s", domain.c_str(), gameid.c_str(), found ? "found" : "not found");
+
+	if (g_learnSink)
+		g_learnSink(String::format("{\"kind\":\"game\",\"game\":\"%s\",\"gameid\":\"%s\",\"pack\":",
+			jsonEscape(domain).c_str(), jsonEscape(gameid).c_str()) + pack + "}");
+}
+
 void learnEmit(const char *kind, const String &speaker, const String &text) {
 	if (!learnEnabled())
 		return;
+	sendGamePack();
 
 	String trimmed = text;
 	trimmed.trim();
-	// Drop resource IDs like "/CANNON.065/" that some games keep in front of names.
+	// Split off resource IDs like "/CANNON.065/" that some games keep in front of text.
+	// The ID is passed on: a pack can translate by ID, which never mismatches.
+	String id;
 	if (trimmed.size() > 2 && trimmed[0] == '/') {
 		size_t end = trimmed.findFirstOf('/', 1);
 		if (end != String::npos && end < 24 && trimmed.findFirstOf('.', 1) < end) {
+			id = String(trimmed.c_str() + 1, trimmed.c_str() + end);
 			trimmed = String(trimmed.c_str() + end + 1);
 			trimmed.trim();
 		}
@@ -113,11 +155,12 @@ void learnEmit(const char *kind, const String &speaker, const String &text) {
 		return;
 	g_lastKey = key;
 
-	String json = String::format("{\"t\":%u,\"game\":\"%s\",\"kind\":\"%s\",\"speaker\":\"%s\",\"text\":\"%s\"}",
+	String json = String::format("{\"t\":%u,\"game\":\"%s\",\"kind\":\"%s\",\"speaker\":\"%s\",\"id\":\"%s\",\"text\":\"%s\"}",
 		g_system->getMillis(),
 		jsonEscape(ConfMan.getActiveDomainName()).c_str(),
 		kind,
 		jsonEscape(speaker).c_str(),
+		jsonEscape(id).c_str(),
 		jsonEscape(trimmed).c_str());
 
 	debug(1, "LEARN %s", json.c_str());

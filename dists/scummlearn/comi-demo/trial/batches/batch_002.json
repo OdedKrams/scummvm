@@ -1,0 +1,527 @@
+[
+ {
+  "id": "LOGO.001",
+  "group": "LOGO",
+  "text": "This is no time to be indulging myself."
+ },
+ {
+  "id": "LOGO.002",
+  "group": "LOGO",
+  "text": "That's made my voice sound funny."
+ },
+ {
+  "id": "CANNON.007",
+  "group": "CANNON",
+  "text": "Piracy: The LeChuck Way"
+ },
+ {
+  "id": "CANNON.008",
+  "group": "CANNON",
+  "text": "'Chapter 1'"
+ },
+ {
+  "id": "CANNON.012",
+  "group": "CANNON",
+  "text": "'How to get more than fifteen men on a dead man's chest.'"
+ },
+ {
+  "id": "CANNON.011",
+  "group": "CANNON",
+  "text": "'Chapter 2'"
+ },
+ {
+  "id": "CANNON.009",
+  "group": "CANNON",
+  "text": "'Leg irons or flogging?'"
+ },
+ {
+  "id": "CANNON.010",
+  "group": "CANNON",
+  "text": "'The age old question.'"
+ },
+ {
+  "id": "CANNON.013",
+  "group": "CANNON",
+  "text": "'Chapter 3'"
+ },
+ {
+  "id": "CANNON.017",
+  "group": "CANNON",
+  "text": "'Mermaids or Manatees?'"
+ },
+ {
+  "id": "CANNON.018",
+  "group": "CANNON",
+  "text": "'Does it really matter?'"
+ },
+ {
+  "id": "CANNON.019",
+  "group": "CANNON",
+  "text": "It's a copy of `Piracy the LeChuck Way.`"
+ },
+ {
+  "id": "CANNON.072",
+  "group": "CANNON",
+  "text": "small pirate"
+ },
+ {
+  "id": "CANNON.129",
+  "group": "CANNON",
+  "text": "rope"
+ },
+ {
+  "id": "WATERLN.039",
+  "group": "WATERLN",
+  "text": "floating skull"
+ },
+ {
+  "id": "CANNON.024",
+  "group": "CANNON",
+  "text": "Stand yer distance!"
+ },
+ {
+  "id": "CANNON.025",
+  "group": "CANNON",
+  "text": "Stay away!"
+ },
+ {
+  "id": "CANNON.026",
+  "group": "CANNON",
+  "text": "Stand back!"
+ },
+ {
+  "id": "WALLYDLG.001",
+  "group": "WALLYDLG",
+  "text": "I'm Guybrush Threepwood, who are you?"
+ },
+ {
+  "id": "WALLYDLG.002",
+  "group": "WALLYDLG",
+  "text": "You don't scare me, you mangy pirate!"
+ },
+ {
+  "id": "WALLYDLG.003",
+  "group": "WALLYDLG",
+  "text": "Hello. Please don't kill me."
+ },
+ {
+  "id": "WALLYDLG.004",
+  "group": "WALLYDLG",
+  "text": "Aaargh!"
+ },
+ {
+  "id": "WALLYDLG.005",
+  "group": "WALLYDLG",
+  "text": "I'm selling these fine leather jackets."
+ },
+ {
+  "id": "WALLYDLG.006",
+  "group": "WALLYDLG",
+  "text": "Aren't you a little short for a pirate!"
+ },
+ {
+  "id": "WALLYDLG.007",
+  "group": "WALLYDLG",
+  "text": "I'm the evil pirate, Bloodnose!"
+ },
+ {
+  "id": "WALLYDLG.008",
+  "group": "WALLYDLG",
+  "text": "The wickedest fiend ever to sail under the banner of King Death!"
+ },
+ {
+  "id": "WALLYDLG.009",
+  "group": "WALLYDLG",
+  "text": "I'd as soon chew your nose off as look at you!"
+ },
+ {
+  "id": "WALLYDLG.011",
+  "group": "WALLYDLG",
+  "text": "Brave talk, boy!"
+ },
+ {
+  "id": "WALLYDLG.012",
+  "group": "WALLYDLG",
+  "text": "But now you're face to face with the wicked pirate Bloodnose!"
+ },
+ {
+  "id": "WALLYDLG.013",
+  "group": "WALLYDLG",
+  "text": "I'm the scourge of four out of the seven seas."
+ },
+ {
+  "id": "WALLYDLG.014",
+  "group": "WALLYDLG",
+  "text": "Oh, don't worry about it."
+ },
+ {
+  "id": "WALLYDLG.015",
+  "group": "WALLYDLG",
+  "text": "I don't..."
+ },
+ {
+  "id": "WALLYDLG.016",
+  "group": "WALLYDLG",
+  "text": "...Um..."
+ },
+ {
+  "id": "WALLYDLG.017",
+  "group": "WALLYDLG",
+  "text": "I mean..."
+ },
+ {
+  "id": "WALLYDLG.018",
+  "group": "WALLYDLG",
+  "text": "Ye had best beg for your life, ya fetid flounder!"
+ },
+ {
+  "id": "WALLYDLG.019",
+  "group": "WALLYDLG",
+  "text": "Woe be to ye who fall victim to the zombie pirate LeChuck!"
+ },
+ {
+  "id": "WALLYDLG.020",
+  "group": "WALLYDLG",
+  "text": "Aye!"
+ },
+ {
+  "id": "WALLYDLG.021",
+  "group": "WALLYDLG",
+  "text": "Really?"
+ },
+ {
+  "id": "WALLYDLG.024",
+  "group": "WALLYDLG",
+  "text": "No."
+ },
+ {
+  "id": "WALLYDLG.025",
+  "group": "WALLYDLG",
+  "text": "I'm lying."
+ },
+ {
+  "id": "WALLYDLG.026",
+  "group": "WALLYDLG",
+  "text": "In that case I don't want one."
+ },
+ {
+  "id": "WALLYDLG.027",
+  "group": "WALLYDLG",
+  "text": "Sorry we couldn't make a deal."
+ },
+ {
+  "id": "WALLYDLG.030",
+  "group": "WALLYDLG",
+  "text": "Cross me again and I'll chum for sharks with ya'!"
+ },
+ {
+  "id": "WALLYDLG.031",
+  "group": "WALLYDLG",
+  "text": "Hold yer tongue, captive!"
+ },
+ {
+  "id": "WALLYDLG.032",
+  "group": "WALLYDLG",
+  "text": "Or I'll be holdin' it fer ya!"
+ },
+ {
+  "id": "WALLYDLG.033",
+  "group": "WALLYDLG",
+  "text": "Eeewww!"
+ },
+ {
+  "id": "WALLYDLG.034",
+  "group": "WALLYDLG",
+  "text": "You sound pretty tough."
+ },
+ {
+  "id": "WALLYDLG.035",
+  "group": "WALLYDLG",
+  "text": "How tough are you again?"
+ },
+ {
+  "id": "WALLYDLG.036",
+  "group": "WALLYDLG",
+  "text": "Well, I'm pretty tough myself!"
+ },
+ {
+  "id": "WALLYDLG.037",
+  "group": "WALLYDLG",
+  "text": "I am so tough!"
+ },
+ {
+  "id": "WALLYDLG.038",
+  "group": "WALLYDLG",
+  "text": "Yes, I am!"
+ },
+ {
+  "id": "WALLYDLG.039",
+  "group": "WALLYDLG",
+  "text": "Are so!"
+ },
+ {
+  "id": "WALLYDLG.040",
+  "group": "WALLYDLG",
+  "text": "Are you wearing a fake beard?"
+ },
+ {
+  "id": "WALLYDLG.041",
+  "group": "WALLYDLG",
+  "text": "Ya' scurvy sea dog!"
+ },
+ {
+  "id": "WALLYDLG.043",
+  "group": "WALLYDLG",
+  "text": "Is that hook for real?"
+ },
+ {
+  "id": "WALLYDLG.042",
+  "group": "WALLYDLG",
+  "text": "Is that a real eyepatch?"
+ },
+ {
+  "id": "WALLYDLG.044",
+  "group": "WALLYDLG",
+  "text": "Can I borrow your cannon for a second?"
+ },
+ {
+  "id": "MURRAY.045",
+  "group": "MURRAY",
+  "text": "It's been swell talking to you."
+ },
+ {
+  "id": "WALLYDLG.045",
+  "group": "WALLYDLG",
+  "text": "I'm so tough, in junior high, I stuffed Davy Jones in his locker."
+ },
+ {
+  "id": "WALLYDLG.046",
+  "group": "WALLYDLG",
+  "text": "I'm so tough, I could survive being flogged with a cat o' nine-tails for half an hour..."
+ },
+ {
+  "id": "WALLYDLG.047",
+  "group": "WALLYDLG",
+  "text": "...or three cats o' five-tails for eighteen minutes."
+ },
+ {
+  "id": "WALLYDLG.048",
+  "group": "WALLYDLG",
+  "text": "I'm so tough, I..."
+ },
+ {
+  "id": "WALLYDLG.049",
+  "group": "WALLYDLG",
+  "text": "...er...um..."
+ },
+ {
+  "id": "WALLYDLG.050",
+  "group": "WALLYDLG",
+  "text": "I drink milk straight from the carton!"
+ },
+ {
+  "id": "WALLYDLG.051",
+  "group": "WALLYDLG",
+  "text": "Ooooh!"
+ },
+ {
+  "id": "WALLYDLG.053",
+  "group": "WALLYDLG",
+  "text": "Bloodnose the Pirate would not have a fake beard!"
+ },
+ {
+  "id": "WALLYDLG.054",
+  "group": "WALLYDLG",
+  "text": "Yes, it is!"
+ },
+ {
+  "id": "WALLYDLG.055",
+  "group": "WALLYDLG",
+  "text": "It's been glued to your ear hair!"
+ },
+ {
+  "id": "WALLYDLG.056",
+  "group": "WALLYDLG",
+  "text": "Actually, it's a highly sophisticated beard weave..."
+ },
+ {
+  "id": "WALLYDLG.057",
+  "group": "WALLYDLG",
+  "text": "...made from the chest and back hair of real pirates!"
+ },
+ {
+  "id": "WALLYDLG.058",
+  "group": "WALLYDLG",
+  "text": "I'm hoping it'll take root if I don't wash it for a while!"
+ },
+ {
+  "id": "WALLYDLG.059",
+  "group": "WALLYDLG",
+  "text": "Aye!"
+ },
+ {
+  "id": "WALLYDLG.060",
+  "group": "WALLYDLG",
+  "text": "Sure it be real!"
+ },
+ {
+  "id": "WALLYDLG.061",
+  "group": "WALLYDLG",
+  "text": "Then why are you wearing a monacle underneath it?"
+ },
+ {
+  "id": "WALLYDLG.062",
+  "group": "WALLYDLG",
+  "text": "It keeps the dust out o' me eye socket!"
+ },
+ {
+  "id": "WALLYDLG.063",
+  "group": "WALLYDLG",
+  "text": "Of course it's real!"
+ },
+ {
+  "id": "WALLYDLG.065",
+  "group": "WALLYDLG",
+  "text": "A vicious shark tore off me hand."
+ },
+ {
+  "id": "WALLYDLG.066",
+  "group": "WALLYDLG",
+  "text": "What a struggle it was. I remember..."
+ },
+ {
+  "id": "WALLYDLG.067",
+  "group": "WALLYDLG",
+  "text": "It is so a fake!"
+ },
+ {
+  "id": "WALLYDLG.068",
+  "group": "WALLYDLG",
+  "text": "It is not!"
+ },
+ {
+  "id": "WALLYDLG.069",
+  "group": "WALLYDLG",
+  "text": "Well..."
+ },
+ {
+  "id": "WALLYDLG.070",
+  "group": "WALLYDLG",
+  "text": "O.K., it is."
+ },
+ {
+  "id": "WALLYDLG.071",
+  "group": "WALLYDLG",
+  "text": "See, I haven't lost my hand yet."
+ },
+ {
+  "id": "WALLYDLG.072",
+  "group": "WALLYDLG",
+  "text": "This is sort of a training-hook."
+ },
+ {
+  "id": "WALLYDLG.073",
+  "group": "WALLYDLG",
+  "text": "I'm wearing this just to get used to the feel of it."
+ },
+ {
+  "id": "WALLYDLG.074",
+  "group": "WALLYDLG",
+  "text": "Captain LeChuck says he'll cut my hand off when he gets some free time."
+ },
+ {
+  "id": "WALLYDLG.075",
+  "group": "WALLYDLG",
+  "text": "I do have a hang nail."
+ },
+ {
+  "id": "WALLYDLG.076",
+  "group": "WALLYDLG",
+  "text": "It'll probably get infected."
+ },
+ {
+  "id": "WALLYDLG.077",
+  "group": "WALLYDLG",
+  "text": "No, ya scheming scallawag!"
+ },
+ {
+  "id": "WALLYDLG.078",
+  "group": "WALLYDLG",
+  "text": "Ya scrappy scofflaw!"
+ },
+ {
+  "id": "WALLYDLG.079",
+  "group": "WALLYDLG",
+  "text": "Ya steamin' souffle!"
+ },
+ {
+  "id": "WALLYDLG.081",
+  "group": "WALLYDLG",
+  "text": "You!"
+ },
+ {
+  "id": "WALLYDLG.082",
+  "group": "WALLYDLG",
+  "text": "Don't make me laugh!"
+ },
+ {
+  "id": "WALLYDLG.083",
+  "group": "WALLYDLG",
+  "text": "You couldn't even grow a decent beard!"
+ },
+ {
+  "id": "WALLYDLG.084",
+  "group": "WALLYDLG",
+  "text": "Well, what about YOUR beard?"
+ },
+ {
+  "id": "WALLYDLG.085",
+  "group": "WALLYDLG",
+  "text": "And furthermore..."
+ },
+ {
+  "id": "WALLYDLG.086",
+  "group": "WALLYDLG",
+  "text": "Hey..."
+ },
+ {
+  "id": "WALLYDLG.087",
+  "group": "WALLYDLG",
+  "text": "How did you know about my attempted beard?"
+ },
+ {
+  "id": "WALLYDLG.088",
+  "group": "WALLYDLG",
+  "text": "Er..."
+ },
+ {
+  "id": "WALLYDLG.089",
+  "group": "WALLYDLG",
+  "text": "Pirate's intuition."
+ },
+ {
+  "id": "WALLYDLG.090",
+  "group": "WALLYDLG",
+  "text": "You are not!"
+ },
+ {
+  "id": "WALLYDLG.091",
+  "group": "WALLYDLG",
+  "text": "No, you're not!"
+ },
+ {
+  "id": "WALLYDLG.092",
+  "group": "WALLYDLG",
+  "text": "Are not!"
+ },
+ {
+  "id": "WALLYDLG.093",
+  "group": "WALLYDLG",
+  "text": "Oh, yeah?"
+ },
+ {
+  "id": "WALLYDLG.094",
+  "group": "WALLYDLG",
+  "text": "Well, I want a cracker!"
+ }
+]

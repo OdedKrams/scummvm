@@ -37,7 +37,9 @@ import java.util.Set;
  *   a finger on it: then the game pauses and the subtitle stays until release.
  * - A column of big buttons on the left: Hebrew subtitles on/off, inventory, skip line.
  *
- * Translations come from res/raw/learn_dict.json, bundled in the APK (works offline).
+ * Translations and hints come from the game's own learn pack (learn_pack.json in the game
+ * folder, sent by the engine when the game starts), or from the built-in pack for the
+ * Curse of Monkey Island demo (res/raw/learn_dict.json + learn_hints.json). All offline.
  */
 public class LearnPanel {
 	public interface PauseCallback {
@@ -59,6 +61,10 @@ public class LearnPanel {
 	private final InputSender _input;
 	private final Handler _ui = new Handler(Looper.getMainLooper());
 	private final Map<String, String> _lines = new HashMap<>();
+	private final Map<String, String> _ids = new HashMap<>();
+	private final Map<String, String> _words = new HashMap<>();
+	/** Current game (config domain); progress is kept per game. */
+	private String _game = "";
 
 	private TextView _subtitle;
 	private TextView _toggle;
@@ -129,21 +135,86 @@ public class LearnPanel {
 		return s.replaceAll("^\\s*/[A-Za-z0-9_\\-]+\\.[0-9]+/", "").replaceAll("\\s+", " ").trim();
 	}
 
+	/** Built-in pack (the Curse of Monkey Island demo), used when a game has no pack of its own. */
 	private void loadDict() {
-		try (InputStream in = _activity.getResources().openRawResource(R.raw.learn_dict)) {
-			ByteArrayOutputStream out = new ByteArrayOutputStream();
-			byte[] buf = new byte[8192];
-			int n;
-			while ((n = in.read(buf)) > 0)
-				out.write(buf, 0, n);
-			JSONObject lines = new JSONObject(out.toString("UTF-8")).getJSONObject("lines");
-			for (Iterator<String> it = lines.keys(); it.hasNext(); ) {
-				String en = it.next();
-				_lines.put(norm(en), lines.getString(en));
-			}
+		try {
+			loadPackDict(new JSONObject(readRaw(R.raw.learn_dict)));
 		} catch (Exception e) {
 			// No dictionary: subtitles simply stay hidden.
 		}
+	}
+
+	/**
+	 * Pack format (learn_pack.json, see dists/scummlearn/README-packs.md):
+	 *   {"game": "...", "lines": {english: hebrew}, "ids": {lineId: hebrew},
+	 *    "words": {word: {"he": ..., "note": ...}}, "hints": {"cooldown_sec":..., "rooms": {...}}}
+	 */
+	private void loadPackDict(JSONObject pack) {
+		_lines.clear();
+		_ids.clear();
+		_words.clear();
+		JSONObject lines = pack.optJSONObject("lines");
+		if (lines != null)
+			for (Iterator<String> it = lines.keys(); it.hasNext(); ) {
+				String en = it.next();
+				_lines.put(norm(en), lines.optString(en));
+			}
+		JSONObject ids = pack.optJSONObject("ids");
+		if (ids != null)
+			for (Iterator<String> it = ids.keys(); it.hasNext(); ) {
+				String id = it.next();
+				_ids.put(id.toUpperCase(Locale.ROOT), ids.optString(id));
+			}
+		JSONObject words = pack.optJSONObject("words");
+		if (words != null)
+			for (Iterator<String> it = words.keys(); it.hasNext(); ) {
+				String w = it.next();
+				JSONObject e = words.optJSONObject(w);
+				_words.put(w.toLowerCase(Locale.ROOT), e != null ? e.optString("he") : words.optString(w));
+			}
+	}
+
+	/** A game started: switch to its own pack if it has one, else keep the built-in one. */
+	private void startGame(JSONObject o) {
+		String game = o.optString("game");
+		if (game.equals(_game))
+			return;
+		_game = game;
+		JSONObject pack = o.optJSONObject("pack");
+		if (pack != null) {
+			loadPackDict(pack);
+			JSONObject hints = pack.optJSONObject("hints");
+			_hints = hints;
+			Log.d("ScummLearn", "pack for " + game + ": " + _lines.size() + " lines, " + _ids.size()
+				+ " ids, " + _words.size() + " words, hints " + (hints != null));
+		} else {
+			loadDict();
+			try {
+				_hints = new JSONObject(readRaw(R.raw.learn_hints));
+			} catch (Exception e) {
+				_hints = null;
+			}
+			Log.d("ScummLearn", "no pack for " + game + ", using built-in (" + _lines.size() + " lines)");
+		}
+		loadProgress();
+		tickHint();
+	}
+
+	/** Progress keys are per game; the demo keeps the keys it always had. */
+	private String key(String name) {
+		return (_game.isEmpty() || _game.startsWith("comi-demo")) ? name : name + "@" + _game;
+	}
+
+	private String translate(String id, String text) {
+		if (id != null && !id.isEmpty()) {
+			String he = _ids.get(id.toUpperCase(Locale.ROOT));
+			if (he != null)
+				return he;
+		}
+		String he = _lines.get(text);
+		if (he == null && text.indexOf(' ') < 0)
+			he = _words.get(text.toLowerCase(Locale.ROOT)); // single-word object names
+		return he;
 	}
 
 	private String readRaw(int id) throws Exception {
@@ -163,10 +234,16 @@ public class LearnPanel {
 		} catch (Exception e) {
 			_hints = null;
 		}
-		Set<String> seen = getPrefs().getStringSet("seen_lines", null);
+		loadProgress();
+	}
+
+	private void loadProgress() {
+		_seen.clear();
+		_hintShown.clear();
+		Set<String> seen = getPrefs().getStringSet(key("seen_lines"), null);
 		if (seen != null)
 			_seen.addAll(seen);
-		Set<String> shown = getPrefs().getStringSet("hints_shown", null);
+		Set<String> shown = getPrefs().getStringSet(key("hints_shown"), null);
 		if (shown != null)
 			_hintShown.addAll(shown);
 	}
@@ -281,7 +358,7 @@ public class LearnPanel {
 			final String en = norm(raw);
 			if (en.isEmpty())
 				continue;
-			String he = _lines.get(en);
+			String he = translate(null, en);
 			TextView card = new TextView(_activity);
 			card.setText(he != null ? he + "\n" + en : en);
 			card.setTextColor(Color.WHITE);
@@ -412,7 +489,7 @@ public class LearnPanel {
 	// ---- hints ----------------------------------------------------------------
 
 	private long hintReadyAt() {
-		return getPrefs().getLong("hint_ready_at", 0);
+		return getPrefs().getLong(key("hint_ready_at"), 0);
 	}
 
 	private void tickHint() {
@@ -463,7 +540,7 @@ public class LearnPanel {
 			if (!step.has("done_if") && _hintShown.contains(key) && !last)
 				continue;
 			_hintShown.add(key);
-			getPrefs().edit().putStringSet("hints_shown", new HashSet<>(_hintShown)).apply();
+			getPrefs().edit().putStringSet(key("hints_shown"), new HashSet<>(_hintShown)).apply();
 			return step.optString("he");
 		}
 		JSONObject lastStep = steps.optJSONObject(steps.length() - 1);
@@ -482,7 +559,7 @@ public class LearnPanel {
 		_hintCard.bringToFront();
 		_pause.setPaused(true);
 		long cooldown = (_hints != null ? _hints.optLong("cooldown_sec", 180) : 180) * 1000;
-		getPrefs().edit().putLong("hint_ready_at", System.currentTimeMillis() + cooldown).apply();
+		getPrefs().edit().putLong(key("hint_ready_at"), System.currentTimeMillis() + cooldown).apply();
 		tickHint();
 	}
 
@@ -490,11 +567,15 @@ public class LearnPanel {
 
 	/** Called on the native thread whenever the game shows or ends a line of text. */
 	public void addLine(final String json) {
-		Log.d("ScummLearn", "event " + json);
+		Log.d("ScummLearn", "event " + (json.length() > 300 ? json.substring(0, 300) + "..." : json));
 		_ui.post(() -> {
 			try {
 				JSONObject o = new JSONObject(json);
 				String kind = o.optString("kind");
+				if ("game".equals(kind)) {
+					startGame(o);
+					return;
+				}
 				if ("clear".equals(kind)) {
 					if (_showKind == SHOW_LINE)
 						hideIfNotHeld();
@@ -520,10 +601,10 @@ public class LearnPanel {
 				String text = norm(o.optString("text"));
 				boolean line = "dialog".equals(kind) || "video".equals(kind);
 				if (line && _seen.add(text))
-					getPrefs().edit().putStringSet("seen_lines", new HashSet<>(_seen)).apply();
+					getPrefs().edit().putStringSet(key("seen_lines"), new HashSet<>(_seen)).apply();
 				if (!_enabled || _holding)
 					return; // while held, keep the current subtitle
-				String he = _lines.get(text);
+				String he = translate(o.optString("id"), text);
 
 				if (line) {
 					if (he == null) {

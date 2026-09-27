@@ -1,0 +1,3416 @@
+[
+ {
+  "id": "NEW.1",
+  "group": "NEW",
+  "text": "Joystick Disabled",
+  "file": "COMI.EXE"
+ },
+ {
+  "id": "NEW.2",
+  "group": "NEW",
+  "text": "Recalibrating Joystick",
+  "file": "COMI.EXE"
+ },
+ {
+  "id": "NEW.3",
+  "group": "NEW",
+  "text": "move the joystick to the upper left... hit any button",
+  "file": "COMI.EXE"
+ },
+ {
+  "id": "NEW.4",
+  "group": "NEW",
+  "text": "move the joystick to the lower right... hit any button",
+  "file": "COMI.EXE"
+ },
+ {
+  "id": "NEW.5",
+  "group": "NEW",
+  "text": "move the joystick to the center... hit any button",
+  "file": "COMI.EXE"
+ },
+ {
+  "id": "NEW.6",
+  "group": "NEW",
+  "text": "Unable to initialize joystick",
+  "file": "COMI.EXE"
+ },
+ {
+  "id": "NEW.23",
+  "group": "NEW",
+  "text": "Text Speed Slow ========== Fast",
+  "file": "COMI.EXE"
+ },
+ {
+  "id": "NEW.24",
+  "group": "NEW",
+  "text": "Music Volume Low ========= High",
+  "file": "COMI.EXE"
+ },
+ {
+  "id": "NEW.25",
+  "group": "NEW",
+  "text": "Voice Volume Low ========= High",
+  "file": "COMI.EXE"
+ },
+ {
+  "id": "NEW.26",
+  "group": "NEW",
+  "text": "Sfx Volume Low ========= High",
+  "file": "COMI.EXE"
+ },
+ {
+  "id": "LOGO.023",
+  "group": "LOGO",
+  "text": "helium balloons",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "LOGO.024",
+  "group": "LOGO",
+  "text": "They're very festive.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "LOGO.025",
+  "group": "LOGO",
+  "text": "It's a helium-filled balloon.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "LOGO.026",
+  "group": "LOGO",
+  "text": "I can't use a balloon with that.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "LOGO.027",
+  "group": "LOGO",
+  "text": "They're fun, but I need to use them with something else.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "LOGO.028",
+  "group": "LOGO",
+  "text": "It's fun, but I need to use it with something else.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "LOGO.029",
+  "group": "LOGO",
+  "text": "logo-logo-object",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "LOGO.030",
+  "group": "LOGO",
+  "text": "logo-bear-object",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "LOGO.031",
+  "group": "LOGO",
+  "text": "logo-disclaimer",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "BOOT.002",
+  "group": "BOOT",
+  "text": "Game Paused. Press SPACE to Continue.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "BOOT.003",
+  "group": "BOOT",
+  "text": "Unable to Find %s, (%c%d) Press Button.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "BOOT.004",
+  "group": "BOOT",
+  "text": "Error reading disk %c, (%c%d) Press Button.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "BOOT.005",
+  "group": "BOOT",
+  "text": "Are you sure you want to restart? (Y/N)Y",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "BOOT.006",
+  "group": "BOOT",
+  "text": "Are you sure you want to quit? (Y/N)Y",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "BOOT.007",
+  "group": "BOOT",
+  "text": "MONKEY ISLAND 3",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "BOOT.008",
+  "group": "BOOT",
+  "text": "Save",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "BOOT.009",
+  "group": "BOOT",
+  "text": "Load",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "BOOT.010",
+  "group": "BOOT",
+  "text": "Play",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "BOOT.011",
+  "group": "BOOT",
+  "text": "Cancel",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "BOOT.012",
+  "group": "BOOT",
+  "text": "Quit",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "BOOT.013",
+  "group": "BOOT",
+  "text": "OK",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "BOOT.014",
+  "group": "BOOT",
+  "text": "You must enter a name",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "BOOT.015",
+  "group": "BOOT",
+  "text": "The game was NOT saved (disk full?)",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "BOOT.016",
+  "group": "BOOT",
+  "text": "The game was NOT loaded",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "BOOT.017",
+  "group": "BOOT",
+  "text": "Saving '%s'",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "BOOT.018",
+  "group": "BOOT",
+  "text": "Loading '%s'",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "BOOT.019",
+  "group": "BOOT",
+  "text": "Name your SAVE game",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "BOOT.020",
+  "group": "BOOT",
+  "text": "Select a game to LOAD",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "BOOT.021",
+  "group": "BOOT",
+  "text": "Music",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "BOOT.022",
+  "group": "BOOT",
+  "text": "Voice",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "BOOT.023",
+  "group": "BOOT",
+  "text": "Sfx",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "BOOT.024",
+  "group": "BOOT",
+  "text": "Disabled",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "BOOT.025",
+  "group": "BOOT",
+  "text": "Text Speed",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "BOOT.026",
+  "group": "BOOT",
+  "text": "Display Text",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "BOOT.028",
+  "group": "BOOT",
+  "text": "Do you want to replace this saved game? (Y/N)Y",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "BOOT.030",
+  "group": "BOOT",
+  "text": "TEXT Speed Slow xxxxxxxxxx Fast",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "BOOT.031",
+  "group": "BOOT",
+  "text": "Volume Low xxxxxxxxx High",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "BOOT.032",
+  "group": "BOOT",
+  "text": "sfx Volume Low xxxxxxxxx High",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "BOOT.033",
+  "group": "BOOT",
+  "text": "Recalibrating Joystick",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "BOOT.034",
+  "group": "BOOT",
+  "text": "move the joystick to the upper left... hit any button",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "BOOT.035",
+  "group": "BOOT",
+  "text": "move the joystick to the lower right... hit any button",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "BOOT.036",
+  "group": "BOOT",
+  "text": "move the joystick to the center... hit any button",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "BOOT.037",
+  "group": "BOOT",
+  "text": "Joystick Disabled",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "SYSTEM.023",
+  "group": "SYSTEM",
+  "text": "M",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "SYSTEM.003",
+  "group": "SYSTEM",
+  "text": "I don't have anything.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "SYSTEM.004",
+  "group": "SYSTEM",
+  "text": "I've got nothing to say.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "SYSTEM.005",
+  "group": "SYSTEM",
+  "text": "Naw.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "SYSTEM.006",
+  "group": "SYSTEM",
+  "text": "Hmmm.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "SYSTEM.007",
+  "group": "SYSTEM",
+  "text": "Don't think so.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "SYSTEM.008",
+  "group": "SYSTEM",
+  "text": "Hmmm... no.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "SYSTEM.009",
+  "group": "SYSTEM",
+  "text": "I can't reach it.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "SYSTEM.010",
+  "group": "SYSTEM",
+  "text": "I don't have that.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "SYSTEM.011",
+  "group": "SYSTEM",
+  "text": "I don't think so.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "SYSTEM.012",
+  "group": "SYSTEM",
+  "text": "Hmmm.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "SYSTEM.013",
+  "group": "SYSTEM",
+  "text": "Hey!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "SYSTEM.014",
+  "group": "SYSTEM",
+  "text": "Fun.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "SYSTEM.015",
+  "group": "SYSTEM",
+  "text": "That won't fit.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "SYSTEM.016",
+  "group": "SYSTEM",
+  "text": "Pardon?",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "SYSTEM.017",
+  "group": "SYSTEM",
+  "text": "No.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "SYSTEM.018",
+  "group": "SYSTEM",
+  "text": "Molasses machine.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "SYSTEM.019",
+  "group": "SYSTEM",
+  "text": "Street legal machine.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "SYSTEM.020",
+  "group": "SYSTEM",
+  "text": "Trans-warp drive machine.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "SYSTEM.021",
+  "group": "SYSTEM",
+  "text": "Machine rating is",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "SYSTEM.022",
+  "group": "SYSTEM",
+  "text": "Are you sure you want to win? (Y/N)",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "LOGO.001",
+  "group": "LOGO",
+  "text": "This is no time to be indulging myself.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "LOGO.002",
+  "group": "LOGO",
+  "text": "That's made my voice sound funny.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "CANNON.007",
+  "group": "CANNON",
+  "text": "Piracy: The LeChuck Way",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "CANNON.008",
+  "group": "CANNON",
+  "text": "'Chapter 1'",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "CANNON.012",
+  "group": "CANNON",
+  "text": "'How to get more than fifteen men on a dead man's chest.'",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "CANNON.011",
+  "group": "CANNON",
+  "text": "'Chapter 2'",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "CANNON.009",
+  "group": "CANNON",
+  "text": "'Leg irons or flogging?'",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "CANNON.010",
+  "group": "CANNON",
+  "text": "'The age old question.'",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "CANNON.013",
+  "group": "CANNON",
+  "text": "'Chapter 3'",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "CANNON.017",
+  "group": "CANNON",
+  "text": "'Mermaids or Manatees?'",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "CANNON.018",
+  "group": "CANNON",
+  "text": "'Does it really matter?'",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "CANNON.019",
+  "group": "CANNON",
+  "text": "It's a copy of `Piracy the LeChuck Way.`",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "CANNON.072",
+  "group": "CANNON",
+  "text": "small pirate",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "CANNON.129",
+  "group": "CANNON",
+  "text": "rope",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WATERLN.039",
+  "group": "WATERLN",
+  "text": "floating skull",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "CANNON.024",
+  "group": "CANNON",
+  "text": "Stand yer distance!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "CANNON.025",
+  "group": "CANNON",
+  "text": "Stay away!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "CANNON.026",
+  "group": "CANNON",
+  "text": "Stand back!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.001",
+  "group": "WALLYDLG",
+  "text": "I'm Guybrush Threepwood, who are you?",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.002",
+  "group": "WALLYDLG",
+  "text": "You don't scare me, you mangy pirate!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.003",
+  "group": "WALLYDLG",
+  "text": "Hello. Please don't kill me.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.004",
+  "group": "WALLYDLG",
+  "text": "Aaargh!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.005",
+  "group": "WALLYDLG",
+  "text": "I'm selling these fine leather jackets.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.006",
+  "group": "WALLYDLG",
+  "text": "Aren't you a little short for a pirate!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.007",
+  "group": "WALLYDLG",
+  "text": "I'm the evil pirate, Bloodnose!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.008",
+  "group": "WALLYDLG",
+  "text": "The wickedest fiend ever to sail under the banner of King Death!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.009",
+  "group": "WALLYDLG",
+  "text": "I'd as soon chew your nose off as look at you!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.011",
+  "group": "WALLYDLG",
+  "text": "Brave talk, boy!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.012",
+  "group": "WALLYDLG",
+  "text": "But now you're face to face with the wicked pirate Bloodnose!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.013",
+  "group": "WALLYDLG",
+  "text": "I'm the scourge of four out of the seven seas.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.014",
+  "group": "WALLYDLG",
+  "text": "Oh, don't worry about it.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.015",
+  "group": "WALLYDLG",
+  "text": "I don't...",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.016",
+  "group": "WALLYDLG",
+  "text": "...Um...",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.017",
+  "group": "WALLYDLG",
+  "text": "I mean...",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.018",
+  "group": "WALLYDLG",
+  "text": "Ye had best beg for your life, ya fetid flounder!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.019",
+  "group": "WALLYDLG",
+  "text": "Woe be to ye who fall victim to the zombie pirate LeChuck!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.020",
+  "group": "WALLYDLG",
+  "text": "Aye!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.021",
+  "group": "WALLYDLG",
+  "text": "Really?",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.024",
+  "group": "WALLYDLG",
+  "text": "No.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.025",
+  "group": "WALLYDLG",
+  "text": "I'm lying.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.026",
+  "group": "WALLYDLG",
+  "text": "In that case I don't want one.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.027",
+  "group": "WALLYDLG",
+  "text": "Sorry we couldn't make a deal.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.030",
+  "group": "WALLYDLG",
+  "text": "Cross me again and I'll chum for sharks with ya'!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.031",
+  "group": "WALLYDLG",
+  "text": "Hold yer tongue, captive!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.032",
+  "group": "WALLYDLG",
+  "text": "Or I'll be holdin' it fer ya!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.033",
+  "group": "WALLYDLG",
+  "text": "Eeewww!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.034",
+  "group": "WALLYDLG",
+  "text": "You sound pretty tough.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.035",
+  "group": "WALLYDLG",
+  "text": "How tough are you again?",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.036",
+  "group": "WALLYDLG",
+  "text": "Well, I'm pretty tough myself!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.037",
+  "group": "WALLYDLG",
+  "text": "I am so tough!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.038",
+  "group": "WALLYDLG",
+  "text": "Yes, I am!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.039",
+  "group": "WALLYDLG",
+  "text": "Are so!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.040",
+  "group": "WALLYDLG",
+  "text": "Are you wearing a fake beard?",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.041",
+  "group": "WALLYDLG",
+  "text": "Ya' scurvy sea dog!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.043",
+  "group": "WALLYDLG",
+  "text": "Is that hook for real?",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.042",
+  "group": "WALLYDLG",
+  "text": "Is that a real eyepatch?",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.044",
+  "group": "WALLYDLG",
+  "text": "Can I borrow your cannon for a second?",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "MURRAY.045",
+  "group": "MURRAY",
+  "text": "It's been swell talking to you.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.045",
+  "group": "WALLYDLG",
+  "text": "I'm so tough, in junior high, I stuffed Davy Jones in his locker.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.046",
+  "group": "WALLYDLG",
+  "text": "I'm so tough, I could survive being flogged with a cat o' nine-tails for half an hour...",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.047",
+  "group": "WALLYDLG",
+  "text": "...or three cats o' five-tails for eighteen minutes.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.048",
+  "group": "WALLYDLG",
+  "text": "I'm so tough, I...",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.049",
+  "group": "WALLYDLG",
+  "text": "...er...um...",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.050",
+  "group": "WALLYDLG",
+  "text": "I drink milk straight from the carton!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.051",
+  "group": "WALLYDLG",
+  "text": "Ooooh!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.053",
+  "group": "WALLYDLG",
+  "text": "Bloodnose the Pirate would not have a fake beard!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.054",
+  "group": "WALLYDLG",
+  "text": "Yes, it is!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.055",
+  "group": "WALLYDLG",
+  "text": "It's been glued to your ear hair!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.056",
+  "group": "WALLYDLG",
+  "text": "Actually, it's a highly sophisticated beard weave...",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.057",
+  "group": "WALLYDLG",
+  "text": "...made from the chest and back hair of real pirates!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.058",
+  "group": "WALLYDLG",
+  "text": "I'm hoping it'll take root if I don't wash it for a while!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.059",
+  "group": "WALLYDLG",
+  "text": "Aye!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.060",
+  "group": "WALLYDLG",
+  "text": "Sure it be real!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.061",
+  "group": "WALLYDLG",
+  "text": "Then why are you wearing a monacle underneath it?",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.062",
+  "group": "WALLYDLG",
+  "text": "It keeps the dust out o' me eye socket!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.063",
+  "group": "WALLYDLG",
+  "text": "Of course it's real!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.065",
+  "group": "WALLYDLG",
+  "text": "A vicious shark tore off me hand.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.066",
+  "group": "WALLYDLG",
+  "text": "What a struggle it was. I remember...",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.067",
+  "group": "WALLYDLG",
+  "text": "It is so a fake!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.068",
+  "group": "WALLYDLG",
+  "text": "It is not!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.069",
+  "group": "WALLYDLG",
+  "text": "Well...",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.070",
+  "group": "WALLYDLG",
+  "text": "O.K., it is.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.071",
+  "group": "WALLYDLG",
+  "text": "See, I haven't lost my hand yet.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.072",
+  "group": "WALLYDLG",
+  "text": "This is sort of a training-hook.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.073",
+  "group": "WALLYDLG",
+  "text": "I'm wearing this just to get used to the feel of it.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.074",
+  "group": "WALLYDLG",
+  "text": "Captain LeChuck says he'll cut my hand off when he gets some free time.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.075",
+  "group": "WALLYDLG",
+  "text": "I do have a hang nail.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.076",
+  "group": "WALLYDLG",
+  "text": "It'll probably get infected.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.077",
+  "group": "WALLYDLG",
+  "text": "No, ya scheming scallawag!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.078",
+  "group": "WALLYDLG",
+  "text": "Ya scrappy scofflaw!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.079",
+  "group": "WALLYDLG",
+  "text": "Ya steamin' souffle!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.081",
+  "group": "WALLYDLG",
+  "text": "You!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.082",
+  "group": "WALLYDLG",
+  "text": "Don't make me laugh!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.083",
+  "group": "WALLYDLG",
+  "text": "You couldn't even grow a decent beard!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.084",
+  "group": "WALLYDLG",
+  "text": "Well, what about YOUR beard?",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.085",
+  "group": "WALLYDLG",
+  "text": "And furthermore...",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.086",
+  "group": "WALLYDLG",
+  "text": "Hey...",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.087",
+  "group": "WALLYDLG",
+  "text": "How did you know about my attempted beard?",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.088",
+  "group": "WALLYDLG",
+  "text": "Er...",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.089",
+  "group": "WALLYDLG",
+  "text": "Pirate's intuition.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.090",
+  "group": "WALLYDLG",
+  "text": "You are not!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.091",
+  "group": "WALLYDLG",
+  "text": "No, you're not!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.092",
+  "group": "WALLYDLG",
+  "text": "Are not!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.093",
+  "group": "WALLYDLG",
+  "text": "Oh, yeah?",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.094",
+  "group": "WALLYDLG",
+  "text": "Well, I want a cracker!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.095",
+  "group": "WALLYDLG",
+  "text": "What kind of a comeback is that?",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.096",
+  "group": "WALLYDLG",
+  "text": "That's not terrifying?",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.097",
+  "group": "WALLYDLG",
+  "text": "Not in the least.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.098",
+  "group": "WALLYDLG",
+  "text": "How strange.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.099",
+  "group": "WALLYDLG",
+  "text": "I'm sure I said it right.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.100",
+  "group": "WALLYDLG",
+  "text": "Wally",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.101",
+  "group": "WALLYDLG",
+  "text": "Wait a minute!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.102",
+  "group": "WALLYDLG",
+  "text": "You're not a pirate!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.103",
+  "group": "WALLYDLG",
+  "text": "Wally!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.104",
+  "group": "WALLYDLG",
+  "text": "Don't you recognize me?",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.105",
+  "group": "WALLYDLG",
+  "text": "It's Guybrush Threepwood!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.106",
+  "group": "WALLYDLG",
+  "text": "Oh, gee...",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.107",
+  "group": "WALLYDLG",
+  "text": "Hello, Mr. Wood.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.111",
+  "group": "WALLYDLG",
+  "text": "The last time I saw you, we were prisoners in LeChuck's dungeon.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.112",
+  "group": "WALLYDLG",
+  "text": "Why would you sign on with a ship of the living dead?",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.113",
+  "group": "WALLYDLG",
+  "text": "Well, Mr. Brush...",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.114",
+  "group": "WALLYDLG",
+  "text": "...at first I had some misgivings about it.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.115",
+  "group": "WALLYDLG",
+  "text": "But thanks to LeChuck's seminars, motivational lectures...",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.116",
+  "group": "WALLYDLG",
+  "text": "...and audio books-on-parrot, I've become a vicious corsair!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.119",
+  "group": "WALLYDLG",
+  "text": "You can too!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.120",
+  "group": "WALLYDLG",
+  "text": "Ask me how!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.121",
+  "group": "WALLYDLG",
+  "text": "Tell me about these seminars.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.122",
+  "group": "WALLYDLG",
+  "text": "Tell me about these motivational lectures.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.123",
+  "group": "WALLYDLG",
+  "text": "Tell me about these audio books.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.124",
+  "group": "WALLYDLG",
+  "text": "Do you have any literature I could look at?",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.125",
+  "group": "WALLYDLG",
+  "text": "Tell me more!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.126",
+  "group": "WALLYDLG",
+  "text": "I'm not in the mood for sales hype.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.127",
+  "group": "WALLYDLG",
+  "text": "The seminars really brought things into focus.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.128",
+  "group": "WALLYDLG",
+  "text": "You don't know how empowering it is...",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.129",
+  "group": "WALLYDLG",
+  "text": "...to be able to say to yourself...",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.130",
+  "group": "WALLYDLG",
+  "text": "'Yes. I am a despicable, filthy, villainous pirate...'",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.131",
+  "group": "WALLYDLG",
+  "text": "'...deserving blame and censure...'",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.132",
+  "group": "WALLYDLG",
+  "text": "'...but THAT pirate...'",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.133",
+  "group": "WALLYDLG",
+  "text": "'...is who I want to be.'",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.134",
+  "group": "WALLYDLG",
+  "text": "Everyone was really very supportive.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.135",
+  "group": "WALLYDLG",
+  "text": "We had this great feeling of synergy.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.136",
+  "group": "WALLYDLG",
+  "text": "Then LeChuck kicked down the door and said...",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.137",
+  "group": "WALLYDLG",
+  "text": "'Ye lazy scum!'",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.138",
+  "group": "WALLYDLG",
+  "text": "'Get back ta work or I'll beat you with yer own legs.'",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.139",
+  "group": "WALLYDLG",
+  "text": "Well, they weren't lectures as such.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.140",
+  "group": "WALLYDLG",
+  "text": "It was what LeChuck described as flogging the inner child.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.141",
+  "group": "WALLYDLG",
+  "text": "To become a pirate, the audio books-on-parrot are the key.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.142",
+  "group": "WALLYDLG",
+  "text": "You get a set of twelve parrots...",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.143",
+  "group": "WALLYDLG",
+  "text": "...one a month.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.144",
+  "group": "WALLYDLG",
+  "text": "Return as many as you like.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.145",
+  "group": "WALLYDLG",
+  "text": "Keep them all and live.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.146",
+  "group": "WALLYDLG",
+  "text": "They teach you to talk just like a pirate!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.147",
+  "group": "WALLYDLG",
+  "text": "All the key phrases are in there!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.148",
+  "group": "WALLYDLG",
+  "text": "'Blow the man down.'",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.149",
+  "group": "WALLYDLG",
+  "text": "'Shiver me timbers.'",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.150",
+  "group": "WALLYDLG",
+  "text": "'Who's a pretty bird?'",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.151",
+  "group": "WALLYDLG",
+  "text": "All the phrases a pirate needs to command respect on the high-seas!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.152",
+  "group": "WALLYDLG",
+  "text": "Here.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.153",
+  "group": "WALLYDLG",
+  "text": "At least take this literature.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.154",
+  "group": "WALLYDLG",
+  "text": "You may change your mind.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.155",
+  "group": "WALLYDLG",
+  "text": "Here.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.156",
+  "group": "WALLYDLG",
+  "text": "This leaflet explains the basic philosophy I follow.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.157",
+  "group": "WALLYDLG",
+  "text": "Set me free, Wally.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.158",
+  "group": "WALLYDLG",
+  "text": "What's behind that door?",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.159",
+  "group": "WALLYDLG",
+  "text": "What's behind the door again?",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.160",
+  "group": "WALLYDLG",
+  "text": "What are LeChuck's plans?",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.161",
+  "group": "WALLYDLG",
+  "text": "What are LeChuck's plans again?",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.162",
+  "group": "WALLYDLG",
+  "text": "Snap out of it Wally!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.163",
+  "group": "WALLYDLG",
+  "text": "You're a failure as a pirate.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.164",
+  "group": "WALLYDLG",
+  "text": "I can't Mr. Brush.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.165",
+  "group": "WALLYDLG",
+  "text": "I'm the evil pirate Bloodnose, now.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.166",
+  "group": "WALLYDLG",
+  "text": "And besides...",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.167",
+  "group": "WALLYDLG",
+  "text": "...even if you got up on deck, LeChuck would cut you to ribbons.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.168",
+  "group": "WALLYDLG",
+  "text": "Oooooh...",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.169",
+  "group": "WALLYDLG",
+  "text": "That's the door to LeChuck's treasure hold.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.170",
+  "group": "WALLYDLG",
+  "text": "There's heaps and piles of gold and silver.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.171",
+  "group": "WALLYDLG",
+  "text": "He's brought all the loot he's ever stolen to give to Elaine.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.172",
+  "group": "WALLYDLG",
+  "text": "LeChuck is convinced that he can buy Elaine's love.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.173",
+  "group": "WALLYDLG",
+  "text": "Hmmmm...",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.174",
+  "group": "WALLYDLG",
+  "text": "It's LeChuck's fabulous treasure hold.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.175",
+  "group": "WALLYDLG",
+  "text": "He's been working on a secret weapon.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.176",
+  "group": "WALLYDLG",
+  "text": "Some incredibly powerful cannonball.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.177",
+  "group": "WALLYDLG",
+  "text": "He's going to use it to blow down the walls of the fort...",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.178",
+  "group": "WALLYDLG",
+  "text": "...so his crew can overrun the island!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.179",
+  "group": "WALLYDLG",
+  "text": "He's going to blow up the fort with a magic cannon ball.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.180",
+  "group": "WALLYDLG",
+  "text": "That's Bloodnose to you, ya scurvy sea-bass!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.181",
+  "group": "WALLYDLG",
+  "text": "The only thing that'll be snappin' around here is yer neck!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.182",
+  "group": "WALLYDLG",
+  "text": "Shut yer trap, ya yellow-bellied blowfish!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.183",
+  "group": "WALLYDLG",
+  "text": "One more peep out of you and I'll do ya in!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.184",
+  "group": "WALLYDLG",
+  "text": "Peep.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.185",
+  "group": "WALLYDLG",
+  "text": "Word.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.186",
+  "group": "WALLYDLG",
+  "text": "Try it, shrimpy.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.187",
+  "group": "WALLYDLG",
+  "text": "You haven't got the guts!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.188",
+  "group": "WALLYDLG",
+  "text": "You wouldn't dare!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.189",
+  "group": "WALLYDLG",
+  "text": "You and what navy?",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.190",
+  "group": "WALLYDLG",
+  "text": "You're a cartographer, not a pirate.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.191",
+  "group": "WALLYDLG",
+  "text": "Just go ahead and shoot.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.192",
+  "group": "WALLYDLG",
+  "text": "I am not!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.193",
+  "group": "WALLYDLG",
+  "text": "I'm a vicious pirate.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.194",
+  "group": "WALLYDLG",
+  "text": "You've got 'I luv maps' embroidered on your shirt.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.195",
+  "group": "WALLYDLG",
+  "text": "That's a coincidence!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.196",
+  "group": "WALLYDLG",
+  "text": "Now keep quiet before I fill you full of lead.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.197",
+  "group": "WALLYDLG",
+  "text": "Ya scabrous swab!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.198",
+  "group": "WALLYDLG",
+  "text": "One more word and I'll let you have it!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.199",
+  "group": "WALLYDLG",
+  "text": "Ya jigglin' jellyfish!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.200",
+  "group": "WALLYDLG",
+  "text": "Ya sanguine sasquatch!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.201",
+  "group": "WALLYDLG",
+  "text": "Don't make me use this pistol on you!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "CANNON.034",
+  "group": "CANNON",
+  "text": "Blast ye scurvy dogs!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "CANNON.035",
+  "group": "CANNON",
+  "text": "This will make you rue the day!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "CANNON.036",
+  "group": "CANNON",
+  "text": "Avast, ye swabs! Prepare fer yer doom!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "CANNON.037",
+  "group": "CANNON",
+  "text": "Ya drink bilge water, and yer mothers dress you funny!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "CANNON.038",
+  "group": "CANNON",
+  "text": "Take that!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "CANNON.039",
+  "group": "CANNON",
+  "text": "Let's see if you can take this!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "CANNON.040",
+  "group": "CANNON",
+  "text": "I'll reduce yer fort ta rubble!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "CANNON.041",
+  "group": "CANNON",
+  "text": "I feel like I could, TAKE ON THE WORLD!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "CANNON.042",
+  "group": "CANNON",
+  "text": "You in the fort! Yer doom be at hand!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "CANNON.043",
+  "group": "CANNON",
+  "text": "Somehow, I find all this violence desensitizing.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "CANNON.050",
+  "group": "CANNON",
+  "text": "If there are any of you stinking, wretched fiends of the damned in there...",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "CANNON.051",
+  "group": "CANNON",
+  "text": "...could you open this door?",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "CANNON.052",
+  "group": "CANNON",
+  "text": "It's not that I'm trying to escape or anything.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "CANNON.053",
+  "group": "CANNON",
+  "text": "It's just that I'd like to step outside and enjoy an adult beverage.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "CANNON.054",
+  "group": "CANNON",
+  "text": "Hey!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "CANNON.055",
+  "group": "CANNON",
+  "text": "If there are any of you rancid, evil, deviant hellspawn behind this door...",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "CANNON.056",
+  "group": "CANNON",
+  "text": "You'd better watch out!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "CANNON.057",
+  "group": "CANNON",
+  "text": "'Cause I'm breaking out of here!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "CANNON.044",
+  "group": "CANNON",
+  "text": "Hello!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "CANNON.045",
+  "group": "CANNON",
+  "text": "Is there anybody in there who's not evil or dead?",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "CANNON.046",
+  "group": "CANNON",
+  "text": "Hmmm...",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "CANNON.047",
+  "group": "CANNON",
+  "text": "There's no point calling out.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "CANNON.048",
+  "group": "CANNON",
+  "text": "If there was anyone in there...",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "CANNON.049",
+  "group": "CANNON",
+  "text": "...they would be some sort of minion of darkness.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "CANNON.058",
+  "group": "CANNON",
+  "text": "No one can hear me through this door.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "CANNON.059",
+  "group": "CANNON",
+  "text": "If only I could get it open!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "CANNON.027",
+  "group": "CANNON",
+  "text": "Any closer and it's curtains for you!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "CANNON.028",
+  "group": "CANNON",
+  "text": "You're in my personal space, ya lubber!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "CANNON.029",
+  "group": "CANNON",
+  "text": "If you give me room to be my own pirate...",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "CANNON.030",
+  "group": "CANNON",
+  "text": "...then I can give you room to be your own pirate.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "CANNON.031",
+  "group": "CANNON",
+  "text": "I'm glad we had this talk.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "CANNON.032",
+  "group": "CANNON",
+  "text": "Ya wretched refuse!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "CANNON.033",
+  "group": "CANNON",
+  "text": "Ya better fear!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.202",
+  "group": "WALLYDLG",
+  "text": "OK!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.203",
+  "group": "WALLYDLG",
+  "text": "That's it!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.206",
+  "group": "WALLYDLG",
+  "text": "I'm gonna blast ya!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.207",
+  "group": "WALLYDLG",
+  "text": "I'm gonna...",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.208",
+  "group": "WALLYDLG",
+  "text": "...I'm...",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.209",
+  "group": "WALLYDLG",
+  "text": "...gonna...",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.210",
+  "group": "WALLYDLG",
+  "text": "...<sniff>...",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.211",
+  "group": "WALLYDLG",
+  "text": "Oh, I can't do it!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.212",
+  "group": "WALLYDLG",
+  "text": "I just can't!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.213",
+  "group": "WALLYDLG",
+  "text": "<sob>",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.214",
+  "group": "WALLYDLG",
+  "text": "You're right, Mr. Wood!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.215",
+  "group": "WALLYDLG",
+  "text": "I'm just not a pirate!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.216",
+  "group": "WALLYDLG",
+  "text": "I'm not ferocious, or bloodthirsty, or hateful, or anything!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.217",
+  "group": "WALLYDLG",
+  "text": "I'm not even...",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.219",
+  "group": "WALLYDLG",
+  "text": "I'm not even unpleasant!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.220",
+  "group": "WALLYDLG",
+  "text": "Waaaaaaaaah!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.221",
+  "group": "WALLYDLG",
+  "text": "There, there.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "CANNON.060",
+  "group": "CANNON",
+  "text": "I see a diorama of the children of the world living in peace and freedom.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "CANNON.061",
+  "group": "CANNON",
+  "text": "No, wait.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "CANNON.062",
+  "group": "CANNON",
+  "text": "It can't be that.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "CANNON.063",
+  "group": "CANNON",
+  "text": "It's just too dark to make out what's in there.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "CANNON.064",
+  "group": "CANNON",
+  "text": "It's too dark to see.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "CANNON.020",
+  "group": "CANNON",
+  "text": "Get your hands off that cannon!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "CANNON.021",
+  "group": "CANNON",
+  "text": "Don't you touch that cannon!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "CANNON.022",
+  "group": "CANNON",
+  "text": "That's LeChuck's property! Hands off!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "CANNON.023",
+  "group": "CANNON",
+  "text": "Don't touch that!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.218",
+  "group": "WALLYDLG",
+  "text": "<whimper>",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WALLYDLG.222",
+  "group": "WALLYDLG",
+  "text": "<weep>",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "CANNON.073",
+  "group": "CANNON",
+  "text": "I don't think I've ever seen a cuter pirate.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "CANNON.074",
+  "group": "CANNON",
+  "text": "I don't want to disturb him.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "CANNON.075",
+  "group": "CANNON",
+  "text": "He's had a hard day.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "CANNON.076",
+  "group": "CANNON",
+  "text": "If I rough him up, he may shoot me.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "CANNON.077",
+  "group": "CANNON",
+  "text": "I don't want to slap the little guy around.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "CANNON.078",
+  "group": "CANNON",
+  "text": "I'm not going to bludgeon poor Wally with this.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "CANNON.079",
+  "group": "CANNON",
+  "text": "Wally doesn't need this hook any more.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "CANNON.098",
+  "group": "CANNON",
+  "text": "cannon restraint rope",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "CANNON.099",
+  "group": "CANNON",
+  "text": "It's the restraining rope for the cannon.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "CANNON.100",
+  "group": "CANNON",
+  "text": "The rope has been cut.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "CANNON.101",
+  "group": "CANNON",
+  "text": "There's nothing restraining the cannon now.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "CANNON.102",
+  "group": "CANNON",
+  "text": "I could never untie that big a knot.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "CANNON.105",
+  "group": "CANNON",
+  "text": "I couldn't chew through that.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "CANNON.106",
+  "group": "CANNON",
+  "text": "No.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "CANNON.108",
+  "group": "CANNON",
+  "text": "It's already cut.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "CANNON.109",
+  "group": "CANNON",
+  "text": "Hooking the rope won't do anything.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "CANNON.069",
+  "group": "CANNON",
+  "text": "cannon",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "CANNON.070",
+  "group": "CANNON",
+  "text": "It's one of those new, self-loading cannons I've heard so much about.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "CANNON.071",
+  "group": "CANNON",
+  "text": "It's already loaded and ready to fire.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "CANNON.130",
+  "group": "CANNON",
+  "text": "It's an old, short, frayed rope.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "CANNON.131",
+  "group": "CANNON",
+  "text": "It's tangled up in all that debris. I can't pick it up.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "CANNON.132",
+  "group": "CANNON",
+  "text": "I've got enough fiber in my diet already.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "CANNON.133",
+  "group": "CANNON",
+  "text": "Even if I could cut it loose, it's too short and frayed to be of any use.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "CANNON.134",
+  "group": "CANNON",
+  "text": "useless rope",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "CANNON.135",
+  "group": "CANNON",
+  "text": "The rope is too short and frayed to be of any use.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "CANNON.136",
+  "group": "CANNON",
+  "text": "useless rope",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "CANNON.117",
+  "group": "CANNON",
+  "text": "cannon balls",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "CANNON.118",
+  "group": "CANNON",
+  "text": "Nice cannon balls.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "CANNON.119",
+  "group": "CANNON",
+  "text": "They're too heavy to carry.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "CANNON.120",
+  "group": "CANNON",
+  "text": "The ramrod is for the cannon, not the cannon balls.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "CANNON.112",
+  "group": "CANNON",
+  "text": "keyhole",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "CANNON.113",
+  "group": "CANNON",
+  "text": "I don't have my lock-picking tools.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "CANNON.114",
+  "group": "CANNON",
+  "text": "I never have been any good at lock-picking.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "CANNON.115",
+  "group": "CANNON",
+  "text": "But I am still a mighty pirate, believe you me.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "CANNON.116",
+  "group": "CANNON",
+  "text": "That's too big to fit in the keyhole.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "CANNON.065",
+  "group": "CANNON",
+  "text": "locked door",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "CANNON.066",
+  "group": "CANNON",
+  "text": "It looks pretty sturdy.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "CANNON.067",
+  "group": "CANNON",
+  "text": "I couldn't force that door open with my bare hands.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "CANNON.068",
+  "group": "CANNON",
+  "text": "The door is too strong for the cutlass to cut through.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "CANNON.110",
+  "group": "CANNON",
+  "text": "pirate literature",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "CANNON.111",
+  "group": "CANNON",
+  "text": "This is only for reading.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "CANNON.092",
+  "group": "CANNON",
+  "text": "gaff",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "CANNON.093",
+  "group": "CANNON",
+  "text": "It's a ramrod with a plastic hook stuck on the end.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "CANNON.094",
+  "group": "CANNON",
+  "text": "That doesn't look appetizing.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "CANNON.095",
+  "group": "CANNON",
+  "text": "Hello, ramrod with plastic hook.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "CANNON.088",
+  "group": "CANNON",
+  "text": "Scraping a hook on that would be pointless.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "CANNON.097",
+  "group": "CANNON",
+  "text": "I can't just use this by itself.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "CANNON.085",
+  "group": "CANNON",
+  "text": "plastic hook",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "CANNON.086",
+  "group": "CANNON",
+  "text": "It's Wally's fake pirate hook.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "CANNON.087",
+  "group": "CANNON",
+  "text": "It's not a toothpick.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "CANNON.089",
+  "group": "CANNON",
+  "text": "I don't need to wear a hook.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "CANNON.090",
+  "group": "CANNON",
+  "text": "I have two good hands.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "CANNON.091",
+  "group": "CANNON",
+  "text": "I don't want to pop the balloon.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "CANNON.121",
+  "group": "CANNON",
+  "text": "grate",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "CANNON.122",
+  "group": "CANNON",
+  "text": "Grate.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "CANNON.123",
+  "group": "CANNON",
+  "text": "There's nobody up there to hear me.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "CANNON.124",
+  "group": "CANNON",
+  "text": "Nobody friendly, anyway.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "CANNON.125",
+  "group": "CANNON",
+  "text": "I can't reach it.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "CANNON.126",
+  "group": "CANNON",
+  "text": "I can't reach it.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "CANNON.127",
+  "group": "CANNON",
+  "text": "The grate is solid wood. I can't push it open.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "CANNON.128",
+  "group": "CANNON",
+  "text": "The hook is too big to fit through the grate.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "CANNON.080",
+  "group": "CANNON",
+  "text": "ramrod",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "CANNON.081",
+  "group": "CANNON",
+  "text": "Looks like a ramrod for the cannon.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "CANNON.082",
+  "group": "CANNON",
+  "text": "I don't want to talk to the ramrod.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "CANNON.083",
+  "group": "CANNON",
+  "text": "That doesn't need to be loaded.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "CANNON.084",
+  "group": "CANNON",
+  "text": "This has to be used with something else.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "CANNON.001",
+  "group": "CANNON",
+  "text": "I've got to get out of here and help Elaine!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "CANNON.002",
+  "group": "CANNON",
+  "text": "If I could only get through this one door...",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "CANNON.003",
+  "group": "CANNON",
+  "text": "...then I could easily overpower the armed guards above...",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "CANNON.004",
+  "group": "CANNON",
+  "text": "...slip over the side and make for the shore.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "CANNON.005",
+  "group": "CANNON",
+  "text": "Quit yer mumbling, captive!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "CANNONV.001",
+  "group": "CANNONV",
+  "text": "Unlimited cannon balls mode ON.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "CANNONV.002",
+  "group": "CANNONV",
+  "text": "Unlimited cannon balls mode STILL ON.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "CANNONV.010",
+  "group": "CANNONV",
+  "text": "Hey! You're gettin' a little close there, pal!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "CANNONV.011",
+  "group": "CANNONV",
+  "text": "Watch where you're shootin'!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "CANNONV.012",
+  "group": "CANNONV",
+  "text": "Whose side are you on?",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "CANNONV.013",
+  "group": "CANNONV",
+  "text": "You're gonna get us all killed! Again!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "CANNONV.014",
+  "group": "CANNONV",
+  "text": "It's like you're not one of LeChuck's evil minions!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "CANNONV.015",
+  "group": "CANNONV",
+  "text": "The fort, you fool! Aim for the fort!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "CANNONV.016",
+  "group": "CANNONV",
+  "text": "Wally! When we get back to the boat, you're gonna be in trouble!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "CANNONV.017",
+  "group": "CANNONV",
+  "text": "Who is manning that cannon?",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "CANNONV.018",
+  "group": "CANNONV",
+  "text": "Aim farther out, you idiot!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "CANNONV.019",
+  "group": "CANNONV",
+  "text": "Stop it!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "CANNONV.005",
+  "group": "CANNONV",
+  "text": "Whoops!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "CANNONV.006",
+  "group": "CANNONV",
+  "text": "That was me. Sorry.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "CANNONV.007",
+  "group": "CANNONV",
+  "text": "Sorry about that!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "CANNONV.008",
+  "group": "CANNONV",
+  "text": "Oops! My fault!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "CANNONV.009",
+  "group": "CANNONV",
+  "text": "Ouch.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "CANNONV.003",
+  "group": "CANNONV",
+  "text": "Hey! I'm getting pretty good at this...",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "CANNONV.004",
+  "group": "CANNONV",
+  "text": "Ewww, gross... all the bones and stuff are floating towards the ship.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WATERLN.027",
+  "group": "WATERLN",
+  "text": "That will reach it, but it can't catch hold.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WATERLN.001",
+  "group": "WATERLN",
+  "text": "I can't quite squeeze past this cannon.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WATERLN.002",
+  "group": "WATERLN",
+  "text": "Move out of the way!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WATERLN.003",
+  "group": "WATERLN",
+  "text": "I can't fire the cannon with you standing there!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WATERLN.012",
+  "group": "WATERLN",
+  "text": "Well, they've messed with the wrong skull this time!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WATERLN.013",
+  "group": "WATERLN",
+  "text": "If I could just get my hands on that gunner! If I could just get my hands, period!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WATERLN.014",
+  "group": "WATERLN",
+  "text": "Ah, well. I guess I'll just have to look on the bright side of this.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WATERLN.015",
+  "group": "WATERLN",
+  "text": "At least I've lost some weight.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WATERLN.016",
+  "group": "WATERLN",
+  "text": "Boy! There's not much to do out here when you're just a bodiless head.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WATERLN.017",
+  "group": "WATERLN",
+  "text": "I could pass the time by whistling if I had lips.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WATERLN.018",
+  "group": "WATERLN",
+  "text": "This is just SO unfair!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WATERLN.019",
+  "group": "WATERLN",
+  "text": "Now everybody's going to storm the fort and I'm going to be stuck here.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WATERLN.020",
+  "group": "WATERLN",
+  "text": "Hey!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "MURRAY.003",
+  "group": "MURRAY",
+  "text": "Can I call you BOB?",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "MURRAY.002",
+  "group": "MURRAY",
+  "text": "Lose something?",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "MURRAY.001",
+  "group": "MURRAY",
+  "text": "I'm Guybrush Threepwood, a mighty pirate!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "MURRAY.004",
+  "group": "MURRAY",
+  "text": "I'm Guybrush. Sorry about blasting your boat.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "MURRAY.027",
+  "group": "MURRAY",
+  "text": "You may call me Murray!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "MURRAY.028",
+  "group": "MURRAY",
+  "text": "I'm a powerful demonic force!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "MURRAY.029",
+  "group": "MURRAY",
+  "text": "I'm the harbinger of your doom!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "MURRAY.030",
+  "group": "MURRAY",
+  "text": "And the forces of darkness will applaud me as I STRIDE through the gates of hell carrying your head on a pike!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "MURRAY.031",
+  "group": "MURRAY",
+  "text": "'Stride?'",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "MURRAY.032",
+  "group": "MURRAY",
+  "text": "Alright then, 'ROLL! ROLL through the gates of hell.'",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "MURRAY.033",
+  "group": "MURRAY",
+  "text": "Must you take the fun out of everything?",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "MURRAY.017",
+  "group": "MURRAY",
+  "text": "I am Murray!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "MURRAY.018",
+  "group": "MURRAY",
+  "text": "The invincible, demonic skull!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "MURRAY.019",
+  "group": "MURRAY",
+  "text": "Quake in fear, mortal!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "MURRAY.020",
+  "group": "MURRAY",
+  "text": "For your insolence, I shall now devour you!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "MURRAY.021",
+  "group": "MURRAY",
+  "text": "Uh-huh.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "MURRAY.022",
+  "group": "MURRAY",
+  "text": "Could you...",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "MURRAY.023",
+  "group": "MURRAY",
+  "text": "...er...",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "MURRAY.024",
+  "group": "MURRAY",
+  "text": "Could you pick me up, so I can bite you?",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "MURRAY.025",
+  "group": "MURRAY",
+  "text": "No.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "MURRAY.026",
+  "group": "MURRAY",
+  "text": "Just thought I'd ask.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "MURRAY.005",
+  "group": "MURRAY",
+  "text": "I'm Murray,...",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "MURRAY.006",
+  "group": "MURRAY",
+  "text": "...the demonic skeleton...",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "MURRAY.007",
+  "group": "MURRAY",
+  "text": "...uh...",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "MURRAY.008",
+  "group": "MURRAY",
+  "text": "...the mighty demonic skull!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "MURRAY.009",
+  "group": "MURRAY",
+  "text": "And I'm in need of some bones!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "MURRAY.010",
+  "group": "MURRAY",
+  "text": "Maybe I'll just take yours!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "MURRAY.011",
+  "group": "MURRAY",
+  "text": "Bwahahahaha!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "MURRAY.012",
+  "group": "MURRAY",
+  "text": "What are you going to do?",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "MURRAY.013",
+  "group": "MURRAY",
+  "text": "Head-butt me?",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "MURRAY.016",
+  "group": "MURRAY",
+  "text": "I'll think of something.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "MURRAY.034",
+  "group": "MURRAY",
+  "text": "Then that sorrow will be the last thing you feel!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "MURRAY.035",
+  "group": "MURRAY",
+  "text": "You have come face to face with the terrible demon skull Murray!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "MURRAY.036",
+  "group": "MURRAY",
+  "text": "Now, let me hear your screams of terror!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "MURRAY.037",
+  "group": "MURRAY",
+  "text": "Eeek.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "MURRAY.038",
+  "group": "MURRAY",
+  "text": "Aaah.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "MURRAY.039",
+  "group": "MURRAY",
+  "text": "Ooooh.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "MURRAY.040",
+  "group": "MURRAY",
+  "text": "I'm too petrified to say anything.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "MURRAY.041",
+  "group": "MURRAY",
+  "text": "Bwahahahahahahaha!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "MURRAY.042",
+  "group": "MURRAY",
+  "text": "Why do you villains always laugh so much?",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "MURRAY.044",
+  "group": "MURRAY",
+  "text": "You'd look great with a melting candle on your forehead.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "MURRAY.043",
+  "group": "MURRAY",
+  "text": "You're about as fearsome as a doorstop.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "MURRAY.046",
+  "group": "MURRAY",
+  "text": "I wasn't laughing about anything in particular.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "MURRAY.047",
+  "group": "MURRAY",
+  "text": "Somewhere, there's a fish nibbling on my foot and it really tickles.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "MURRAY.048",
+  "group": "MURRAY",
+  "text": "Is it a really EVIL looking doorstop?",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "MURRAY.049",
+  "group": "MURRAY",
+  "text": "Never mind.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "MURRAY.050",
+  "group": "MURRAY",
+  "text": "I get the feeling you're not taking me very seriously.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "MURRAY.051",
+  "group": "MURRAY",
+  "text": "No, I am. Really.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "MURRAY.052",
+  "group": "MURRAY",
+  "text": "Really?",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "MURRAY.053",
+  "group": "MURRAY",
+  "text": "Then let me hear you scream in terror!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "MURRAY.054",
+  "group": "MURRAY",
+  "text": "Really.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "MURRAY.055",
+  "group": "MURRAY",
+  "text": "That's great!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "MURRAY.056",
+  "group": "MURRAY",
+  "text": "Run, then!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "MURRAY.057",
+  "group": "MURRAY",
+  "text": "Run!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "MURRAY.058",
+  "group": "MURRAY",
+  "text": "RUN away from the fearsome skull!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "MURRAY.059",
+  "group": "MURRAY",
+  "text": "Until you die, I shall revisit you in your most horrible nightmares!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "MURRAY.060",
+  "group": "MURRAY",
+  "text": "Whatever.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "MURRAY.061",
+  "group": "MURRAY",
+  "text": "Was your mother's father bald, too?",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "MURRAY.062",
+  "group": "MURRAY",
+  "text": "At least now you never have to worry about what to wear.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "MURRAY.063",
+  "group": "MURRAY",
+  "text": "How can you see without eyeballs?",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "MURRAY.064",
+  "group": "MURRAY",
+  "text": "I'm going now.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "MURRAY.065",
+  "group": "MURRAY",
+  "text": "I'm not bald!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "MURRAY.066",
+  "group": "MURRAY",
+  "text": "I just have a really high widows peak.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "MURRAY.067",
+  "group": "MURRAY",
+  "text": "I suppose that's true.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "MURRAY.068",
+  "group": "MURRAY",
+  "text": "And accessorizing is really easy.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "MURRAY.069",
+  "group": "MURRAY",
+  "text": "That's also true.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "MURRAY.070",
+  "group": "MURRAY",
+  "text": "And I look good in hats.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "MURRAY.071",
+  "group": "MURRAY",
+  "text": "There you go.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "MURRAY.072",
+  "group": "MURRAY",
+  "text": "How can you walk around without a brain?",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "MURRAY.073",
+  "group": "MURRAY",
+  "text": "Some things no one can answer.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "MURRAY.074",
+  "group": "MURRAY",
+  "text": "Good.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "MURRAY.075",
+  "group": "MURRAY",
+  "text": "Now leave me alone!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "MURRAY.076",
+  "group": "MURRAY",
+  "text": "I have a lot of scheming and evil plotting to do.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "MURRAY.077",
+  "group": "MURRAY",
+  "text": "I'm going now.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "MURRAY.078",
+  "group": "MURRAY",
+  "text": "Good.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "MURRAY.079",
+  "group": "MURRAY",
+  "text": "Now leave me alone!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "MURRAY.080",
+  "group": "MURRAY",
+  "text": "I have a lot of scheming and evil plotting to do.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WATERLN.021",
+  "group": "WATERLN",
+  "text": "Hey! That's my arm!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WATERLN.022",
+  "group": "WATERLN",
+  "text": "Give that back!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WATERLN.004",
+  "group": "WATERLN",
+  "text": "If I gave you your arm back, what would you do with it?",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WATERLN.005",
+  "group": "WATERLN",
+  "text": "I'd terrorize the South Seas!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WATERLN.006",
+  "group": "WATERLN",
+  "text": "I'd torture the living!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WATERLN.007",
+  "group": "WATERLN",
+  "text": "I'd demolish the...er...",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WATERLN.008",
+  "group": "WATERLN",
+  "text": "What I meant to say was I would use it to pet kittens.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WATERLN.009",
+  "group": "WATERLN",
+  "text": "Nope.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WATERLN.010",
+  "group": "WATERLN",
+  "text": "You blew it.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WATERLN.011",
+  "group": "WATERLN",
+  "text": "Drat.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WATERLN.023",
+  "group": "WATERLN",
+  "text": "debris",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WATERLN.024",
+  "group": "WATERLN",
+  "text": "There's a skeletal arm, floating in the water.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WATERLN.025",
+  "group": "WATERLN",
+  "text": "I can't reach that far!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WATERLN.026",
+  "group": "WATERLN",
+  "text": "The hook won't reach.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WATERLN.028",
+  "group": "WATERLN",
+  "text": "cutlass",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WATERLN.029",
+  "group": "WATERLN",
+  "text": "It's a sharp cutlass.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WATERLN.030",
+  "group": "WATERLN",
+  "text": "That's a little large to pick my teeth with.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WATERLN.031",
+  "group": "WATERLN",
+  "text": "That doesn't need cutting.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WATERLN.032",
+  "group": "WATERLN",
+  "text": "I don't want to use this cutlass for no reason.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WATERLN.033",
+  "group": "WATERLN",
+  "text": "skeleton arm",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WATERLN.034",
+  "group": "WATERLN",
+  "text": "It's a skeleton arm.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WATERLN.035",
+  "group": "WATERLN",
+  "text": "It's a skeleton arm with paste all over it.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WATERLN.036",
+  "group": "WATERLN",
+  "text": "I can't use the skeleton arm with that.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WATERLN.037",
+  "group": "WATERLN",
+  "text": "I can't use the skeleton arm with that.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WATERLN.038",
+  "group": "WATERLN",
+  "text": "It's all bony and creepy and stuff.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WATERLN.040",
+  "group": "WATERLN",
+  "text": "It's a horrible skull.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WATERLN.041",
+  "group": "WATERLN",
+  "text": "I think it would bite me.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WATERLN.042",
+  "group": "WATERLN",
+  "text": "I've got nothing to say to him.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WATERLN.043",
+  "group": "WATERLN",
+  "text": "No.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WATERLN.044",
+  "group": "WATERLN",
+  "text": "He would just use it for evil.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WATERLN.045",
+  "group": "WATERLN",
+  "text": "porthole",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WATERLN.046",
+  "group": "WATERLN",
+  "text": "There's a strange glow coming from that porthole.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WATERLN.047",
+  "group": "WATERLN",
+  "text": "Can anybody down there hear me?",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WATERLN.048",
+  "group": "WATERLN",
+  "text": "I guess not.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WATERLN.049",
+  "group": "WATERLN",
+  "text": "porthole",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WATERLN.050",
+  "group": "WATERLN",
+  "text": "It's a brightly lit porthole.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WATERLN.051",
+  "group": "WATERLN",
+  "text": "Is there anyone down in the hold?",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WATERLN.052",
+  "group": "WATERLN",
+  "text": "I don't think anyone is there.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WATERLN.053",
+  "group": "WATERLN",
+  "text": "gunport",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WATERLN.054",
+  "group": "WATERLN",
+  "text": "It's another gun bay.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WATERLN.055",
+  "group": "WATERLN",
+  "text": "Hey!",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WATERLN.056",
+  "group": "WATERLN",
+  "text": "Is anyone over there?",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WATERLN.057",
+  "group": "WATERLN",
+  "text": "There's no one over there.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WATERLN.058",
+  "group": "WATERLN",
+  "text": "I can't squeeze past this cannon to get over there.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WATERLN.059",
+  "group": "WATERLN",
+  "text": "muzzle",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WATERLN.060",
+  "group": "WATERLN",
+  "text": "It's the muzzle of the cannon.",
+  "file": "COMI.LA1"
+ },
+ {
+  "id": "WATERLN.061",
+  "group": "WATERLN",
+  "text": "The cannon is already loaded.",
+  "file": "COMI.LA1"
+ }
+]

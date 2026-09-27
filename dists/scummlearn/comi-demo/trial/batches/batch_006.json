@@ -1,0 +1,392 @@
+[
+ {
+  "id": "MURRAY.050",
+  "group": "MURRAY",
+  "text": "I get the feeling you're not taking me very seriously."
+ },
+ {
+  "id": "MURRAY.051",
+  "group": "MURRAY",
+  "text": "No, I am. Really."
+ },
+ {
+  "id": "MURRAY.052",
+  "group": "MURRAY",
+  "text": "Really?"
+ },
+ {
+  "id": "MURRAY.053",
+  "group": "MURRAY",
+  "text": "Then let me hear you scream in terror!"
+ },
+ {
+  "id": "MURRAY.054",
+  "group": "MURRAY",
+  "text": "Really."
+ },
+ {
+  "id": "MURRAY.055",
+  "group": "MURRAY",
+  "text": "That's great!"
+ },
+ {
+  "id": "MURRAY.056",
+  "group": "MURRAY",
+  "text": "Run, then!"
+ },
+ {
+  "id": "MURRAY.057",
+  "group": "MURRAY",
+  "text": "Run!"
+ },
+ {
+  "id": "MURRAY.058",
+  "group": "MURRAY",
+  "text": "RUN away from the fearsome skull!"
+ },
+ {
+  "id": "MURRAY.059",
+  "group": "MURRAY",
+  "text": "Until you die, I shall revisit you in your most horrible nightmares!"
+ },
+ {
+  "id": "MURRAY.060",
+  "group": "MURRAY",
+  "text": "Whatever."
+ },
+ {
+  "id": "MURRAY.061",
+  "group": "MURRAY",
+  "text": "Was your mother's father bald, too?"
+ },
+ {
+  "id": "MURRAY.062",
+  "group": "MURRAY",
+  "text": "At least now you never have to worry about what to wear."
+ },
+ {
+  "id": "MURRAY.063",
+  "group": "MURRAY",
+  "text": "How can you see without eyeballs?"
+ },
+ {
+  "id": "MURRAY.064",
+  "group": "MURRAY",
+  "text": "I'm going now."
+ },
+ {
+  "id": "MURRAY.065",
+  "group": "MURRAY",
+  "text": "I'm not bald!"
+ },
+ {
+  "id": "MURRAY.066",
+  "group": "MURRAY",
+  "text": "I just have a really high widows peak."
+ },
+ {
+  "id": "MURRAY.067",
+  "group": "MURRAY",
+  "text": "I suppose that's true."
+ },
+ {
+  "id": "MURRAY.068",
+  "group": "MURRAY",
+  "text": "And accessorizing is really easy."
+ },
+ {
+  "id": "MURRAY.069",
+  "group": "MURRAY",
+  "text": "That's also true."
+ },
+ {
+  "id": "MURRAY.070",
+  "group": "MURRAY",
+  "text": "And I look good in hats."
+ },
+ {
+  "id": "MURRAY.071",
+  "group": "MURRAY",
+  "text": "There you go."
+ },
+ {
+  "id": "MURRAY.072",
+  "group": "MURRAY",
+  "text": "How can you walk around without a brain?"
+ },
+ {
+  "id": "MURRAY.073",
+  "group": "MURRAY",
+  "text": "Some things no one can answer."
+ },
+ {
+  "id": "MURRAY.074",
+  "group": "MURRAY",
+  "text": "Good."
+ },
+ {
+  "id": "MURRAY.075",
+  "group": "MURRAY",
+  "text": "Now leave me alone!"
+ },
+ {
+  "id": "MURRAY.076",
+  "group": "MURRAY",
+  "text": "I have a lot of scheming and evil plotting to do."
+ },
+ {
+  "id": "MURRAY.077",
+  "group": "MURRAY",
+  "text": "I'm going now."
+ },
+ {
+  "id": "MURRAY.078",
+  "group": "MURRAY",
+  "text": "Good."
+ },
+ {
+  "id": "MURRAY.079",
+  "group": "MURRAY",
+  "text": "Now leave me alone!"
+ },
+ {
+  "id": "MURRAY.080",
+  "group": "MURRAY",
+  "text": "I have a lot of scheming and evil plotting to do."
+ },
+ {
+  "id": "WATERLN.021",
+  "group": "WATERLN",
+  "text": "Hey! That's my arm!"
+ },
+ {
+  "id": "WATERLN.022",
+  "group": "WATERLN",
+  "text": "Give that back!"
+ },
+ {
+  "id": "WATERLN.004",
+  "group": "WATERLN",
+  "text": "If I gave you your arm back, what would you do with it?"
+ },
+ {
+  "id": "WATERLN.005",
+  "group": "WATERLN",
+  "text": "I'd terrorize the South Seas!"
+ },
+ {
+  "id": "WATERLN.006",
+  "group": "WATERLN",
+  "text": "I'd torture the living!"
+ },
+ {
+  "id": "WATERLN.007",
+  "group": "WATERLN",
+  "text": "I'd demolish the...er..."
+ },
+ {
+  "id": "WATERLN.008",
+  "group": "WATERLN",
+  "text": "What I meant to say was I would use it to pet kittens."
+ },
+ {
+  "id": "WATERLN.009",
+  "group": "WATERLN",
+  "text": "Nope."
+ },
+ {
+  "id": "WATERLN.010",
+  "group": "WATERLN",
+  "text": "You blew it."
+ },
+ {
+  "id": "WATERLN.011",
+  "group": "WATERLN",
+  "text": "Drat."
+ },
+ {
+  "id": "WATERLN.023",
+  "group": "WATERLN",
+  "text": "debris"
+ },
+ {
+  "id": "WATERLN.024",
+  "group": "WATERLN",
+  "text": "There's a skeletal arm, floating in the water."
+ },
+ {
+  "id": "WATERLN.025",
+  "group": "WATERLN",
+  "text": "I can't reach that far!"
+ },
+ {
+  "id": "WATERLN.026",
+  "group": "WATERLN",
+  "text": "The hook won't reach."
+ },
+ {
+  "id": "WATERLN.028",
+  "group": "WATERLN",
+  "text": "cutlass"
+ },
+ {
+  "id": "WATERLN.029",
+  "group": "WATERLN",
+  "text": "It's a sharp cutlass."
+ },
+ {
+  "id": "WATERLN.030",
+  "group": "WATERLN",
+  "text": "That's a little large to pick my teeth with."
+ },
+ {
+  "id": "WATERLN.031",
+  "group": "WATERLN",
+  "text": "That doesn't need cutting."
+ },
+ {
+  "id": "WATERLN.032",
+  "group": "WATERLN",
+  "text": "I don't want to use this cutlass for no reason."
+ },
+ {
+  "id": "WATERLN.033",
+  "group": "WATERLN",
+  "text": "skeleton arm"
+ },
+ {
+  "id": "WATERLN.034",
+  "group": "WATERLN",
+  "text": "It's a skeleton arm."
+ },
+ {
+  "id": "WATERLN.035",
+  "group": "WATERLN",
+  "text": "It's a skeleton arm with paste all over it."
+ },
+ {
+  "id": "WATERLN.036",
+  "group": "WATERLN",
+  "text": "I can't use the skeleton arm with that."
+ },
+ {
+  "id": "WATERLN.037",
+  "group": "WATERLN",
+  "text": "I can't use the skeleton arm with that."
+ },
+ {
+  "id": "WATERLN.038",
+  "group": "WATERLN",
+  "text": "It's all bony and creepy and stuff."
+ },
+ {
+  "id": "WATERLN.040",
+  "group": "WATERLN",
+  "text": "It's a horrible skull."
+ },
+ {
+  "id": "WATERLN.041",
+  "group": "WATERLN",
+  "text": "I think it would bite me."
+ },
+ {
+  "id": "WATERLN.042",
+  "group": "WATERLN",
+  "text": "I've got nothing to say to him."
+ },
+ {
+  "id": "WATERLN.043",
+  "group": "WATERLN",
+  "text": "No."
+ },
+ {
+  "id": "WATERLN.044",
+  "group": "WATERLN",
+  "text": "He would just use it for evil."
+ },
+ {
+  "id": "WATERLN.045",
+  "group": "WATERLN",
+  "text": "porthole"
+ },
+ {
+  "id": "WATERLN.046",
+  "group": "WATERLN",
+  "text": "There's a strange glow coming from that porthole."
+ },
+ {
+  "id": "WATERLN.047",
+  "group": "WATERLN",
+  "text": "Can anybody down there hear me?"
+ },
+ {
+  "id": "WATERLN.048",
+  "group": "WATERLN",
+  "text": "I guess not."
+ },
+ {
+  "id": "WATERLN.049",
+  "group": "WATERLN",
+  "text": "porthole"
+ },
+ {
+  "id": "WATERLN.050",
+  "group": "WATERLN",
+  "text": "It's a brightly lit porthole."
+ },
+ {
+  "id": "WATERLN.051",
+  "group": "WATERLN",
+  "text": "Is there anyone down in the hold?"
+ },
+ {
+  "id": "WATERLN.052",
+  "group": "WATERLN",
+  "text": "I don't think anyone is there."
+ },
+ {
+  "id": "WATERLN.053",
+  "group": "WATERLN",
+  "text": "gunport"
+ },
+ {
+  "id": "WATERLN.054",
+  "group": "WATERLN",
+  "text": "It's another gun bay."
+ },
+ {
+  "id": "WATERLN.055",
+  "group": "WATERLN",
+  "text": "Hey!"
+ },
+ {
+  "id": "WATERLN.056",
+  "group": "WATERLN",
+  "text": "Is anyone over there?"
+ },
+ {
+  "id": "WATERLN.057",
+  "group": "WATERLN",
+  "text": "There's no one over there."
+ },
+ {
+  "id": "WATERLN.058",
+  "group": "WATERLN",
+  "text": "I can't squeeze past this cannon to get over there."
+ },
+ {
+  "id": "WATERLN.059",
+  "group": "WATERLN",
+  "text": "muzzle"
+ },
+ {
+  "id": "WATERLN.060",
+  "group": "WATERLN",
+  "text": "It's the muzzle of the cannon."
+ },
+ {
+  "id": "WATERLN.061",
+  "group": "WATERLN",
+  "text": "The cannon is already loaded."
+ }
+]

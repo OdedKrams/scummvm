@@ -1,0 +1,641 @@
+[
+ {
+  "id": "LOGO.001",
+  "best": "X",
+  "err": [],
+  "why": "Most faithful and natural"
+ },
+ {
+  "id": "LOGO.002",
+  "best": "X",
+  "err": [],
+  "why": "'Weird' fits funny voice best"
+ },
+ {
+  "id": "CANNON.007",
+  "best": "Y",
+  "err": [],
+  "why": "Correct spelling, clean title"
+ },
+ {
+  "id": "CANNON.008",
+  "best": "tie",
+  "err": [],
+  "why": "Identical"
+ },
+ {
+  "id": "CANNON.012",
+  "best": "Z",
+  "err": [],
+  "why": "Keeps chest-as-box meaning"
+ },
+ {
+  "id": "CANNON.011",
+  "best": "tie",
+  "err": [],
+  "why": "Identical"
+ },
+ {
+  "id": "CANNON.009",
+  "best": "Y",
+  "err": [],
+  "why": "Most idiomatic terms"
+ },
+ {
+  "id": "CANNON.010",
+  "best": "Z",
+  "err": [],
+  "why": "Age-old equals eternal question"
+ },
+ {
+  "id": "CANNON.013",
+  "best": "tie",
+  "err": [],
+  "why": "Identical"
+ },
+ {
+  "id": "CANNON.017",
+  "best": "Z",
+  "err": [
+   "X"
+  ],
+  "why": "Correct terms; X uses non-word"
+ },
+ {
+  "id": "CANNON.018",
+  "best": "Y",
+  "err": [],
+  "why": "Natural phrasing (Z identical)"
+ },
+ {
+  "id": "CANNON.019",
+  "best": "Y",
+  "err": [],
+  "why": "Clear, correctly spelled title"
+ },
+ {
+  "id": "CANNON.072",
+  "best": "tie",
+  "err": [],
+  "why": "Identical"
+ },
+ {
+  "id": "CANNON.129",
+  "best": "tie",
+  "err": [],
+  "why": "Identical"
+ },
+ {
+  "id": "WATERLN.039",
+  "best": "tie",
+  "err": [],
+  "why": "Identical"
+ },
+ {
+  "id": "CANNON.024",
+  "best": "Y",
+  "err": [],
+  "why": "Natural, keeps distance idea"
+ },
+ {
+  "id": "CANNON.025",
+  "best": "Z",
+  "err": [],
+  "why": "Most natural Hebrew"
+ },
+ {
+  "id": "CANNON.026",
+  "best": "X",
+  "err": [],
+  "why": "Short, punchy, accurate"
+ },
+ {
+  "id": "WALLYDLG.001",
+  "best": "tie",
+  "err": [],
+  "why": "Identical"
+ },
+ {
+  "id": "WALLYDLG.002",
+  "best": "Y",
+  "err": [],
+  "why": "Mangy rendered well"
+ },
+ {
+  "id": "WALLYDLG.003",
+  "best": "tie",
+  "err": [],
+  "why": "Identical"
+ },
+ {
+  "id": "WALLYDLG.004",
+  "best": "X",
+  "err": [],
+  "why": "Readable pirate growl"
+ },
+ {
+  "id": "WALLYDLG.005",
+  "best": "X",
+  "err": [],
+  "why": "Accurate, fine leather coats"
+ },
+ {
+  "id": "WALLYDLG.006",
+  "best": "Y",
+  "err": [],
+  "why": "Correct word for short person"
+ },
+ {
+  "id": "WALLYDLG.007",
+  "best": "X",
+  "err": [],
+  "why": "Evil rendered well (Z same)"
+ },
+ {
+  "id": "WALLYDLG.008",
+  "best": "X",
+  "err": [],
+  "why": "Complete and fluent"
+ },
+ {
+  "id": "WALLYDLG.009",
+  "best": "Y",
+  "err": [
+   "X"
+  ],
+  "why": "Faithful; X is garbled Hebrew"
+ },
+ {
+  "id": "WALLYDLG.011",
+  "best": "Y",
+  "err": [
+   "Z"
+  ],
+  "why": "Accurate; Z has non-word"
+ },
+ {
+  "id": "WALLYDLG.012",
+  "best": "Y",
+  "err": [],
+  "why": "Complete and natural"
+ },
+ {
+  "id": "WALLYDLG.013",
+  "best": "Z",
+  "err": [
+   "X"
+  ],
+  "why": "Natural; X ungrammatical non-word"
+ },
+ {
+  "id": "WALLYDLG.014",
+  "best": "X",
+  "err": [],
+  "why": "Short and natural"
+ },
+ {
+  "id": "WALLYDLG.015",
+  "best": "tie",
+  "err": [],
+  "why": "Identical"
+ },
+ {
+  "id": "WALLYDLG.016",
+  "best": "tie",
+  "err": [],
+  "why": "Identical"
+ },
+ {
+  "id": "WALLYDLG.017",
+  "best": "tie",
+  "err": [],
+  "why": "Identical"
+ },
+ {
+  "id": "WALLYDLG.018",
+  "best": "X",
+  "err": [],
+  "why": "Concise, accurate insult"
+ },
+ {
+  "id": "WALLYDLG.019",
+  "best": "Y",
+  "err": [],
+  "why": "Correct preposition, concise"
+ },
+ {
+  "id": "WALLYDLG.020",
+  "best": "tie",
+  "err": [],
+  "why": "Identical"
+ },
+ {
+  "id": "WALLYDLG.021",
+  "best": "tie",
+  "err": [],
+  "why": "Identical"
+ },
+ {
+  "id": "WALLYDLG.025",
+  "best": "tie",
+  "err": [],
+  "why": "Identical"
+ },
+ {
+  "id": "WALLYDLG.026",
+  "best": "Y",
+  "err": [],
+  "why": "Natural, drops awkward 'one'"
+ },
+ {
+  "id": "WALLYDLG.027",
+  "best": "Z",
+  "err": [],
+  "why": "Most idiomatic"
+ },
+ {
+  "id": "WALLYDLG.030",
+  "best": "Y",
+  "err": [
+   "X"
+  ],
+  "why": "Clear threat; X non-word"
+ },
+ {
+  "id": "WALLYDLG.031",
+  "best": "X",
+  "err": [],
+  "why": "Short and correct"
+ },
+ {
+  "id": "WALLYDLG.032",
+  "best": "X",
+  "err": [],
+  "why": "Captures joke concisely"
+ },
+ {
+  "id": "WALLYDLG.033",
+  "best": "Y",
+  "err": [
+   "X"
+  ],
+  "why": "Correct interjection; X nonsense"
+ },
+ {
+  "id": "WALLYDLG.034",
+  "best": "X",
+  "err": [],
+  "why": "Complete (Y same)"
+ },
+ {
+  "id": "WALLYDLG.035",
+  "best": "Y",
+  "err": [],
+  "why": "Captures 'again' nuance"
+ },
+ {
+  "id": "WALLYDLG.036",
+  "best": "X",
+  "err": [],
+  "why": "Most natural"
+ },
+ {
+  "id": "WALLYDLG.037",
+  "best": "Y",
+  "err": [],
+  "why": "Natural and accurate"
+ },
+ {
+  "id": "WALLYDLG.038",
+  "best": "tie",
+  "err": [],
+  "why": "Identical"
+ },
+ {
+  "id": "WALLYDLG.039",
+  "best": "X",
+  "err": [],
+  "why": "Safe natural retort"
+ },
+ {
+  "id": "WALLYDLG.040",
+  "best": "Y",
+  "err": [],
+  "why": "Better verb than 'onded'"
+ },
+ {
+  "id": "WALLYDLG.041",
+  "best": "Y",
+  "err": [],
+  "why": "Concise insult"
+ },
+ {
+  "id": "WALLYDLG.043",
+  "best": "X",
+  "err": [],
+  "why": "Correct spelling (Z same)"
+ },
+ {
+  "id": "WALLYDLG.042",
+  "best": "Z",
+  "err": [],
+  "why": "Clearest term for kids"
+ },
+ {
+  "id": "WALLYDLG.044",
+  "best": "Y",
+  "err": [],
+  "why": "Correct borrow verb"
+ },
+ {
+  "id": "MURRAY.045",
+  "best": "Z",
+  "err": [],
+  "why": "Most natural"
+ },
+ {
+  "id": "WALLYDLG.045",
+  "best": "Y",
+  "err": [],
+  "why": "Fluent with locker"
+ },
+ {
+  "id": "WALLYDLG.046",
+  "best": "X",
+  "err": [
+   "Y"
+  ],
+  "why": "Complete; Y drops nine-tails"
+ },
+ {
+  "id": "WALLYDLG.047",
+  "best": "Z",
+  "err": [],
+  "why": "Shortest, accurate"
+ },
+ {
+  "id": "WALLYDLG.048",
+  "best": "X",
+  "err": [],
+  "why": "Natural continuation"
+ },
+ {
+  "id": "WALLYDLG.049",
+  "best": "Y",
+  "err": [],
+  "why": "Natural hesitation"
+ },
+ {
+  "id": "WALLYDLG.050",
+  "best": "tie",
+  "err": [],
+  "why": "Identical"
+ },
+ {
+  "id": "WALLYDLG.051",
+  "best": "X",
+  "err": [],
+  "why": "Clean interjection"
+ },
+ {
+  "id": "WALLYDLG.053",
+  "best": "X",
+  "err": [],
+  "why": "Correct conditional"
+ },
+ {
+  "id": "WALLYDLG.054",
+  "best": "Z",
+  "err": [],
+  "why": "Direct retort"
+ },
+ {
+  "id": "WALLYDLG.055",
+  "best": "Y",
+  "err": [],
+  "why": "Accurate and natural"
+ },
+ {
+  "id": "WALLYDLG.056",
+  "best": "X",
+  "err": [],
+  "why": "Accurate, grammatical"
+ },
+ {
+  "id": "WALLYDLG.057",
+  "best": "X",
+  "err": [],
+  "why": "Accurate (Y same)"
+ },
+ {
+  "id": "WALLYDLG.058",
+  "best": "Y",
+  "err": [],
+  "why": "Correct idiom"
+ },
+ {
+  "id": "WALLYDLG.060",
+  "best": "Y",
+  "err": [],
+  "why": "Natural (Z same)"
+ },
+ {
+  "id": "WALLYDLG.061",
+  "best": "Y",
+  "err": [],
+  "why": "Natural verb"
+ },
+ {
+  "id": "WALLYDLG.062",
+  "best": "Z",
+  "err": [
+   "X"
+  ],
+  "why": "Clear; X reverses meaning"
+ },
+ {
+  "id": "WALLYDLG.063",
+  "best": "X",
+  "err": [],
+  "why": "Natural"
+ },
+ {
+  "id": "WALLYDLG.065",
+  "best": "Y",
+  "err": [],
+  "why": "Tore off rendered precisely"
+ },
+ {
+  "id": "WALLYDLG.066",
+  "best": "X",
+  "err": [],
+  "why": "Accurate (Y same)"
+ },
+ {
+  "id": "WALLYDLG.067",
+  "best": "Z",
+  "err": [],
+  "why": "Captures insistence"
+ },
+ {
+  "id": "WALLYDLG.068",
+  "best": "Z",
+  "err": [],
+  "why": "Natural retort"
+ },
+ {
+  "id": "WALLYDLG.069",
+  "best": "X",
+  "err": [],
+  "why": "Natural (Z same)"
+ },
+ {
+  "id": "WALLYDLG.070",
+  "best": "X",
+  "err": [],
+  "why": "Clearest for kids"
+ },
+ {
+  "id": "WALLYDLG.071",
+  "best": "X",
+  "err": [],
+  "why": "Concise, accurate"
+ },
+ {
+  "id": "WALLYDLG.072",
+  "best": "Y",
+  "err": [],
+  "why": "Natural phrasing"
+ },
+ {
+  "id": "WALLYDLG.073",
+  "best": "Y",
+  "err": [],
+  "why": "Right verb, keeps 'just'"
+ },
+ {
+  "id": "WALLYDLG.074",
+  "best": "Z",
+  "err": [],
+  "why": "Correct tense, natural"
+ },
+ {
+  "id": "WALLYDLG.075",
+  "best": "X",
+  "err": [
+   "Y",
+   "Z"
+  ],
+  "why": "Y ingrown nail; Z calque"
+ },
+ {
+  "id": "WALLYDLG.076",
+  "best": "X",
+  "err": [
+   "Z"
+  ],
+  "why": "Z says contagious, wrong"
+ },
+ {
+  "id": "WALLYDLG.077",
+  "best": "Z",
+  "err": [],
+  "why": "Accurate, concise insult"
+ },
+ {
+  "id": "WALLYDLG.078",
+  "best": "X",
+  "err": [],
+  "why": "Natural insult"
+ },
+ {
+  "id": "WALLYDLG.079",
+  "best": "X",
+  "err": [],
+  "why": "Accurate (Y same)"
+ },
+ {
+  "id": "WALLYDLG.081",
+  "best": "tie",
+  "err": [],
+  "why": "Identical"
+ },
+ {
+  "id": "WALLYDLG.082",
+  "best": "Z",
+  "err": [],
+  "why": "Idiomatic Hebrew"
+ },
+ {
+  "id": "WALLYDLG.083",
+  "best": "X",
+  "err": [],
+  "why": "Natural for kids"
+ },
+ {
+  "id": "WALLYDLG.084",
+  "best": "Y",
+  "err": [],
+  "why": "Most natural"
+ },
+ {
+  "id": "WALLYDLG.085",
+  "best": "Z",
+  "err": [],
+  "why": "Natural and short"
+ },
+ {
+  "id": "WALLYDLG.086",
+  "best": "Z",
+  "err": [],
+  "why": "Natural interruption"
+ },
+ {
+  "id": "WALLYDLG.087",
+  "best": "Y",
+  "err": [],
+  "why": "Accurate, correct spelling"
+ },
+ {
+  "id": "WALLYDLG.088",
+  "best": "Y",
+  "err": [],
+  "why": "Natural hesitation"
+ },
+ {
+  "id": "WALLYDLG.089",
+  "best": "tie",
+  "err": [],
+  "why": "Identical"
+ },
+ {
+  "id": "WALLYDLG.090",
+  "best": "tie",
+  "err": [],
+  "why": "Identical"
+ },
+ {
+  "id": "WALLYDLG.091",
+  "best": "tie",
+  "err": [],
+  "why": "Identical"
+ },
+ {
+  "id": "WALLYDLG.092",
+  "best": "Z",
+  "err": [],
+  "why": "Natural retort"
+ },
+ {
+  "id": "WALLYDLG.093",
+  "best": "X",
+  "err": [],
+  "why": "Natural (Z same)"
+ },
+ {
+  "id": "WALLYDLG.094",
+  "best": "X",
+  "err": [],
+  "why": "Natural"
+ }
+]

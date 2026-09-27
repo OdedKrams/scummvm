@@ -1,0 +1,512 @@
+[
+ {
+  "id": "WALLYDLG.095",
+  "group": "WALLYDLG",
+  "text": "What kind of a comeback is that?"
+ },
+ {
+  "id": "WALLYDLG.096",
+  "group": "WALLYDLG",
+  "text": "That's not terrifying?"
+ },
+ {
+  "id": "WALLYDLG.097",
+  "group": "WALLYDLG",
+  "text": "Not in the least."
+ },
+ {
+  "id": "WALLYDLG.098",
+  "group": "WALLYDLG",
+  "text": "How strange."
+ },
+ {
+  "id": "WALLYDLG.099",
+  "group": "WALLYDLG",
+  "text": "I'm sure I said it right."
+ },
+ {
+  "id": "WALLYDLG.100",
+  "group": "WALLYDLG",
+  "text": "Wally"
+ },
+ {
+  "id": "WALLYDLG.101",
+  "group": "WALLYDLG",
+  "text": "Wait a minute!"
+ },
+ {
+  "id": "WALLYDLG.102",
+  "group": "WALLYDLG",
+  "text": "You're not a pirate!"
+ },
+ {
+  "id": "WALLYDLG.103",
+  "group": "WALLYDLG",
+  "text": "Wally!"
+ },
+ {
+  "id": "WALLYDLG.104",
+  "group": "WALLYDLG",
+  "text": "Don't you recognize me?"
+ },
+ {
+  "id": "WALLYDLG.105",
+  "group": "WALLYDLG",
+  "text": "It's Guybrush Threepwood!"
+ },
+ {
+  "id": "WALLYDLG.106",
+  "group": "WALLYDLG",
+  "text": "Oh, gee..."
+ },
+ {
+  "id": "WALLYDLG.107",
+  "group": "WALLYDLG",
+  "text": "Hello, Mr. Wood."
+ },
+ {
+  "id": "WALLYDLG.111",
+  "group": "WALLYDLG",
+  "text": "The last time I saw you, we were prisoners in LeChuck's dungeon."
+ },
+ {
+  "id": "WALLYDLG.112",
+  "group": "WALLYDLG",
+  "text": "Why would you sign on with a ship of the living dead?"
+ },
+ {
+  "id": "WALLYDLG.113",
+  "group": "WALLYDLG",
+  "text": "Well, Mr. Brush..."
+ },
+ {
+  "id": "WALLYDLG.114",
+  "group": "WALLYDLG",
+  "text": "...at first I had some misgivings about it."
+ },
+ {
+  "id": "WALLYDLG.115",
+  "group": "WALLYDLG",
+  "text": "But thanks to LeChuck's seminars, motivational lectures..."
+ },
+ {
+  "id": "WALLYDLG.116",
+  "group": "WALLYDLG",
+  "text": "...and audio books-on-parrot, I've become a vicious corsair!"
+ },
+ {
+  "id": "WALLYDLG.119",
+  "group": "WALLYDLG",
+  "text": "You can too!"
+ },
+ {
+  "id": "WALLYDLG.120",
+  "group": "WALLYDLG",
+  "text": "Ask me how!"
+ },
+ {
+  "id": "WALLYDLG.121",
+  "group": "WALLYDLG",
+  "text": "Tell me about these seminars."
+ },
+ {
+  "id": "WALLYDLG.122",
+  "group": "WALLYDLG",
+  "text": "Tell me about these motivational lectures."
+ },
+ {
+  "id": "WALLYDLG.123",
+  "group": "WALLYDLG",
+  "text": "Tell me about these audio books."
+ },
+ {
+  "id": "WALLYDLG.124",
+  "group": "WALLYDLG",
+  "text": "Do you have any literature I could look at?"
+ },
+ {
+  "id": "WALLYDLG.125",
+  "group": "WALLYDLG",
+  "text": "Tell me more!"
+ },
+ {
+  "id": "WALLYDLG.126",
+  "group": "WALLYDLG",
+  "text": "I'm not in the mood for sales hype."
+ },
+ {
+  "id": "WALLYDLG.127",
+  "group": "WALLYDLG",
+  "text": "The seminars really brought things into focus."
+ },
+ {
+  "id": "WALLYDLG.128",
+  "group": "WALLYDLG",
+  "text": "You don't know how empowering it is..."
+ },
+ {
+  "id": "WALLYDLG.129",
+  "group": "WALLYDLG",
+  "text": "...to be able to say to yourself..."
+ },
+ {
+  "id": "WALLYDLG.130",
+  "group": "WALLYDLG",
+  "text": "'Yes. I am a despicable, filthy, villainous pirate...'"
+ },
+ {
+  "id": "WALLYDLG.131",
+  "group": "WALLYDLG",
+  "text": "'...deserving blame and censure...'"
+ },
+ {
+  "id": "WALLYDLG.132",
+  "group": "WALLYDLG",
+  "text": "'...but THAT pirate...'"
+ },
+ {
+  "id": "WALLYDLG.133",
+  "group": "WALLYDLG",
+  "text": "'...is who I want to be.'"
+ },
+ {
+  "id": "WALLYDLG.134",
+  "group": "WALLYDLG",
+  "text": "Everyone was really very supportive."
+ },
+ {
+  "id": "WALLYDLG.135",
+  "group": "WALLYDLG",
+  "text": "We had this great feeling of synergy."
+ },
+ {
+  "id": "WALLYDLG.136",
+  "group": "WALLYDLG",
+  "text": "Then LeChuck kicked down the door and said..."
+ },
+ {
+  "id": "WALLYDLG.137",
+  "group": "WALLYDLG",
+  "text": "'Ye lazy scum!'"
+ },
+ {
+  "id": "WALLYDLG.138",
+  "group": "WALLYDLG",
+  "text": "'Get back ta work or I'll beat you with yer own legs.'"
+ },
+ {
+  "id": "WALLYDLG.139",
+  "group": "WALLYDLG",
+  "text": "Well, they weren't lectures as such."
+ },
+ {
+  "id": "WALLYDLG.140",
+  "group": "WALLYDLG",
+  "text": "It was what LeChuck described as flogging the inner child."
+ },
+ {
+  "id": "WALLYDLG.141",
+  "group": "WALLYDLG",
+  "text": "To become a pirate, the audio books-on-parrot are the key."
+ },
+ {
+  "id": "WALLYDLG.142",
+  "group": "WALLYDLG",
+  "text": "You get a set of twelve parrots..."
+ },
+ {
+  "id": "WALLYDLG.143",
+  "group": "WALLYDLG",
+  "text": "...one a month."
+ },
+ {
+  "id": "WALLYDLG.144",
+  "group": "WALLYDLG",
+  "text": "Return as many as you like."
+ },
+ {
+  "id": "WALLYDLG.145",
+  "group": "WALLYDLG",
+  "text": "Keep them all and live."
+ },
+ {
+  "id": "WALLYDLG.146",
+  "group": "WALLYDLG",
+  "text": "They teach you to talk just like a pirate!"
+ },
+ {
+  "id": "WALLYDLG.147",
+  "group": "WALLYDLG",
+  "text": "All the key phrases are in there!"
+ },
+ {
+  "id": "WALLYDLG.148",
+  "group": "WALLYDLG",
+  "text": "'Blow the man down.'"
+ },
+ {
+  "id": "WALLYDLG.149",
+  "group": "WALLYDLG",
+  "text": "'Shiver me timbers.'"
+ },
+ {
+  "id": "WALLYDLG.150",
+  "group": "WALLYDLG",
+  "text": "'Who's a pretty bird?'"
+ },
+ {
+  "id": "WALLYDLG.151",
+  "group": "WALLYDLG",
+  "text": "All the phrases a pirate needs to command respect on the high-seas!"
+ },
+ {
+  "id": "WALLYDLG.152",
+  "group": "WALLYDLG",
+  "text": "Here."
+ },
+ {
+  "id": "WALLYDLG.153",
+  "group": "WALLYDLG",
+  "text": "At least take this literature."
+ },
+ {
+  "id": "WALLYDLG.154",
+  "group": "WALLYDLG",
+  "text": "You may change your mind."
+ },
+ {
+  "id": "WALLYDLG.155",
+  "group": "WALLYDLG",
+  "text": "Here."
+ },
+ {
+  "id": "WALLYDLG.156",
+  "group": "WALLYDLG",
+  "text": "This leaflet explains the basic philosophy I follow."
+ },
+ {
+  "id": "WALLYDLG.157",
+  "group": "WALLYDLG",
+  "text": "Set me free, Wally."
+ },
+ {
+  "id": "WALLYDLG.158",
+  "group": "WALLYDLG",
+  "text": "What's behind that door?"
+ },
+ {
+  "id": "WALLYDLG.159",
+  "group": "WALLYDLG",
+  "text": "What's behind the door again?"
+ },
+ {
+  "id": "WALLYDLG.160",
+  "group": "WALLYDLG",
+  "text": "What are LeChuck's plans?"
+ },
+ {
+  "id": "WALLYDLG.161",
+  "group": "WALLYDLG",
+  "text": "What are LeChuck's plans again?"
+ },
+ {
+  "id": "WALLYDLG.162",
+  "group": "WALLYDLG",
+  "text": "Snap out of it Wally!"
+ },
+ {
+  "id": "WALLYDLG.163",
+  "group": "WALLYDLG",
+  "text": "You're a failure as a pirate."
+ },
+ {
+  "id": "WALLYDLG.164",
+  "group": "WALLYDLG",
+  "text": "I can't Mr. Brush."
+ },
+ {
+  "id": "WALLYDLG.165",
+  "group": "WALLYDLG",
+  "text": "I'm the evil pirate Bloodnose, now."
+ },
+ {
+  "id": "WALLYDLG.166",
+  "group": "WALLYDLG",
+  "text": "And besides..."
+ },
+ {
+  "id": "WALLYDLG.167",
+  "group": "WALLYDLG",
+  "text": "...even if you got up on deck, LeChuck would cut you to ribbons."
+ },
+ {
+  "id": "WALLYDLG.168",
+  "group": "WALLYDLG",
+  "text": "Oooooh..."
+ },
+ {
+  "id": "WALLYDLG.169",
+  "group": "WALLYDLG",
+  "text": "That's the door to LeChuck's treasure hold."
+ },
+ {
+  "id": "WALLYDLG.170",
+  "group": "WALLYDLG",
+  "text": "There's heaps and piles of gold and silver."
+ },
+ {
+  "id": "WALLYDLG.171",
+  "group": "WALLYDLG",
+  "text": "He's brought all the loot he's ever stolen to give to Elaine."
+ },
+ {
+  "id": "WALLYDLG.172",
+  "group": "WALLYDLG",
+  "text": "LeChuck is convinced that he can buy Elaine's love."
+ },
+ {
+  "id": "WALLYDLG.173",
+  "group": "WALLYDLG",
+  "text": "Hmmmm..."
+ },
+ {
+  "id": "WALLYDLG.174",
+  "group": "WALLYDLG",
+  "text": "It's LeChuck's fabulous treasure hold."
+ },
+ {
+  "id": "WALLYDLG.175",
+  "group": "WALLYDLG",
+  "text": "He's been working on a secret weapon."
+ },
+ {
+  "id": "WALLYDLG.176",
+  "group": "WALLYDLG",
+  "text": "Some incredibly powerful cannonball."
+ },
+ {
+  "id": "WALLYDLG.177",
+  "group": "WALLYDLG",
+  "text": "He's going to use it to blow down the walls of the fort..."
+ },
+ {
+  "id": "WALLYDLG.178",
+  "group": "WALLYDLG",
+  "text": "...so his crew can overrun the island!"
+ },
+ {
+  "id": "WALLYDLG.179",
+  "group": "WALLYDLG",
+  "text": "He's going to blow up the fort with a magic cannon ball."
+ },
+ {
+  "id": "WALLYDLG.180",
+  "group": "WALLYDLG",
+  "text": "That's Bloodnose to you, ya scurvy sea-bass!"
+ },
+ {
+  "id": "WALLYDLG.181",
+  "group": "WALLYDLG",
+  "text": "The only thing that'll be snappin' around here is yer neck!"
+ },
+ {
+  "id": "WALLYDLG.182",
+  "group": "WALLYDLG",
+  "text": "Shut yer trap, ya yellow-bellied blowfish!"
+ },
+ {
+  "id": "WALLYDLG.183",
+  "group": "WALLYDLG",
+  "text": "One more peep out of you and I'll do ya in!"
+ },
+ {
+  "id": "WALLYDLG.184",
+  "group": "WALLYDLG",
+  "text": "Peep."
+ },
+ {
+  "id": "WALLYDLG.185",
+  "group": "WALLYDLG",
+  "text": "Word."
+ },
+ {
+  "id": "WALLYDLG.186",
+  "group": "WALLYDLG",
+  "text": "Try it, shrimpy."
+ },
+ {
+  "id": "WALLYDLG.187",
+  "group": "WALLYDLG",
+  "text": "You haven't got the guts!"
+ },
+ {
+  "id": "WALLYDLG.188",
+  "group": "WALLYDLG",
+  "text": "You wouldn't dare!"
+ },
+ {
+  "id": "WALLYDLG.189",
+  "group": "WALLYDLG",
+  "text": "You and what navy?"
+ },
+ {
+  "id": "WALLYDLG.190",
+  "group": "WALLYDLG",
+  "text": "You're a cartographer, not a pirate."
+ },
+ {
+  "id": "WALLYDLG.191",
+  "group": "WALLYDLG",
+  "text": "Just go ahead and shoot."
+ },
+ {
+  "id": "WALLYDLG.192",
+  "group": "WALLYDLG",
+  "text": "I am not!"
+ },
+ {
+  "id": "WALLYDLG.193",
+  "group": "WALLYDLG",
+  "text": "I'm a vicious pirate."
+ },
+ {
+  "id": "WALLYDLG.194",
+  "group": "WALLYDLG",
+  "text": "You've got 'I luv maps' embroidered on your shirt."
+ },
+ {
+  "id": "WALLYDLG.195",
+  "group": "WALLYDLG",
+  "text": "That's a coincidence!"
+ },
+ {
+  "id": "WALLYDLG.196",
+  "group": "WALLYDLG",
+  "text": "Now keep quiet before I fill you full of lead."
+ },
+ {
+  "id": "WALLYDLG.197",
+  "group": "WALLYDLG",
+  "text": "Ya scabrous swab!"
+ },
+ {
+  "id": "WALLYDLG.198",
+  "group": "WALLYDLG",
+  "text": "One more word and I'll let you have it!"
+ },
+ {
+  "id": "WALLYDLG.199",
+  "group": "WALLYDLG",
+  "text": "Ya jigglin' jellyfish!"
+ },
+ {
+  "id": "WALLYDLG.200",
+  "group": "WALLYDLG",
+  "text": "Ya sanguine sasquatch!"
+ },
+ {
+  "id": "WALLYDLG.201",
+  "group": "WALLYDLG",
+  "text": "Don't make me use this pistol on you!"
+ }
+]
