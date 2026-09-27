@@ -2,6 +2,7 @@ package org.scummvm.scummvm;
 
 import android.os.Handler;
 import android.os.Looper;
+import android.util.Log;
 import android.view.HapticFeedbackConstants;
 import android.view.MotionEvent;
 import android.view.View;
@@ -37,6 +38,7 @@ public class KidTouch {
 
 	private final Runnable _startHold = () -> {
 		_holding = true;
+		Log.d("ScummLearn", "touch hold at " + (int) _x + "," + (int) _y);
 		send(ScummVMEvents.JE_LMB_DOWN, _x, _y);
 		if (_view != null)
 			_view.performHapticFeedback(HapticFeedbackConstants.LONG_PRESS);
@@ -109,11 +111,13 @@ public class KidTouch {
 			case MotionEvent.ACTION_UP:
 				_h.removeCallbacks(_startHold);
 				if (_twoFinger) {
+					Log.d("ScummLearn", "touch two-finger tap");
 					rightClick();
 				} else if (_holding) {
 					send(ScummVMEvents.JE_MOUSE_MOVE, e.getX(), e.getY());
 					send(ScummVMEvents.JE_LMB_UP, e.getX(), e.getY());
 				} else if (Math.hypot(e.getX() - _anchorX, e.getY() - _anchorY) <= _slop) {
+					Log.d("ScummLearn", "touch tap at " + (int) e.getX() + "," + (int) e.getY());
 					click(ScummVMEvents.JE_LMB_DOWN, ScummVMEvents.JE_LMB_UP, e.getX(), e.getY());
 				}
 				_holding = false;

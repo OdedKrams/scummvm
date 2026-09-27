@@ -7,6 +7,7 @@ import android.graphics.drawable.GradientDrawable;
 import android.os.Handler;
 import android.os.Looper;
 import android.speech.tts.TextToSpeech;
+import android.util.Log;
 import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.MotionEvent;
@@ -384,6 +385,7 @@ public class LearnPanel {
 		if (System.currentTimeMillis() < hintReadyAt())
 			return; // still charging
 		String hint = pickHint();
+		Log.d("ScummLearn", "hint room=" + _room + " -> " + hint);
 		if (hint == null)
 			hint = "אין עדיין רמז למקום הזה. נסה להסתכל (Look at) ולדבר (Talk to) עם כל מה שאפשר.";
 		_hintCard.setText(hint + "\n\n(נגיעה כדי לסגור)");
@@ -399,6 +401,7 @@ public class LearnPanel {
 
 	/** Called on the native thread whenever the game shows or ends a line of text. */
 	public void addLine(final String json) {
+		Log.d("ScummLearn", "event " + json);
 		_ui.post(() -> {
 			try {
 				JSONObject o = new JSONObject(json);

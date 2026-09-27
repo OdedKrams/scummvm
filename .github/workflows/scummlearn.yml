@@ -19,6 +19,8 @@ jobs:
   android:
     name: Android arm64
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     env:
       NDK_VERSION: "23.2.8568313"
     steps:
@@ -69,6 +71,19 @@ jobs:
         with:
           name: scummlearn-android-arm64
           path: ScummVM-debug.apk
+
+      # Public, login-free download of the newest APK (used by debug.bat and the tablet):
+      # https://github.com/OdedKrams/scummvm/releases/download/scummlearn-latest/ScummVM-debug.apk
+      - name: Publish to the scummlearn-latest release
+        if: github.ref == 'refs/heads/scummlearn'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release view scummlearn-latest >/dev/null 2>&1 || \
+            gh release create scummlearn-latest --prerelease --target "$GITHUB_SHA" \
+              --title "ScummLearn latest APK" --notes "Newest build of the scummlearn branch."
+          gh release upload scummlearn-latest ScummVM-debug.apk --clobber
+          gh release edit scummlearn-latest --notes "Newest build: ${GITHUB_SHA::8}"
 
   windows:
     name: Windows x64
