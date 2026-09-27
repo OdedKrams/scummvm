@@ -96,6 +96,14 @@ void learnEmit(const char *kind, const String &speaker, const String &text) {
 
 	String trimmed = text;
 	trimmed.trim();
+	// Drop resource IDs like "/CANNON.065/" that some games keep in front of names.
+	if (trimmed.size() > 2 && trimmed[0] == '/') {
+		size_t end = trimmed.findFirstOf('/', 1);
+		if (end != String::npos && end < 24 && trimmed.findFirstOf('.', 1) < end) {
+			trimmed = String(trimmed.c_str() + end + 1);
+			trimmed.trim();
+		}
+	}
 	if (trimmed.empty())
 		return;
 

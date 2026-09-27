@@ -121,7 +121,8 @@ public class LearnPanel {
 	}
 
 	private static String norm(String s) {
-		return s.replaceAll("\\s+", " ").trim();
+		// also drop resource IDs like "/CANNON.065/" in front of names
+		return s.replaceAll("^\\s*/[A-Za-z0-9_\\-]+\\.[0-9]+/", "").replaceAll("\\s+", " ").trim();
 	}
 
 	private void loadDict() {
