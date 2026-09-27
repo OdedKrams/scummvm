@@ -1,5 +1,9 @@
 name: CI
-on: [push, pull_request]
+on:
+  # ScummLearn fork: the full upstream CI is skipped on our branch (see scummlearn.yml).
+  push:
+    branches-ignore: [scummlearn]
+  pull_request:
 #  schedule:
 #    - cron: '0 0-23/4 * * *'
 permissions:
