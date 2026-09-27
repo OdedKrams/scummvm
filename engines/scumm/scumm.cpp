@@ -3160,6 +3160,39 @@ void ScummEngine::scummLoop(int delta) {
 	if (_talkDelay < 0)
 		_talkDelay = 0;
 
+	// ScummLearn: report the list of dialogue options on screen (v7/v8 games show
+	// them as highlightable text verbs), so the app can list their translations.
+	if (_game.version >= 7) {
+		static Common::String learnLastChoices;
+		Common::String all;
+		for (int i = 1; i < _numVerbs; i++) {
+			const VerbSlot &vs = _verbs[i];
+			if (!vs.verbid || vs.saveid || vs.curmode != 1 || vs.type != kTextVerbType || !vs.hicolor)
+				continue;
+			const byte *msg = getResourceAddress(rtVerb, i);
+			if (!msg)
+				continue;
+			byte buf[384];
+			memset(buf, 0, sizeof(buf));
+			convertMessageToString(msg, buf, sizeof(buf));
+			const byte *t = buf;
+			while (*t == 0xFF)
+				t += 4;
+			if (!*t)
+				continue;
+			if (!all.empty())
+				all += '\n';
+			all += (const char *)t;
+		}
+		if (all != learnLastChoices) {
+			learnLastChoices = all;
+			if (all.empty())
+				Common::learnEmit("choices_end", Common::String(), "-");
+			else
+				Common::learnEmit("choices", Common::String(), all);
+		}
+	}
+
 	// ScummLearn: report the object or character under the finger/cursor.
 	{
 		static int learnLastHover = -1;

@@ -64,6 +64,9 @@ public class LearnPanel {
 	private TextView _toggle;
 	private TextView _hintBtn;
 	private TextView _hintCard;
+	private LinearLayout _choicesPanel;
+	private LinearLayout _choicesList;
+	private String _choicesKey = "";
 	private JSONObject _hints;
 	private String _room = "";
 	private final Set<String> _seen = new HashSet<>();
@@ -94,6 +97,7 @@ public class LearnPanel {
 		loadHints();
 		createSubtitle();
 		createHintCard();
+		createChoicesPanel();
 		createButtons();
 		tickHint();
 
@@ -235,6 +239,85 @@ public class LearnPanel {
 		_root.addView(_hintCard, lp);
 	}
 
+	// ---- dialogue options panel ----------------------------------------------
+
+	private void createChoicesPanel() {
+		_choicesPanel = new LinearLayout(_activity);
+		_choicesPanel.setOrientation(LinearLayout.VERTICAL);
+		_choicesPanel.setPadding(dp(8), dp(8), dp(8), dp(8));
+		GradientDrawable bg = new GradientDrawable();
+		bg.setColor(0xCC101828);
+		bg.setCornerRadius(dp(16));
+		_choicesPanel.setBackground(bg);
+
+		TextView title = new TextView(_activity);
+		title.setText("מה אפשר להגיד? (נגיעה = להקשיב)");
+		title.setTextColor(0xFFB8C4E0);
+		title.setTextSize(TypedValue.COMPLEX_UNIT_SP, 15);
+		title.setGravity(Gravity.CENTER);
+		title.setPadding(0, 0, 0, dp(6));
+		_choicesPanel.addView(title);
+
+		_choicesList = new LinearLayout(_activity);
+		_choicesList.setOrientation(LinearLayout.VERTICAL);
+		android.widget.ScrollView scroll = new android.widget.ScrollView(_activity);
+		scroll.addView(_choicesList);
+		_choicesPanel.addView(scroll);
+		_choicesPanel.setVisibility(View.GONE);
+
+		FrameLayout.LayoutParams lp = new FrameLayout.LayoutParams(
+			dp(300), FrameLayout.LayoutParams.WRAP_CONTENT, Gravity.END | Gravity.CENTER_VERTICAL);
+		lp.setMargins(0, dp(90), dp(8), dp(24));
+		_root.addView(_choicesPanel, lp);
+	}
+
+	private void showChoices(String all) {
+		if (all.equals(_choicesKey) && _choicesPanel.getVisibility() == View.VISIBLE)
+			return;
+		_choicesKey = all;
+		_choicesList.removeAllViews();
+		int shown = 0;
+		for (String raw : all.split("\n")) {
+			final String en = norm(raw);
+			if (en.isEmpty())
+				continue;
+			String he = _lines.get(en);
+			TextView card = new TextView(_activity);
+			card.setText(he != null ? he + "\n" + en : en);
+			card.setTextColor(Color.WHITE);
+			card.setTextSize(TypedValue.COMPLEX_UNIT_SP, 18);
+			card.setGravity(Gravity.CENTER);
+			card.setPadding(dp(12), dp(10), dp(12), dp(10));
+			GradientDrawable cbg = new GradientDrawable();
+			cbg.setColor(0xFF2B3A67);
+			cbg.setCornerRadius(dp(12));
+			card.setBackground(cbg);
+			card.setOnClickListener(v -> {
+				cbg.setColor(0xFF4A6BC4);
+				_ui.postDelayed(() -> cbg.setColor(0xFF2B3A67), 600);
+				if (_ttsReady)
+					_tts.speak(en, TextToSpeech.QUEUE_FLUSH, null, "scummlearn-choice");
+			});
+			LinearLayout.LayoutParams clp = new LinearLayout.LayoutParams(
+				LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+			clp.setMargins(0, dp(4), 0, dp(4));
+			_choicesList.addView(card, clp);
+			shown++;
+		}
+		boolean visible = shown > 0 && _enabled;
+		_choicesPanel.setVisibility(visible ? View.VISIBLE : View.GONE);
+		if (visible)
+			_choicesPanel.bringToFront();
+		KidTouch.sHoldEnabled = shown == 0;
+	}
+
+	private void hideChoices() {
+		_choicesKey = "";
+		_choicesPanel.setVisibility(View.GONE);
+		_choicesList.removeAllViews();
+		KidTouch.sHoldEnabled = true;
+	}
+
 	private TextView makeButton(String label, int color) {
 		TextView b = new TextView(_activity);
 		b.setText(label);
@@ -292,8 +375,13 @@ public class LearnPanel {
 		_enabled = on;
 		getPrefs().edit().putBoolean("subtitles_he", on).apply();
 		updateToggle();
-		if (!on)
+		if (!on) {
 			hide();
+			if (_choicesPanel != null)
+				_choicesPanel.setVisibility(View.GONE);
+		} else if (_choicesPanel != null && _choicesList.getChildCount() > 0) {
+			_choicesPanel.setVisibility(View.VISIBLE);
+		}
 	}
 
 	private void show(String he, long maxMs) {
@@ -419,6 +507,14 @@ public class LearnPanel {
 				}
 				if ("room".equals(kind)) {
 					_room = o.optString("text");
+					return;
+				}
+				if ("choices".equals(kind)) {
+					showChoices(o.optString("text"));
+					return;
+				}
+				if ("choices_end".equals(kind)) {
+					hideChoices();
 					return;
 				}
 				String text = norm(o.optString("text"));

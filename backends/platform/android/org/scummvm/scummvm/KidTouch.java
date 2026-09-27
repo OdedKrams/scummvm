@@ -26,6 +26,8 @@ public class KidTouch {
 	/** Finger state, read by the learning overlay (object names show only while touching). */
 	public static volatile boolean sFingerDown = false;
 	public static Runnable sOnFingerUp = null;
+	/** Off while a dialogue menu is shown: a resting finger must not pick an option. */
+	public static volatile boolean sHoldEnabled = true;
 
 	private final ScummVM _scummvm;
 	private final Handler _h = new Handler(Looper.getMainLooper());
@@ -37,6 +39,8 @@ public class KidTouch {
 	private final float _slop;
 
 	private final Runnable _startHold = () -> {
+		if (!sHoldEnabled)
+			return;
 		_holding = true;
 		Log.d("ScummLearn", "touch hold at " + (int) _x + "," + (int) _y);
 		send(ScummVMEvents.JE_LMB_DOWN, _x, _y);
