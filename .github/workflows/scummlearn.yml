@@ -10,6 +10,11 @@ on:
     branches: [scummlearn]
   workflow_dispatch:
 
+# A new push cancels older builds that are still queued or running.
+concurrency:
+  group: scummlearn-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   android:
     name: Android arm64
