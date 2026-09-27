@@ -76,6 +76,7 @@ public:
 	static void wakeupForQuit();
 
 	static void setWindowCaption(const Common::U32String &caption);
+	static void learnLine(const Common::String &json); // ScummLearn
 
 	/**
 	 * Array members of DPIValues are xdpi, ydpi, density
@@ -152,6 +153,7 @@ private:
 	static jmethodID _MID_setTextInClipboard;
 	static jmethodID _MID_isConnectionLimited;
 	static jmethodID _MID_setWindowCaption;
+	static jmethodID _MID_learnLine;
 	static jmethodID _MID_showVirtualKeyboard;
 	static jmethodID _MID_showOnScreenControls;
 	static jmethodID _MID_setTouchMode;

@@ -92,6 +92,7 @@ jmethodID JNI::_MID_getTextFromClipboard = 0;
 jmethodID JNI::_MID_setTextInClipboard = 0;
 jmethodID JNI::_MID_isConnectionLimited = 0;
 jmethodID JNI::_MID_setWindowCaption = 0;
+jmethodID JNI::_MID_learnLine = 0;
 jmethodID JNI::_MID_showVirtualKeyboard = 0;
 jmethodID JNI::_MID_showOnScreenControls = 0;
 jmethodID JNI::_MID_setTouchMode = 0;
@@ -412,6 +413,25 @@ void JNI::setWindowCaption(const Common::U32String &caption) {
 	}
 
 	env->DeleteLocalRef(java_caption);
+}
+
+void JNI::learnLine(const Common::String &json) {
+	// ScummLearn: hand one captured text line (JSON) to the Java help panel.
+	if (!_MID_learnLine)
+		return;
+	JNIEnv *env = JNI::getEnv();
+	jstring java_json = convertToJString(env, Common::U32String(json));
+
+	env->CallVoidMethod(_jobj, _MID_learnLine, java_json);
+
+	if (env->ExceptionCheck()) {
+		LOGE("Failed to pass learn line");
+
+		env->ExceptionDescribe();
+		env->ExceptionClear();
+	}
+
+	env->DeleteLocalRef(java_json);
 }
 
 void JNI::showVirtualKeyboard(bool enable) {
@@ -805,6 +825,7 @@ void JNI::create(JNIEnv *env, jobject self, jobject asset_manager,
 	FIND_METHOD(, setTextInClipboard, "(Ljava/lang/String;)Z");
 	FIND_METHOD(, isConnectionLimited, "()Z");
 	FIND_METHOD(, setWindowCaption, "(Ljava/lang/String;)V");
+	FIND_METHOD(, learnLine, "(Ljava/lang/String;)V");
 	FIND_METHOD(, showVirtualKeyboard, "(Z)V");
 	FIND_METHOD(, showOnScreenControls, "(I)V");
 	FIND_METHOD(, setTouchMode, "(I)V");

@@ -813,6 +813,12 @@ public class ScummVMActivity extends Activity {
 		}
 
 		@Override
+		protected void learnLine(final String json) {
+			if (_learnPanel != null)
+				_learnPanel.addLine(json);
+		}
+
+		@Override
 		protected void setWindowCaption(final String caption) {
 			runOnUiThread(new Runnable() {
 				public void run() {
@@ -1126,6 +1132,7 @@ public class ScummVMActivity extends Activity {
 	}
 
 	private MyScummVM _scummvm;
+	private LearnPanel _learnPanel; // ScummLearn help panel
 	private ScummVMEvents _events;
 	private Thread _scummvm_thread;
 
@@ -1148,6 +1155,12 @@ public class ScummVMActivity extends Activity {
 		_openMenuBtnIcon = findViewById(R.id.open_menu_button);
 		_toggleTouchModeKeyboardBtnIcon = findViewById(R.id.toggle_touch_button);
 		_ioLed = findViewById(R.id.io_led);
+
+		// ScummLearn: "?" button + help panel over the game
+		_learnPanel = new LearnPanel(this, _videoLayout, paused -> {
+			if (_scummvm != null)
+				_scummvm.setPause(paused);
+		});
 
 		// Hide by default all buttons, they will be shown when native code will start
 		showToggleOnScreenBtnIcons(0);
@@ -1394,6 +1407,11 @@ public class ScummVMActivity extends Activity {
 //		Log.d(ScummVM.LOG_TAG, "onDestroy");
 
 		super.onDestroy();
+
+		if (_learnPanel != null) {
+			_learnPanel.destroy();
+			_learnPanel = null;
+		}
 
 		SAFFSTree.setIOBusyListener(null);
 

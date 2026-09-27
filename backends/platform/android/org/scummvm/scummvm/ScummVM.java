@@ -109,6 +109,8 @@ public abstract class ScummVM implements SurfaceHolder.Callback,
 	abstract protected boolean isConnectionLimited();
 	/** @noinspection unused */ @Keep
 	abstract protected void setWindowCaption(String caption);
+	// ScummLearn: one captured line of game text, as JSON
+	abstract protected void learnLine(String json);
 	/** @noinspection unused */ @Keep
 	abstract protected void showVirtualKeyboard(boolean enable);
 	/** @noinspection unused */ @Keep

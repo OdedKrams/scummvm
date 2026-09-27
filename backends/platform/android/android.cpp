@@ -79,6 +79,7 @@
 #include "backends/keymapper/standard-actions.h"
 
 #include "common/config-manager.h"
+#include "common/learn-bridge.h"
 #include "common/events.h"
 #include "common/mutex.h"
 #include "common/queue.h"
@@ -308,8 +309,15 @@ void *OSystem_Android::timerThreadFunc(void *arg) {
 //         Upon calling launcherDialog() the transient domain configuration options are cleared!
 //       According to comments in main.cpp:
 //         "Those that affect the graphics mode and the others (like bootparam etc.) should not blindly be passed to the first game launched from the launcher."
+static void learnSinkAndroid(const Common::String &json) {
+	JNI::learnLine(json);
+}
+
 void OSystem_Android::initBackend() {
 	ENTER();
+
+	// ScummLearn: forward captured game text to the Java help panel.
+	Common::setLearnSink(learnSinkAndroid);
 
 	_main_thread = pthread_self();
 
