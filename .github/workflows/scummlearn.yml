@@ -57,6 +57,12 @@ jobs:
             --disable-all-engines --enable-engine=scumm,scumm_7_8,he \
             --enable-release --disable-debug
 
+      - name: Use the fixed ScummLearn debug key
+        # Every build must be signed with the same key, or Android refuses to update the app.
+        run: |
+          mkdir -p ~/.android
+          cp dists/scummlearn/debug.keystore ~/.android/debug.keystore
+
       - name: Build
         run: |
           report() {  # surface errors as annotations (readable without log access)
