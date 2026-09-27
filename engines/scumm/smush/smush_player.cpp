@@ -20,6 +20,7 @@
  */
 
 #include "common/config-manager.h"
+#include "common/learn-bridge.h"
 #include "common/file.h"
 #include "common/system.h"
 #include "common/util.h"
@@ -734,6 +735,9 @@ void SmushPlayer::handleTextResource(uint32 subType, int32 subSize, Common::Seek
 		flags |= kStyleAlignRight;
 		pos_x = _width - 1 - pos_x;
 	}
+
+	// ScummLearn: report cutscene subtitles too.
+	Common::learnEmit("video", Common::String(), str);
 
 	TextStyleFlags flg = (TextStyleFlags)(flags & 7);
 	// flags:

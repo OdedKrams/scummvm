@@ -23,12 +23,13 @@
 #include "common/config-manager.h"
 #include "common/debug.h"
 #include "common/file.h"
+#include "common/fs.h"
 #include "common/system.h"
 
 namespace Common {
 
 static LearnSink g_learnSink = nullptr;
-static DumpFile *g_learnLog = nullptr;
+static WriteStream *g_learnLog = nullptr;
 static bool g_learnLogTried = false;
 static String g_lastKey;
 
@@ -79,11 +80,10 @@ static void openLog() {
 		}
 	}
 
-	g_learnLog = new DumpFile();
-	if (!g_learnLog->open(file, true)) {
+	// Non-atomic: lines must survive even if the app is killed (Android does that).
+	g_learnLog = FSNode(file).createWriteStream(false);
+	if (!g_learnLog) {
 		warning("ScummLearn: could not open %s", file.toString().c_str());
-		delete g_learnLog;
-		g_learnLog = nullptr;
 		return;
 	}
 	if (!previous.empty())
