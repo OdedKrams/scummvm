@@ -21,7 +21,8 @@ import os
 import re
 import sys
 
-LINE_RE = re.compile(rb'/([A-Za-z0-9_]{1,20}\.[0-9]{1,4})/([^\x00]{1,400}?)\x00')
+# IDs: "CANNON.065" (demo) or "WGSO001" (full game); always contain a digit.
+LINE_RE = re.compile(rb'/([A-Za-z][A-Za-z0-9_]{2,19}(?:\.[0-9]{1,4})?)/([^\x00]{1,400}?)\x00')
 # Real text is printable Latin-1; the engine uses a few control codes (^, \xff) we drop.
 CTRL_RE = re.compile(r'\xff.|[\x00-\x1f]')
 
@@ -36,7 +37,9 @@ def looks_like_text(s: str) -> bool:
     if not s:
         return False
     printable = sum(1 for c in s if ' ' <= c <= '~' or c in 'áéíóúñü¡¿')
-    return printable / len(s) > 0.95 and any(c.isalpha() for c in s)
+    # binary junk that happens to follow a "/XYZ12/" pattern is mostly symbols
+    wordy = sum(1 for c in s if c.isalnum() or c in " '.,!?-<>`\"%()/:;=*&")
+    return printable / len(s) > 0.95 and wordy / len(s) > 0.9 and any(c.isalpha() for c in s)
 
 
 def extract(folder: str):
@@ -47,15 +50,21 @@ def extract(folder: str):
             path = os.path.join(root, name)
             if os.path.getsize(path) > 600 * 1024 * 1024:
                 continue
+            # videos, audio, fonts and documents never hold script text (and their binary
+            # data can look like "/ID/text" by chance)
+            if name.upper().rsplit('.', 1)[-1] in ('SAN', 'BUN', 'NUT', 'IMX', 'PDF', 'EXE', 'ICO', 'DLL', 'LNK'):
+                continue
             with open(path, 'rb') as f:
                 data = f.read()
             for m in LINE_RE.finditer(data):
                 line_id = m.group(1).decode('ascii').upper()
+                if not any(c.isdigit() for c in line_id):
+                    continue
                 text = clean(m.group(2))
                 if not looks_like_text(text) or line_id in seen:
                     continue
                 seen[line_id] = text
-                order.append({'id': line_id, 'group': line_id.split('.')[0], 'text': text, 'file': name})
+                order.append({'id': line_id, 'group': re.sub(r'[0-9.]+$', '', line_id) or line_id, 'text': text, 'file': name})
     return order
 
 
