@@ -118,6 +118,13 @@ public class LearnPanel {
 	private boolean _huntHelped = false;
 	private final Runnable _huntNext = () -> startHunt(false);
 	private final Runnable _huntHelp = this::huntHelp;
+	/** The finger is resting on the object we're looking for (found on lift, or after a short hold). */
+	private boolean _huntOnTarget = false;
+	private static final long HUNT_DWELL_MS = 900;
+	private final Runnable _huntDwell = () -> {
+		if (_huntTarget != null && _huntOnTarget && KidTouch.sFingerDown)
+			huntFound();
+	};
 	private final Runnable _huntGiveUp = () -> endHunt(false);
 	private final java.util.Random _rnd = new java.util.Random();
 	/** In a conversation (dialogue options shown, and a little while after): no search cards. */
@@ -154,6 +161,11 @@ public class LearnPanel {
 		});
 		// Object names show only while the finger is on the screen.
 		KidTouch.sOnFingerUp = () -> _ui.post(() -> {
+			// Lifting the finger on the object we're looking for = "this one!"
+			if (_huntTarget != null && _huntOnTarget)
+				huntFound();
+			_huntOnTarget = false;
+			_ui.removeCallbacks(_huntDwell);
 			if (_showKind == SHOW_HOVER && _hoverEn != null)
 				hide();
 		});
@@ -793,12 +805,8 @@ public class LearnPanel {
 		}
 	}
 
-	/** The finger is on (or just tapped) the object we're looking for, or one it overlaps. */
-	private boolean isHuntHit(String name, String alsoUnder) {
-		boolean touching = KidTouch.sFingerDown
-			|| android.os.SystemClock.uptimeMillis() - KidTouch.sLastUpMs < 1500;
-		if (!touching)
-			return false;
+	/** The object under the finger is the one we're looking for (or overlaps it). */
+	private boolean matchesHunt(String name, String alsoUnder) {
 		if (name.equalsIgnoreCase(_huntTarget))
 			return true;
 		for (String other : alsoUnder.split("\n"))
@@ -878,6 +886,10 @@ public class LearnPanel {
 	}
 
 	private void huntFound() {
+		_huntOnTarget = false;
+		_ui.removeCallbacks(_huntDwell);
+		if (_huntTarget == null)
+			return;
 		String en = _huntTarget;
 		int n = _huntHelped ? 2 : 3;
 		_found.add(_room + ":" + en.toLowerCase(Locale.ROOT) + "#" + (timesFound(en) + 1));
@@ -931,6 +943,10 @@ public class LearnPanel {
 						hideIfNotHeld();
 					return;
 				}
+				if ("object_end".equals(kind)) {
+					_huntOnTarget = false; // the finger left the object
+					_ui.removeCallbacks(_huntDwell);
+				}
 				if ("choice_end".equals(kind) || "object_end".equals(kind)) {
 					if (_showKind == SHOW_HOVER)
 						hideIfNotHeld();
@@ -978,9 +994,22 @@ public class LearnPanel {
 				boolean line = "dialog".equals(kind) || "video".equals(kind);
 				if (line && _seen.add(text))
 					getPrefs().edit().putStringSet(key("seen_lines"), new HashSet<>(_seen)).apply();
-				if ("object".equals(kind) && _huntTarget != null && isHuntHit(text, o.optString("speaker"))) {
-					huntFound();
-					return;
+				if ("object".equals(kind) && _huntTarget != null) {
+					// Sliding across the object doesn't count: the child taps it, lifts the finger
+					// on it, or rests on it for a moment.
+					if (!matchesHunt(text, o.optString("speaker"))) {
+						_huntOnTarget = false;
+						_ui.removeCallbacks(_huntDwell);
+					} else if (KidTouch.sFingerDown) {
+						if (!_huntOnTarget) {
+							_huntOnTarget = true;
+							_ui.removeCallbacks(_huntDwell);
+							_ui.postDelayed(_huntDwell, HUNT_DWELL_MS);
+						}
+					} else if (android.os.SystemClock.uptimeMillis() - KidTouch.sLastUpMs < 500) {
+						huntFound(); // a quick tap: the game reported the object after the finger lifted
+						return;
+					}
 				}
 				if (!_enabled || _holding)
 					return; // while held, keep the current subtitle
