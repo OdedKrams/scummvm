@@ -170,7 +170,7 @@ public class LearnPanel {
 
 	private static String norm(String s) {
 		// also drop resource IDs like "/CANNON.065/" in front of names
-		return s.replaceAll("^\\s*/[A-Za-z0-9_\\-]+\\.[0-9]+/", "").replaceAll("\\s+", " ").trim();
+		return s.replaceAll("^\\s*/[A-Za-z0-9_.\\-]*[0-9][A-Za-z0-9_.\\-]*/", "").replaceAll("\\s+", " ").trim();
 	}
 
 	/** Built-in pack (the Curse of Monkey Island demo), used when a game has no pack of its own. */

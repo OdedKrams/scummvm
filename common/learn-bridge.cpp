@@ -25,6 +25,7 @@
 #include "common/file.h"
 #include "common/fs.h"
 #include "common/system.h"
+#include "common/util.h"
 
 namespace Common {
 
@@ -135,12 +136,19 @@ void learnEmit(const char *kind, const String &speaker, const String &text) {
 
 	String trimmed = text;
 	trimmed.trim();
-	// Split off resource IDs like "/CANNON.065/" that some games keep in front of text.
+	// Split off resource IDs like "/CANNON.065/" (demo) or "/WGSO001/" (full game) that some games keep in front of text.
 	// The ID is passed on: a pack can translate by ID, which never mismatches.
 	String id;
 	if (trimmed.size() > 2 && trimmed[0] == '/') {
 		size_t end = trimmed.findFirstOf('/', 1);
-		if (end != String::npos && end < 24 && trimmed.findFirstOf('.', 1) < end) {
+		bool isId = end != String::npos && end >= 3 && end < 24;
+		bool digit = false;
+		for (size_t i = 1; isId && i < end; i++) {
+			char c = trimmed[i];
+			digit |= (c >= '0' && c <= '9');
+			isId = Common::isAlnum(c) || c == '_' || c == '.' || c == '-';
+		}
+		if (isId && digit) {
 			id = String(trimmed.c_str() + 1, trimmed.c_str() + end);
 			trimmed = String(trimmed.c_str() + end + 1);
 			trimmed.trim();
