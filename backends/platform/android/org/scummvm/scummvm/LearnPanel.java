@@ -621,6 +621,24 @@ public class LearnPanel {
 		return h;
 	}
 
+	/** The step that comes after the given hint in the current room (more specific), if any. */
+	private String nextHint(String current) {
+		if (_hints == null)
+			return null;
+		JSONObject rooms = _hints.optJSONObject("rooms");
+		JSONArray steps = rooms != null ? rooms.optJSONArray(_room) : null;
+		if (steps == null)
+			return null;
+		for (int i = 0; i + 1 < steps.length(); i++) {
+			JSONObject step = steps.optJSONObject(i);
+			if (step != null && current.equals(step.optString("he"))) {
+				JSONObject next = steps.optJSONObject(i + 1);
+				return next != null ? next.optString("he") : null;
+			}
+		}
+		return null;
+	}
+
 	/** First step of the current room that the child hasn't finished yet. */
 	private String pickHint() {
 		if (_hints == null)
@@ -653,8 +671,11 @@ public class LearnPanel {
 		// The same hint again (nothing changed since) costs nothing and doesn't restart the timer.
 		String again = peekHint();
 		if (again != null && again.equals(_lastHint)) {
-			Log.d("ScummLearn", "hint room=" + _room + " again (free)");
-			_hintCard.setText(again + "\n\n(זה אותו רמז – בחינם 🙂)\n(נגיעה כדי לסגור)");
+			// Still stuck on the same step: add the next, more specific step as extra help.
+			String more = nextHint(again);
+			Log.d("ScummLearn", "hint room=" + _room + " again (free), more=" + (more != null));
+			_hintCard.setText(again + (more != null ? "\n\n💡 עוד עזרה: " + more : "")
+				+ "\n\n(בחינם 🙂 – נגיעה כדי לסגור)");
 			_hintCard.setVisibility(View.VISIBLE);
 			_hintCard.bringToFront();
 			_pause.setPaused(true);
