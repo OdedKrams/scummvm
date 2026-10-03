@@ -11,9 +11,7 @@ Usage:
     python3 extract_lines.py <game folder> -o lines.json
 
 Output: a JSON list of {"id", "group", "text"} in game-file order, one entry per ID.
-Lines that only appear inside videos (SMUSH .SAN files are compressed) are not found
-here; the app logs them when they play (kind "video"), and translate_video_lines can
-pick them up from learn.jsonl later.
+Video subtitles (SMUSH .SAN files) are read from their TEXT chunks as well.
 """
 import argparse
 import json
@@ -42,6 +40,29 @@ def looks_like_text(s: str) -> bool:
     return printable / len(s) > 0.95 and wordy / len(s) > 0.9 and any(c.isalpha() for c in s)
 
 
+def san_lines(path, name):
+    """Subtitles of SMUSH videos (.SAN): plain TEXT chunks, "/ID/" + formatting codes + text."""
+    import struct
+    with open(path, 'rb') as f:
+        d = f.read()
+    out, p = [], 0
+    while True:
+        p = d.find(b'TEXT', p)
+        if p < 0:
+            return out
+        size = struct.unpack('>I', d[p + 4:p + 8])[0]
+        if 16 < size < 2000:
+            s = d[p + 24:p + 8 + size].split(b'\x00')[0].decode('latin-1')
+            m = re.match(r'\s*/([A-Za-z0-9_.]+)/(.*)', s, re.S)
+            if m:
+                text = re.sub(r'\^f\d\d|\^c\d\d\d', '', m.group(2))
+                text = re.sub(r'\s+', ' ', text).strip()
+                if looks_like_text(text):
+                    out.append({'id': m.group(1).upper(), 'group': 'VIDEO_' + name.rsplit('.', 1)[0].upper(),
+                                'text': text, 'file': name})
+        p += 4
+
+
 def extract(folder: str):
     seen = {}
     order = []
@@ -50,9 +71,17 @@ def extract(folder: str):
             path = os.path.join(root, name)
             if os.path.getsize(path) > 600 * 1024 * 1024:
                 continue
-            # videos, audio, fonts and documents never hold script text (and their binary
+            ext = name.upper().rsplit('.', 1)[-1]
+            if ext == 'SAN':
+                # video subtitles: TEXT chunks holding "/ID/^f00^c031text"
+                for line in san_lines(path, name):
+                    if line['id'] not in seen:
+                        seen[line['id']] = line['text']
+                        order.append(line)
+                continue
+            # audio, fonts and documents never hold script text (and their binary
             # data can look like "/ID/text" by chance)
-            if name.upper().rsplit('.', 1)[-1] in ('SAN', 'BUN', 'NUT', 'IMX', 'PDF', 'EXE', 'ICO', 'DLL', 'LNK'):
+            if ext in ('BUN', 'NUT', 'IMX', 'PDF', 'EXE', 'ICO', 'DLL', 'LNK'):
                 continue
             with open(path, 'rb') as f:
                 data = f.read()
