@@ -73,6 +73,10 @@ public class LearnPanel {
 	private LinearLayout _hintBox;      // the hint card + the "already did it" button
 	private TextView _skipBtn;
 	private static final int SKIP_COST = 3;
+	/** Every hint the child has seen, oldest first (kept with each save), and its viewer. */
+	private final java.util.List<String> _hintLog = new java.util.ArrayList<>();
+	private LinearLayout _logPanel;
+	private LinearLayout _logList;
 	/** Steps the child marked as done by hand (their Hebrew text; kept with each save). */
 	private final Set<String> _manualDone = new HashSet<>();
 	private LinearLayout _choicesPanel;
@@ -158,6 +162,7 @@ public class LearnPanel {
 		createHintCard();
 		createChoicesPanel();
 		createHuntCard();
+		createHintLog();
 		createButtons();
 		createCoinView();
 		tickHint();
@@ -320,6 +325,13 @@ public class LearnPanel {
 		if (had != null)
 			_had.addAll(had);
 		_lastHint = getPrefs().getString(key("last_hint"), null);
+		_hintLog.clear();
+		try {
+			JSONArray hl = new JSONArray(getPrefs().getString(key("hint_log"), "[]"));
+			for (int i = 0; i < hl.length(); i++)
+				_hintLog.add(hl.optString(i));
+		} catch (Exception ignored) {
+		}
 		_manualDone.clear();
 		Set<String> md = getPrefs().getStringSet(key("manual_done"), null);
 		if (md != null)
@@ -416,6 +428,86 @@ public class LearnPanel {
 		_root.addView(_hintBox, lp);
 	}
 
+	private void createHintLog() {
+		_logPanel = new LinearLayout(_activity);
+		_logPanel.setOrientation(LinearLayout.VERTICAL);
+		_logPanel.setPadding(dp(12), dp(12), dp(12), dp(12));
+		GradientDrawable bg = new GradientDrawable();
+		bg.setColor(0xF2FFF4C2);
+		bg.setCornerRadius(dp(18));
+		bg.setStroke(dp(3), 0xFFE0A800);
+		_logPanel.setBackground(bg);
+		TextView title = new TextView(_activity);
+		title.setText("📜 הרמזים שכבר ראית (נגיעה כדי לסגור)");
+		title.setTextColor(0xFF5A4300);
+		title.setTextSize(TypedValue.COMPLEX_UNIT_SP, 18);
+		title.setGravity(Gravity.CENTER);
+		title.setPadding(0, 0, 0, dp(8));
+		_logPanel.addView(title);
+		_logList = new LinearLayout(_activity);
+		_logList.setOrientation(LinearLayout.VERTICAL);
+		android.widget.ScrollView scroll = new android.widget.ScrollView(_activity);
+		scroll.addView(_logList);
+		_logPanel.addView(scroll);
+		_logPanel.setOnClickListener(v -> hideHintLog());
+		title.setOnClickListener(v -> hideHintLog());
+		_logPanel.setVisibility(View.GONE);
+		FrameLayout.LayoutParams lp = new FrameLayout.LayoutParams(
+			FrameLayout.LayoutParams.MATCH_PARENT, FrameLayout.LayoutParams.MATCH_PARENT, Gravity.CENTER);
+		lp.setMargins(dp(90), dp(24), dp(90), dp(24));
+		_root.addView(_logPanel, lp);
+	}
+
+	private void showHintLog() {
+		hideCard();
+		_logList.removeAllViews();
+		if (_hintLog.isEmpty()) {
+			TextView t = new TextView(_activity);
+			t.setText("עדיין לא ביקשת רמזים. לחץ על 💡 כשאתה תקוע.");
+			t.setTextColor(0xFF1A1A1A);
+			t.setTextSize(TypedValue.COMPLEX_UNIT_SP, 20);
+			t.setGravity(Gravity.CENTER);
+			_logList.addView(t);
+		}
+		for (int i = _hintLog.size() - 1; i >= 0; i--) { // newest first
+			TextView t = new TextView(_activity);
+			t.setText(_hintLog.get(i));
+			t.setTextColor(0xFF1A1A1A);
+			t.setTextSize(TypedValue.COMPLEX_UNIT_SP, 19);
+			t.setTextDirection(View.TEXT_DIRECTION_RTL);
+			t.setPadding(dp(12), dp(10), dp(12), dp(10));
+			GradientDrawable ibg = new GradientDrawable();
+			ibg.setColor(i == _hintLog.size() - 1 ? 0xFFFFE58A : 0xFFFFFBE6);
+			ibg.setCornerRadius(dp(10));
+			t.setBackground(ibg);
+			t.setOnClickListener(v -> hideHintLog());
+			LinearLayout.LayoutParams ilp = new LinearLayout.LayoutParams(
+				LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+			ilp.setMargins(0, dp(4), 0, dp(4));
+			_logList.addView(t, ilp);
+		}
+		_logPanel.setVisibility(View.VISIBLE);
+		_logPanel.bringToFront();
+		_pause.setPaused(true);
+	}
+
+	private void hideHintLog() {
+		if (_logPanel.getVisibility() == View.VISIBLE)
+			_pause.setPaused(false);
+		_logPanel.setVisibility(View.GONE);
+	}
+
+	/** Remember a hint the child saw (once; seeing it again moves it to the top). */
+	private void logHint(String text) {
+		if (text == null || text.isEmpty())
+			return;
+		_hintLog.remove(text);
+		_hintLog.add(text);
+		while (_hintLog.size() > 200)
+			_hintLog.remove(0);
+		getPrefs().edit().putString(key("hint_log"), new JSONArray(_hintLog).toString()).apply();
+	}
+
 	/** Show the card; withSkip = it's a game hint the child could mark as already done. */
 	private void showCard(String text, boolean withSkip) {
 		_hintCard.setText(text);
@@ -454,6 +546,7 @@ public class LearnPanel {
 			showCard("זה היה הרמז האחרון שיש לנו למקום הזה. נסה להסתכל ולדבר עם כולם, ולחבר חפצים בתיק 🎒.\n\n(נגיעה כדי לסגור)", false);
 			return;
 		}
+		logHint("💡 " + next);
 		String tip = moreHint(next) != null
 			? "\n\n(עוד לחיצה על 💡 = רמז מפורט יותר, " + MORE_HINT_COST + " 🪙)" : "";
 		showCard("💡 הרמז הבא:\n" + next + tip + "\n\n(נגיעה כדי לסגור)", true);
@@ -564,6 +657,9 @@ public class LearnPanel {
 		_toggle.setOnClickListener(v -> setEnabled(!_enabled));
 		updateToggle();
 
+		TextView log = makeButton("📜", 0xCC8C6A2E);
+		log.setOnClickListener(v -> showHintLog());
+
 		TextView hunt = makeButton("🔎", 0xCC8A3FB0);
 		hunt.setOnClickListener(v -> {
 			if (_huntTarget != null)
@@ -579,8 +675,8 @@ public class LearnPanel {
 		TextView skip = makeButton("⏩", 0xCC3C8C3C);
 		skip.setOnClickListener(v -> _input.pressKey(56 /* KEYCODE_PERIOD */, '.'));
 
-		int size = dp(56);
-		for (TextView b : new TextView[]{_hintBtn, hunt, _toggle, inv, skip}) {
+		int size = dp(52);
+		for (TextView b : new TextView[]{_hintBtn, log, hunt, _toggle, inv, skip}) {
 			LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(size, size);
 			lp.setMargins(0, dp(6), 0, dp(6));
 			col.addView(b, lp);
@@ -713,6 +809,7 @@ public class LearnPanel {
 			o.put("had", new JSONArray(_had));
 			o.put("shown", new JSONArray(_hintShown));
 			o.put("manual", new JSONArray(_manualDone));
+			o.put("log", new JSONArray(_hintLog));
 			getPrefs().edit().putString(key("slot_" + slot), o.toString()).apply();
 			Log.d("ScummLearn", "progress saved with slot " + slot + ": " + _seen.size() + " lines, " + _had.size() + " items");
 		} catch (Exception e) {
@@ -745,12 +842,19 @@ public class LearnPanel {
 			a = o.optJSONArray("manual");
 			for (int i = 0; a != null && i < a.length(); i++)
 				_manualDone.add(a.optString(i));
+			a = o.optJSONArray("log");
+			if (a != null) {
+				_hintLog.clear();
+				for (int i = 0; i < a.length(); i++)
+					_hintLog.add(a.optString(i));
+			}
 			_had.addAll(_invNow);
 			getPrefs().edit()
 				.putStringSet(key("seen_lines"), new HashSet<>(_seen))
 				.putStringSet(key("had"), new HashSet<>(_had))
 				.putStringSet(key("hints_shown"), new HashSet<>(_hintShown))
 				.putStringSet(key("manual_done"), new HashSet<>(_manualDone))
+				.putString(key("hint_log"), new JSONArray(_hintLog).toString())
 				.putString(key("last_hint"), "")
 				.apply();
 			Log.d("ScummLearn", "progress restored from slot " + slot + ": " + _seen.size() + " lines, " + _had.size() + " items");
@@ -848,11 +952,13 @@ public class LearnPanel {
 				text = again + "\n\n(זה אותו רמז – בחינם 🙂)";
 			} else if (boughtSet.contains(again)) {
 				text = again + "\n\n💡💡 רמז מפורט: " + more;
+				logHint("💡💡 " + more);
 			} else if (_coins >= MORE_HINT_COST) {
 				addCoins(-MORE_HINT_COST);
 				boughtSet.add(again);
 				getPrefs().edit().putStringSet(bought, boughtSet).apply();
 				text = again + "\n\n💡💡 רמז מפורט (" + MORE_HINT_COST + " 🪙): " + more;
+				logHint("💡💡 " + more);
 			} else {
 				text = again + "\n\nלרמז מפורט יותר צריך עוד " + (MORE_HINT_COST - _coins)
 					+ " 🪙. מרוויחים מטבעות ב-🔎 חיפוש חפצים.";
@@ -872,6 +978,7 @@ public class LearnPanel {
 		Log.d("ScummLearn", "hint room=" + _room + " -> " + hint);
 		_lastHint = hint;
 		getPrefs().edit().putString(key("last_hint"), hint).apply();
+		logHint(hint != null ? "💡 " + hint : null);
 		if (hint == null)
 			hint = "אין עדיין רמז למקום הזה. נסה להסתכל (Look at) ולדבר (Talk to) עם כל מה שאפשר.";
 		String tip = moreHint(hint) != null
