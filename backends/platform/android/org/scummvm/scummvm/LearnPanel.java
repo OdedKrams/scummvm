@@ -79,6 +79,10 @@ public class LearnPanel {
 	private final Set<String> _hintShown = new HashSet<>();
 	/** Everything the hero has ever carried in this game (lower case): hints use it as progress. */
 	private final Set<String> _had = new HashSet<>();
+	/** What the hero carries right now, and what is in the room right now (lower case). */
+	private final Set<String> _invNow = new HashSet<>();
+	private final Set<String> _roomNow = new HashSet<>();
+	private boolean _roomKnown = false;
 	/** The last hint shown: showing it again is free. */
 	private String _lastHint = null;
 	private final Runnable _tick = this::tickHint;
@@ -594,20 +598,84 @@ public class LearnPanel {
 		JSONArray done = step.optJSONArray("done_if");
 		if (done == null)
 			return false;
-		for (int i = 0; i < done.length(); i++) {
-			String d = done.optString(i);
-			if (d.startsWith("has:")) {
-				// "has:plastic hook+ramrod" = the hero has had all of these at some point
-				boolean all = true;
-				for (String item : d.substring(4).split("\\+"))
-					all &= _had.contains(item.trim().toLowerCase(Locale.ROOT));
-				if (all)
-					return true;
-			} else if (_seen.contains(norm(d))) {
+		for (int i = 0; i < done.length(); i++)
+			if (holds(done.optString(i)))
 				return true;
-			}
-		}
 		return false;
+	}
+
+	/**
+	 * One progress marker. Current game state (bag, room) always works, also right after
+	 * loading a save; history (lines heard, items carried before) is kept per save slot.
+	 *   has:a+b   the hero carries a and b now, or carried them before (used up since)
+	 *   now:a     the hero carries a right now
+	 *   obj:a     a is in the room right now        noobj:a   a is no longer in the room
+	 *   text      this line has been heard
+	 */
+	private boolean holds(String d) {
+		if (d.startsWith("has:") || d.startsWith("now:")) {
+			boolean now = d.startsWith("now:");
+			for (String item : d.substring(4).split("\\+")) {
+				String it = item.trim().toLowerCase(Locale.ROOT);
+				if (!_invNow.contains(it) && (now || !_had.contains(it)))
+					return false;
+			}
+			return true;
+		}
+		if (d.startsWith("obj:"))
+			return _roomNow.contains(d.substring(4).trim().toLowerCase(Locale.ROOT));
+		if (d.startsWith("noobj:"))
+			return _roomKnown && !_roomNow.contains(d.substring(6).trim().toLowerCase(Locale.ROOT));
+		return _seen.contains(norm(d));
+	}
+
+	// ---- learning progress per save slot ----------------------------------------
+
+	private void snapshotTo(String slot) {
+		try {
+			JSONObject o = new JSONObject();
+			o.put("seen", new JSONArray(_seen));
+			o.put("had", new JSONArray(_had));
+			o.put("shown", new JSONArray(_hintShown));
+			getPrefs().edit().putString(key("slot_" + slot), o.toString()).apply();
+			Log.d("ScummLearn", "progress saved with slot " + slot + ": " + _seen.size() + " lines, " + _had.size() + " items");
+		} catch (Exception e) {
+			Log.d("ScummLearn", "progress snapshot failed: " + e);
+		}
+	}
+
+	private void restoreFrom(String slot) {
+		String js = getPrefs().getString(key("slot_" + slot), null);
+		_lastHint = null;
+		if (js == null) {
+			Log.d("ScummLearn", "no progress stored with slot " + slot + " (older save): using the game state");
+			return;
+		}
+		try {
+			JSONObject o = new JSONObject(js);
+			_seen.clear();
+			_had.clear();
+			_hintShown.clear();
+			JSONArray a = o.optJSONArray("seen");
+			for (int i = 0; a != null && i < a.length(); i++)
+				_seen.add(a.optString(i));
+			a = o.optJSONArray("had");
+			for (int i = 0; a != null && i < a.length(); i++)
+				_had.add(a.optString(i));
+			a = o.optJSONArray("shown");
+			for (int i = 0; a != null && i < a.length(); i++)
+				_hintShown.add(a.optString(i));
+			_had.addAll(_invNow);
+			getPrefs().edit()
+				.putStringSet(key("seen_lines"), new HashSet<>(_seen))
+				.putStringSet(key("had"), new HashSet<>(_had))
+				.putStringSet(key("hints_shown"), new HashSet<>(_hintShown))
+				.putString(key("last_hint"), "")
+				.apply();
+			Log.d("ScummLearn", "progress restored from slot " + slot + ": " + _seen.size() + " lines, " + _had.size() + " items");
+		} catch (Exception e) {
+			Log.d("ScummLearn", "progress restore failed: " + e);
+		}
 	}
 
 	/** What pickHint() would return now, without marking anything as shown. */
@@ -840,6 +908,13 @@ public class LearnPanel {
 
 	private void setRoomObjects(String all) {
 		_roomObjects.clear();
+		_roomNow.clear();
+		_roomKnown = true;
+		for (String raw : all.split("\n")) {
+			String en = norm(raw).toLowerCase(Locale.ROOT);
+			if (!en.isEmpty() && !en.equals("-"))
+				_roomNow.add(en);
+		}
 		Set<String> uniq = new HashSet<>();
 		for (String raw : all.split("\n")) {
 			String en = norm(raw);
@@ -1012,14 +1087,28 @@ public class LearnPanel {
 				if ("room".equals(kind)) {
 					_room = o.optString("text");
 					_roomObjects.clear();
+					_roomNow.clear();
+					_roomKnown = false; // until the game lists this room's objects
 					endHunt(false);
+					return;
+				}
+				if ("save".equals(kind)) {
+					snapshotTo(o.optString("text"));
+					return;
+				}
+				if ("load".equals(kind)) {
+					restoreFrom(o.optString("text"));
 					return;
 				}
 				if ("inventory".equals(kind)) {
 					boolean added = false;
+					_invNow.clear();
 					for (String raw : o.optString("text").split("\n")) {
 						String item = norm(raw).toLowerCase(Locale.ROOT);
-						if (!item.isEmpty() && !item.equals("-") && _had.add(item))
+						if (item.isEmpty() || item.equals("-"))
+							continue;
+						_invNow.add(item);
+						if (_had.add(item))
 							added = true;
 					}
 					if (added) {

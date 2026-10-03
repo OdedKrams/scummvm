@@ -20,6 +20,7 @@
  */
 
 #include "common/config-manager.h"
+#include "common/learn-bridge.h"
 #include "common/memstream.h"
 #include "common/savefile.h"
 #include "common/serializer.h"
@@ -669,6 +670,11 @@ bool ScummEngine::saveState(int slot, bool compat, Common::String &filename) {
 	else
 		debug(1, "State saved as '%s'", filename.c_str());
 
+	// ScummLearn: the app keeps its learning progress (lines heard, items carried)
+	// together with each save, and restores it when that save is loaded.
+	if (!saveFailed)
+		Common::learnEmit("save", Common::String::format("%u", g_system->getMillis()), Common::String::format("%d", slot));
+
 	return !saveFailed;
 }
 
@@ -961,6 +967,7 @@ bool ScummEngine::loadState(int slot, bool compat, Common::String &filename) {
 		VAR(VAR_VOICE_MODE) = ConfMan.getBool("subtitles");
 
 	debug(1, "State loaded from '%s'", filename.c_str());
+	Common::learnEmit("load", Common::String::format("%u", g_system->getMillis()), Common::String::format("%d", slot));
 
 	_sound->pauseSounds(false);
 
