@@ -101,6 +101,7 @@ public class LearnPanel {
 
 	// ---- gold coins: earned by learning English, spent on hints ----
 	private static final int HINT_COST = 5;
+	private static final int MORE_HINT_COST = 2;     // the detailed level of the same hint
 	private static final long FREE_HINT_SEC = 300;   // a free hint every 5 minutes
 	private int _coins = 0;
 	private final Set<String> _rewarded = new HashSet<>();  // "L:line", "O:object", "C:choice"
@@ -621,6 +622,23 @@ public class LearnPanel {
 		return h;
 	}
 
+	/** The detailed level of a hint: the step's own "more" text, or else the next step. */
+	private String moreHint(String current) {
+		if (_hints == null)
+			return null;
+		JSONObject rooms = _hints.optJSONObject("rooms");
+		JSONArray steps = rooms != null ? rooms.optJSONArray(_room) : null;
+		if (steps == null)
+			steps = _hints.optJSONArray("general");
+		if (steps != null)
+			for (int i = 0; i < steps.length(); i++) {
+				JSONObject step = steps.optJSONObject(i);
+				if (step != null && current.equals(step.optString("he")) && step.has("more"))
+					return step.optString("more");
+			}
+		return nextHint(current);
+	}
+
 	/** The step that comes after the given hint in the current room (more specific), if any. */
 	private String nextHint(String current) {
 		if (_hints == null)
@@ -671,11 +689,27 @@ public class LearnPanel {
 		// The same hint again (nothing changed since) costs nothing and doesn't restart the timer.
 		String again = peekHint();
 		if (again != null && again.equals(_lastHint)) {
-			// Still stuck on the same step: add the next, more specific step as extra help.
-			String more = nextHint(again);
-			Log.d("ScummLearn", "hint room=" + _room + " again (free), more=" + (more != null));
-			_hintCard.setText(again + (more != null ? "\n\n💡 עוד עזרה: " + more : "")
-				+ "\n\n(בחינם 🙂 – נגיעה כדי לסגור)");
+			// Still stuck on the same step: offer the detailed hint ("more", or else the
+			// next step) for a few coins. Once bought it stays free.
+			String more = moreHint(again);
+			String bought = key("more_bought");
+			Set<String> boughtSet = new HashSet<>(getPrefs().getStringSet(bought, new HashSet<>()));
+			String text;
+			if (more == null) {
+				text = again + "\n\n(זה אותו רמז – בחינם 🙂)";
+			} else if (boughtSet.contains(again)) {
+				text = again + "\n\n💡💡 רמז מפורט: " + more;
+			} else if (_coins >= MORE_HINT_COST) {
+				addCoins(-MORE_HINT_COST);
+				boughtSet.add(again);
+				getPrefs().edit().putStringSet(bought, boughtSet).apply();
+				text = again + "\n\n💡💡 רמז מפורט (" + MORE_HINT_COST + " 🪙): " + more;
+			} else {
+				text = again + "\n\nלרמז מפורט יותר צריך עוד " + (MORE_HINT_COST - _coins)
+					+ " 🪙. מרוויחים מטבעות ב-🔎 חיפוש חפצים.";
+			}
+			Log.d("ScummLearn", "hint room=" + _room + " again, more=" + (more != null) + " coins=" + _coins);
+			_hintCard.setText(text + "\n\n(נגיעה כדי לסגור)");
 			_hintCard.setVisibility(View.VISIBLE);
 			_hintCard.bringToFront();
 			_pause.setPaused(true);
@@ -693,7 +727,9 @@ public class LearnPanel {
 		getPrefs().edit().putString(key("last_hint"), hint).apply();
 		if (hint == null)
 			hint = "אין עדיין רמז למקום הזה. נסה להסתכל (Look at) ולדבר (Talk to) עם כל מה שאפשר.";
-		_hintCard.setText(hint + "\n\n(נגיעה כדי לסגור)");
+		String tip = moreHint(hint) != null
+			? "\n\n(עוד לחיצה על 💡 = רמז מפורט יותר, " + MORE_HINT_COST + " 🪙)" : "";
+		_hintCard.setText(hint + tip + "\n\n(נגיעה כדי לסגור)");
 		_hintCard.setVisibility(View.VISIBLE);
 		_hintCard.bringToFront();
 		_pause.setPaused(true);
