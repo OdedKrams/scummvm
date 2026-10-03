@@ -17,7 +17,12 @@ The app itself is the same for every game. Everything specific to one game lives
 * `ids`: translation by line ID (`/CANNON.065/` in SCUMM v7/v8 games). This is the most reliable way to match a line.
 * `lines`: translation by English text. It is the fallback for lines the engine shows without their ID.
 * `words`: single words, used for one-word object names now and for quizzes later.
-* `hints`: the same format as `dists/android/res/raw/learn_hints.json`.
+* `hints`: per room, a list of steps `{"he": general hint, "more": detailed hint (2 coins), "done_if": [markers]}`. The first step that isn't done is shown. Markers:
+  * `has:a+b`: the hero carries a and b now, or carried them before.
+  * `now:a`: carries a right now.
+  * `obj:a` / `noobj:a`: a is in the room now / is gone from it.
+  * Any other text: that line was heard.
+  * Lines heard and items carried are stored with each save slot and restored when it is loaded, so hints match a loaded game.
 
 ## Where the app looks
 
