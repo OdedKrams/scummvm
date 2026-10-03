@@ -70,6 +70,11 @@ public class LearnPanel {
 	private TextView _toggle;
 	private TextView _hintBtn;
 	private TextView _hintCard;
+	private LinearLayout _hintBox;      // the hint card + the "already did it" button
+	private TextView _skipBtn;
+	private static final int SKIP_COST = 3;
+	/** Steps the child marked as done by hand (their Hebrew text; kept with each save). */
+	private final Set<String> _manualDone = new HashSet<>();
 	private LinearLayout _choicesPanel;
 	private LinearLayout _choicesList;
 	private String _choicesKey = "";
@@ -315,6 +320,10 @@ public class LearnPanel {
 		if (had != null)
 			_had.addAll(had);
 		_lastHint = getPrefs().getString(key("last_hint"), null);
+		_manualDone.clear();
+		Set<String> md = getPrefs().getStringSet(key("manual_done"), null);
+		if (md != null)
+			_manualDone.addAll(md);
 		updateCoins();
 	}
 
@@ -375,15 +384,79 @@ public class LearnPanel {
 		bg.setCornerRadius(dp(18));
 		bg.setStroke(dp(3), 0xFFE0A800);
 		_hintCard.setBackground(bg);
-		_hintCard.setVisibility(View.GONE);
-		_hintCard.setOnClickListener(v -> {
-			_hintCard.setVisibility(View.GONE);
-			_pause.setPaused(false);
-		});
+		_hintCard.setOnClickListener(v -> hideCard());
+
+		// "I already did this": when a hint is stuck on a step the child has finished,
+		// skip to the next one for a few coins.
+		_skipBtn = new TextView(_activity);
+		_skipBtn.setText("✓ כבר עשיתי את זה – לרמז הבא (" + SKIP_COST + " 🪙)");
+		_skipBtn.setTextColor(Color.WHITE);
+		_skipBtn.setTextSize(TypedValue.COMPLEX_UNIT_SP, 18);
+		_skipBtn.setGravity(Gravity.CENTER);
+		_skipBtn.setPadding(dp(16), dp(10), dp(16), dp(10));
+		GradientDrawable sbg = new GradientDrawable();
+		sbg.setColor(0xEE3C8C3C);
+		sbg.setCornerRadius(dp(14));
+		_skipBtn.setBackground(sbg);
+		_skipBtn.setOnClickListener(v -> onSkipPressed());
+
+		_hintBox = new LinearLayout(_activity);
+		_hintBox.setOrientation(LinearLayout.VERTICAL);
+		_hintBox.setGravity(Gravity.CENTER_HORIZONTAL);
+		_hintBox.addView(_hintCard, new LinearLayout.LayoutParams(
+			LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT));
+		LinearLayout.LayoutParams blp = new LinearLayout.LayoutParams(
+			LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+		blp.setMargins(0, dp(10), 0, 0);
+		_hintBox.addView(_skipBtn, blp);
+		_hintBox.setVisibility(View.GONE);
 		FrameLayout.LayoutParams lp = new FrameLayout.LayoutParams(
 			FrameLayout.LayoutParams.WRAP_CONTENT, FrameLayout.LayoutParams.WRAP_CONTENT, Gravity.CENTER);
-		lp.setMargins(dp(110), dp(40), dp(110), dp(40));
-		_root.addView(_hintCard, lp);
+		lp.setMargins(dp(110), dp(30), dp(110), dp(30));
+		_root.addView(_hintBox, lp);
+	}
+
+	/** Show the card; withSkip = it's a game hint the child could mark as already done. */
+	private void showCard(String text, boolean withSkip) {
+		_hintCard.setText(text);
+		_skipBtn.setVisibility(withSkip ? View.VISIBLE : View.GONE);
+		_hintBox.setVisibility(View.VISIBLE);
+		_hintBox.bringToFront();
+	}
+
+	private void hideCard() {
+		if (_hintBox.getVisibility() == View.VISIBLE)
+			_pause.setPaused(false);
+		_hintBox.setVisibility(View.GONE);
+	}
+
+	private boolean cardShown() {
+		return _hintBox.getVisibility() == View.VISIBLE;
+	}
+
+	private void onSkipPressed() {
+		String current = peekHint();
+		if (current == null)
+			return;
+		if (_coins < SKIP_COST) {
+			showCard(current + "\n\nכדי לדלג לרמז הבא צריך עוד " + (SKIP_COST - _coins)
+				+ " 🪙. מרוויחים מטבעות ב-🔎 חיפוש חפצים.\n\n(נגיעה כדי לסגור)", false);
+			return;
+		}
+		addCoins(-SKIP_COST);
+		_manualDone.add(current);
+		getPrefs().edit().putStringSet(key("manual_done"), new HashSet<>(_manualDone)).apply();
+		Log.d("ScummLearn", "hint skipped by the child: " + current);
+		String next = pickHint();
+		_lastHint = next;
+		getPrefs().edit().putString(key("last_hint"), next).apply();
+		if (next == null || next.equals(current)) {
+			showCard("זה היה הרמז האחרון שיש לנו למקום הזה. נסה להסתכל ולדבר עם כולם, ולחבר חפצים בתיק 🎒.\n\n(נגיעה כדי לסגור)", false);
+			return;
+		}
+		String tip = moreHint(next) != null
+			? "\n\n(עוד לחיצה על 💡 = רמז מפורט יותר, " + MORE_HINT_COST + " 🪙)" : "";
+		showCard("💡 הרמז הבא:\n" + next + tip + "\n\n(נגיעה כדי לסגור)", true);
 	}
 
 	// ---- dialogue options panel ----------------------------------------------
@@ -595,6 +668,8 @@ public class LearnPanel {
 	}
 
 	private boolean isDone(JSONObject step) {
+		if (_manualDone.contains(step.optString("he")))
+			return true;
 		JSONArray done = step.optJSONArray("done_if");
 		if (done == null)
 			return false;
@@ -637,6 +712,7 @@ public class LearnPanel {
 			o.put("seen", new JSONArray(_seen));
 			o.put("had", new JSONArray(_had));
 			o.put("shown", new JSONArray(_hintShown));
+			o.put("manual", new JSONArray(_manualDone));
 			getPrefs().edit().putString(key("slot_" + slot), o.toString()).apply();
 			Log.d("ScummLearn", "progress saved with slot " + slot + ": " + _seen.size() + " lines, " + _had.size() + " items");
 		} catch (Exception e) {
@@ -665,11 +741,16 @@ public class LearnPanel {
 			a = o.optJSONArray("shown");
 			for (int i = 0; a != null && i < a.length(); i++)
 				_hintShown.add(a.optString(i));
+			_manualDone.clear();
+			a = o.optJSONArray("manual");
+			for (int i = 0; a != null && i < a.length(); i++)
+				_manualDone.add(a.optString(i));
 			_had.addAll(_invNow);
 			getPrefs().edit()
 				.putStringSet(key("seen_lines"), new HashSet<>(_seen))
 				.putStringSet(key("had"), new HashSet<>(_had))
 				.putStringSet(key("hints_shown"), new HashSet<>(_hintShown))
+				.putStringSet(key("manual_done"), new HashSet<>(_manualDone))
 				.putString(key("last_hint"), "")
 				.apply();
 			Log.d("ScummLearn", "progress restored from slot " + slot + ": " + _seen.size() + " lines, " + _had.size() + " items");
@@ -777,9 +858,7 @@ public class LearnPanel {
 					+ " 🪙. מרוויחים מטבעות ב-🔎 חיפוש חפצים.";
 			}
 			Log.d("ScummLearn", "hint room=" + _room + " again, more=" + (more != null) + " coins=" + _coins);
-			_hintCard.setText(text + "\n\n(נגיעה כדי לסגור)");
-			_hintCard.setVisibility(View.VISIBLE);
-			_hintCard.bringToFront();
+			showCard(text + "\n\n(נגיעה כדי לסגור)", true);
 			_pause.setPaused(true);
 			return;
 		}
@@ -797,9 +876,7 @@ public class LearnPanel {
 			hint = "אין עדיין רמז למקום הזה. נסה להסתכל (Look at) ולדבר (Talk to) עם כל מה שאפשר.";
 		String tip = moreHint(hint) != null
 			? "\n\n(עוד לחיצה על 💡 = רמז מפורט יותר, " + MORE_HINT_COST + " 🪙)" : "";
-		_hintCard.setText(hint + tip + "\n\n(נגיעה כדי לסגור)");
-		_hintCard.setVisibility(View.VISIBLE);
-		_hintCard.bringToFront();
+		showCard(hint + tip + "\n\n(נגיעה כדי לסגור)", _lastHint != null);
 		_pause.setPaused(true);
 		if (free) {
 			long cooldown = FREE_HINT_SEC * 1000;
@@ -875,12 +952,10 @@ public class LearnPanel {
 
 	/** A short message in the hint card style that closes by itself. */
 	private void flash(String msg) {
-		_hintCard.setText(msg);
-		_hintCard.setVisibility(View.VISIBLE);
-		_hintCard.bringToFront();
+		showCard(msg, false);
 		_ui.postDelayed(() -> {
 			if (_hintCard.getText().toString().equals(msg))
-				_hintCard.setVisibility(View.GONE);
+				_hintBox.setVisibility(View.GONE);
 		}, 4000);
 	}
 
@@ -957,7 +1032,7 @@ public class LearnPanel {
 				flash("נחפש אחרי השיחה 🙂");
 			return true; // resumes by itself when the conversation is over
 		}
-		if (!asked && (_choicesPanel.getVisibility() == View.VISIBLE || _hintCard.getVisibility() == View.VISIBLE
+		if (!asked && (_choicesPanel.getVisibility() == View.VISIBLE || cardShown()
 				|| _showKind == SHOW_LINE)) {
 			_ui.postDelayed(_huntNext, 10000); // busy now, try again soon
 			return false;
