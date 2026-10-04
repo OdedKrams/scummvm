@@ -3236,6 +3236,11 @@ void ScummEngine::scummLoop(int delta) {
 	{
 		static int learnObjTick = 0;
 		static Common::String learnLastObjects;
+		static int learnObjRoom = -1;
+		if (_currentRoom != learnObjRoom) {
+			learnObjRoom = _currentRoom; // new room (or a loaded game): send the list again
+			learnLastObjects = "\x01";
+		}
 		if (++learnObjTick >= 20) {
 			learnObjTick = 0;
 			Common::String all;

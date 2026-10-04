@@ -1081,7 +1081,13 @@ public class LearnPanel {
 		bg.setStroke(dp(2), 0xFFE7C6FF);
 		_huntCard.setBackground(bg);
 		_huntCard.setVisibility(View.GONE);
-		_huntCard.setOnClickListener(v -> sayHunt());
+		// Tapping the card says the sentence again (with a short flash so the child sees it worked).
+		_huntCard.setOnClickListener(v -> {
+			Log.d("ScummLearn", "hunt card tapped: say again");
+			v.animate().scaleX(1.12f).scaleY(1.12f).setDuration(120)
+				.withEndAction(() -> v.animate().scaleX(1f).scaleY(1f).setDuration(120).start()).start();
+			sayHunt();
+		});
 		FrameLayout.LayoutParams lp = new FrameLayout.LayoutParams(
 			FrameLayout.LayoutParams.WRAP_CONTENT, FrameLayout.LayoutParams.WRAP_CONTENT, Gravity.TOP | Gravity.CENTER_HORIZONTAL);
 		lp.setMargins(dp(100), dp(10), dp(100), 0);
@@ -1155,7 +1161,7 @@ public class LearnPanel {
 		_huntTarget = left.get(_rnd.nextInt(left.size()));
 		_lastHunt = _huntTarget;
 		_huntHelped = false;
-		_huntCard.setText("🔎 " + huntPhrase(_huntTarget));
+		_huntCard.setText("🔎 " + huntPhrase(_huntTarget) + "  🔊");
 		_huntCard.setVisibility(View.VISIBLE);
 		_huntCard.bringToFront();
 		sayHunt();
@@ -1195,7 +1201,7 @@ public class LearnPanel {
 		if (he == null)
 			return;
 		_huntHelped = true;
-		_huntCard.setText("🔎 " + huntPhrase(_huntTarget) + "\n" + he);
+		_huntCard.setText("🔎 " + huntPhrase(_huntTarget) + "  🔊\n" + he);
 		sayHunt();
 	}
 

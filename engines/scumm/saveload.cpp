@@ -968,6 +968,8 @@ bool ScummEngine::loadState(int slot, bool compat, Common::String &filename) {
 
 	debug(1, "State loaded from '%s'", filename.c_str());
 	Common::learnEmit("load", Common::String::format("%u", g_system->getMillis()), Common::String::format("%d", slot));
+	// A load doesn't go through startScene(): tell the app which room we're in now.
+	Common::learnEmit("room", Common::String::format("%u", g_system->getMillis()), Common::String::format("%d", _currentRoom));
 
 	_sound->pauseSounds(false);
 

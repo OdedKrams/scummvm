@@ -680,6 +680,25 @@ void SmushPlayer::handleTextResource(uint32 subType, int32 subSize, Common::Seek
 	// RA2: The original game always shows subtitle text during cinematics
 	// (there is no subtitle toggle in the retail options menu). Skip
 	// this check so TRES text is always rendered.
+	// ScummLearn: report cutscene subtitles too, even when the game's own subtitles are off
+	// (the app shows the Hebrew; the English line is heard). Skip the "/ID/" and "^" codes.
+	{
+		const char *ls = str;
+		while (*ls == '/')
+			ls++;
+		if (_vm->_game.id == GID_CMI && strchr(ls, '/'))
+			ls = strchr(ls, '/') + 1;
+		while (ls[0] == '^' && ls[1]) {
+			if (ls[1] == 'f' && strlen(ls) >= 4)
+				ls += 4;
+			else if (ls[1] == 'c' && strlen(ls) >= 5)
+				ls += 5;
+			else
+				break;
+		}
+		Common::learnEmit("video", Common::String(), ls);
+	}
+
 	if (!shouldAlwaysShowSubtitles() && (!ConfMan.getBool("subtitles")) && ((flags & 8) == 8))
 		return;
 
@@ -736,8 +755,6 @@ void SmushPlayer::handleTextResource(uint32 subType, int32 subSize, Common::Seek
 		pos_x = _width - 1 - pos_x;
 	}
 
-	// ScummLearn: report cutscene subtitles too.
-	Common::learnEmit("video", Common::String(), str);
 
 	TextStyleFlags flg = (TextStyleFlags)(flags & 7);
 	// flags:
