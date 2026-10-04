@@ -820,8 +820,26 @@ public class LearnPanel {
 	private void restoreFrom(String slot) {
 		String js = getPrefs().getString(key("slot_" + slot), null);
 		_lastHint = null;
+		// The bag and room lists from before the load are stale: the engine sends fresh ones.
+		_invNow.clear();
+		_roomNow.clear();
+		_roomKnown = false;
 		if (js == null) {
-			Log.d("ScummLearn", "no progress stored with slot " + slot + " (older save): using the game state");
+			// An older save: nothing tells which lines were heard in it, and the history of
+			// another game (lines, items carried, skipped steps) would mark steps done that
+			// this save hasn't reached. Start from what the game itself shows: bag and room.
+			_seen.clear();
+			_had.clear();
+			_hintShown.clear();
+			_manualDone.clear();
+			getPrefs().edit()
+				.putStringSet(key("seen_lines"), new HashSet<>())
+				.putStringSet(key("had"), new HashSet<>())
+				.putStringSet(key("hints_shown"), new HashSet<>())
+				.putStringSet(key("manual_done"), new HashSet<>())
+				.putString(key("last_hint"), "")
+				.apply();
+			Log.d("ScummLearn", "no progress stored with slot " + slot + " (older save): history cleared, using the bag and the room");
 			return;
 		}
 		try {
@@ -848,7 +866,6 @@ public class LearnPanel {
 				for (int i = 0; i < a.length(); i++)
 					_hintLog.add(a.optString(i));
 			}
-			_had.addAll(_invNow);
 			getPrefs().edit()
 				.putStringSet(key("seen_lines"), new HashSet<>(_seen))
 				.putStringSet(key("had"), new HashSet<>(_had))

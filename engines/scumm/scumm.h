@@ -85,6 +85,8 @@ class FontSJIS;
  */
 namespace Scumm {
 
+extern int g_learnLoads; // ScummLearn: number of games loaded
+
 class Actor;
 class BaseCostumeLoader;
 class BaseCostumeRenderer;

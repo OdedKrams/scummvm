@@ -55,6 +55,9 @@
 
 namespace Scumm {
 
+// ScummLearn: counts loaded games, so the app gets the room and inventory lists again
+int g_learnLoads = 0;
+
 struct SaveGameHeader {
 	uint32 type;
 	uint32 size;
@@ -967,6 +970,7 @@ bool ScummEngine::loadState(int slot, bool compat, Common::String &filename) {
 		VAR(VAR_VOICE_MODE) = ConfMan.getBool("subtitles");
 
 	debug(1, "State loaded from '%s'", filename.c_str());
+	g_learnLoads++;
 	Common::learnEmit("load", Common::String::format("%u", g_system->getMillis()), Common::String::format("%d", slot));
 	// A load doesn't go through startScene(): tell the app which room we're in now.
 	Common::learnEmit("room", Common::String::format("%u", g_system->getMillis()), Common::String::format("%d", _currentRoom));

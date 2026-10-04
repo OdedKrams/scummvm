@@ -3237,9 +3237,14 @@ void ScummEngine::scummLoop(int delta) {
 		static int learnObjTick = 0;
 		static Common::String learnLastObjects;
 		static int learnObjRoom = -1;
-		if (_currentRoom != learnObjRoom) {
-			learnObjRoom = _currentRoom; // new room (or a loaded game): send the list again
+		static int learnSeenLoads = 0;
+		static Common::String learnLastInventory;
+		if (_currentRoom != learnObjRoom || learnSeenLoads != g_learnLoads) {
+			// new room or a loaded game: send both lists again
+			learnObjRoom = _currentRoom;
+			learnSeenLoads = g_learnLoads;
 			learnLastObjects = "\x01";
+			learnLastInventory = "\x01";
 		}
 		if (++learnObjTick >= 20) {
 			learnObjTick = 0;
@@ -3276,7 +3281,6 @@ void ScummEngine::scummLoop(int delta) {
 			}
 
 			// ...and what the hero carries, so hints know what the child already picked up.
-			static Common::String learnLastInventory;
 			Common::String inv;
 			if (VAR_EGO != 0xFF) {
 				int ego = VAR(VAR_EGO);
